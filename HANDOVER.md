@@ -6,7 +6,8 @@
 - `index.html` — 단일 파일. Google Fonts + 구글맵 iframe(임베드) 사용
 - `matsuyama-places.csv` — 구글 '내 지도(My Maps)' 가져오기용 20곳 목록
 - 게시된 아티팩트: https://claude.ai/artifact/M3NpJDAwm5784yAP5e9XTG
-- GitHub Pages: https://kimddubuck.github.io/yunha_trip/ (`.github/workflows/pages.yml`이 기본 브랜치 푸시마다 자동 배포)
+- GitHub Pages: https://kimddubuck.github.io/yunha_trip/ — **Settings → Pages에서 Source를 `Deploy from a branch`, 브랜치 `claude/kind-feynman-8r8t7v` / root로 한 번 지정해야 켜짐**
+  - Actions 워크플로(`configure-pages`의 `enablement: true`)로 자동 활성화를 시도했으나 실패함. 원인: 워크플로의 `GITHUB_TOKEN`은 `pages: write`가 있어도 **Pages 사이트 생성 권한이 없음**(`Resource not accessible by integration`). 관리자 권한 PAT가 필요해서, 어차피 수동 1회 설정이 필요하므로 워크플로를 제거하고 브랜치 직접 서빙으로 단순화함
 - `README.md` — 레포 소개와 파일 목록
 
 > 파일명이 `matsuyama-family-guide.html` → `index.html`로 바뀌었습니다. GitHub Pages가 루트의 `index.html`을 첫 페이지로 서빙하기 때문입니다.
