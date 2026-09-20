@@ -1043,11 +1043,13 @@ footer{margin-top:40px;font-size:12.5px;color:var(--ink-soft);line-height:1.6}
     });
   });
 
-  /* ---- live fares (pus-myj-fares) ----
-     항공 모니터링 쪽에서 fares.json을 공개하면 이 패널이 자동으로 채워집니다.
-     아직 없거나(404), 아티팩트 뷰어처럼 외부 fetch가 막힌 곳에서는
-     조용히 실패하고 아래 정적 표가 그대로 남습니다. 규격은 HANDOVER.md 참고. */
-  var FARES_URL='https://pus-myj-fares.netlify.app/fares.json';
+  /* ---- live fares ----
+     항공 모니터링 세션이 fares.json을 올리면 이 패널이 자동으로 채워집니다.
+     같은 레포(./fares.json)를 먼저 보고, 없으면 netlify 쪽을 봅니다.
+     같은 레포 쪽은 같은 도메인이라 CORS 설정이 아예 필요 없습니다.
+     둘 다 실패하면(파일 없음·CORS 차단·아티팩트 뷰어의 외부 fetch 차단)
+     조용히 넘어가고 아래 정적 표가 그대로 남습니다. 규격은 HANDOVER.md 5-2절. */
+  var FARES_URLS=['./fares.json','https://pus-myj-fares.netlify.app/fares.json'];
   var JP_HOL=['2026-10-12'];                                  /* 스포츠의날 */
   var KR_HOL=['2026-10-03','2026-10-05','2026-10-09'];        /* 개천절·대체·한글날 */
   function dayName(d){ return '일월화수목금토'.charAt(d.getDay()); }
@@ -1102,12 +1104,15 @@ footer{margin-top:40px;font-size:12.5px;color:var(--ink-soft);line-height:1.6}
     }
     box.hidden=false;
   }
-  try{
-    fetch(FARES_URL,{mode:'cors',cache:'no-store'})
-      .then(function(r){ return r.ok?r.json():null; })
-      .then(function(d){ if(d) renderLive(d); })
-      .catch(function(){});
-  }catch(e){}
+  (function loadFares(i){
+    i=i||0; if(i>=FARES_URLS.length) return;
+    try{
+      fetch(FARES_URLS[i],{mode:'cors',cache:'no-store'})
+        .then(function(r){ return r.ok?r.json():null; })
+        .then(function(d){ if(d&&d.combos&&d.combos.length) renderLive(d); else loadFares(i+1); })
+        .catch(function(){ loadFares(i+1); });
+    }catch(e){ loadFares(i+1); }
+  })(0);
 
   /* checklist memory (per viewer only) */
   var boxes=document.querySelectorAll('.check input');

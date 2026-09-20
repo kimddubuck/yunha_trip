@@ -143,13 +143,36 @@ y = (34.10 - lat) / 0.65 * 520
 확인한 결과: `ListAgents` → "No reachable agents"(PC의 원격 제어 세션은 다른 기기),
 `list_repos`에 항공 사이트 레포 없음(비공개로 추정), 프록시가 `pus-myj-fares.netlify.app` 차단.
 
-**따라서 공유 채널은 GitHub/HTTP 하나뿐이다.** 아래 규격만 맞추면 자동으로 이어진다.
+**따라서 공유 채널은 GitHub 레포 하나뿐이다.**
 
-### 항공 세션이 할 일 — `fares.json` 공개
+### 가장 좋은 방법 — 항공 세션이 이 레포를 같이 클론한다
 
-수집한 데이터를 사이트 루트에 `fares.json`으로 떨구고, **CORS 헤더를 열어야 한다.**
+PC의 항공 모니터링 세션에서:
 
-Netlify라면 `public/_headers`(또는 `netlify.toml`)에 두 줄:
+```bash
+git clone https://github.com/kimddubuck/yunha_trip.git
+```
+
+그러면 그 세션이 `HANDOVER.md`·`index.html`·`matsuyama-places.csv`를 **전부 직접 읽고 쓸 수 있다.**
+한쪽이 push하고 다른 쪽이 pull하면 양방향으로 이어진다.
+
+**그리고 `fares.json`을 이 레포 루트에 커밋하면 CORS 설정이 아예 필요 없다** —
+가이드 페이지(`kimddubuck.github.io/yunha_trip/`)와 같은 도메인이기 때문이다.
+`index.html`은 `./fares.json`을 먼저 보고, 없으면 netlify 쪽을 본다.
+
+**충돌 방지 규칙 — 파일을 나눠 쓴다.**
+
+| 파일 | 담당 |
+|---|---|
+| `fares.json` (+ 수집 스크립트·워크플로) | 항공 모니터링 세션 |
+| `index.html`, `HANDOVER.md`, `matsuyama-places.csv` | 여행 계획 세션 |
+
+서로 상대 파일을 건드리지 않으면 같은 브랜치를 써도 충돌이 없다.
+push 전에 `git pull --rebase origin claude/kind-feynman-8r8t7v`.
+
+### 차선 — netlify에 올리는 경우에만 CORS 필요
+
+`fares.json`을 `pus-myj-fares.netlify.app`에 두겠다면 `public/_headers`에:
 
 ```
 /fares.json
@@ -187,7 +210,7 @@ Netlify라면 `public/_headers`(또는 `netlify.toml`)에 두 줄:
 
 ### 가이드 페이지 쪽은 이미 준비됨
 
-`index.html`의 `#live` 패널과 `FARES_URL` 상수(현재 `https://pus-myj-fares.netlify.app/fares.json`).
+`index.html`의 `#live` 패널과 `FARES_URLS` 배열(`./fares.json` → netlify 순으로 시도).
 
 - 성공하면 `#when` 섹션 맨 위에 **실시간 최저가 표**가 뜬다(상위 6개).
 - **금·토요일 밤과 연휴 밤을 세어 '비싼 밤' 개수를 페이지가 직접 계산한다.**
@@ -204,7 +227,7 @@ Netlify라면 `public/_headers`(또는 `netlify.toml`)에 두 줄:
    그런데 같은 호텔 3박이 9/29 출발 18만원 → 10/10 출발 63만원이다.
    항공권 11만원 아끼고 숙박비 45만원을 더 내는 구조라 **순위가 거짓말을 한다.**
    숙박비 실시간 연동이 어려우면 **연휴 행에 예상 할증을 상수로 더해 재정렬**만 해도 충분하다.
-3. `fares.json` 공개 + CORS (위 규격).
+3. `fares.json`을 **이 레포 루트에 커밋** (권장 — CORS 불필요). 또는 netlify에 공개 + CORS.
 4. 미계산 조합 확인: `10/13→10/17`, `10/21→10/25`, `10/28→11/1`
    (가는편이 전부 20,000 숏트립인데 오는편 운임을 모름. 다만 셋 다 금·토 밤이 껴서 숙박에서 손해).
 
