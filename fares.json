@@ -1,0 +1,1305 @@
+{
+ "updated_at": "2026-09-20T14:58:00+09:00",
+ "route": "PUS-MYJ",
+ "pax": {
+  "adults": 2,
+  "infants": 1
+ },
+ "nights": 4,
+ "combos": [
+  {
+   "depart": "2026-10-10",
+   "return": "2026-10-14",
+   "outbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 409200,
+   "total_with_bags": 689200,
+   "seats_left": 7,
+   "holidays": [
+    "일본연휴"
+   ]
+  },
+  {
+   "depart": "2026-10-29",
+   "return": "2026-11-02",
+   "outbound": {
+    "fare": 60000,
+    "class": "특가",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 457200,
+   "total_with_bags": 688200,
+   "seats_left": 4,
+   "holidays": []
+  },
+  {
+   "depart": "2026-10-31",
+   "return": "2026-11-04",
+   "outbound": {
+    "fare": 70000,
+    "class": "특가",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 478200,
+   "total_with_bags": 667200,
+   "seats_left": 3,
+   "holidays": [
+    "일본문화의날"
+   ]
+  },
+  {
+   "depart": "2026-11-21",
+   "return": "2026-11-25",
+   "outbound": {
+    "fare": 70000,
+    "class": "특가",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "특가",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 478200,
+   "total_with_bags": 583200,
+   "seats_left": 9,
+   "holidays": [
+    "일본연휴"
+   ]
+  },
+  {
+   "depart": "2026-11-24",
+   "return": "2026-11-28",
+   "outbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 70000,
+    "class": "특가",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 478200,
+   "total_with_bags": 625200,
+   "seats_left": 2,
+   "holidays": []
+  },
+  {
+   "depart": "2026-11-26",
+   "return": "2026-11-30",
+   "outbound": {
+    "fare": 70000,
+    "class": "특가",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 478200,
+   "total_with_bags": 709200,
+   "seats_left": 3,
+   "holidays": []
+  },
+  {
+   "depart": "2026-09-21",
+   "return": "2026-09-25",
+   "outbound": {
+    "fare": 80000,
+    "class": "특가",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 1000,
+    "class": "특가",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 491200,
+   "total_with_bags": 549200,
+   "seats_left": 6,
+   "holidays": [
+    "일본연휴"
+   ]
+  },
+  {
+   "depart": "2026-11-20",
+   "return": "2026-11-24",
+   "outbound": {
+    "fare": 80000,
+    "class": "특가",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 499200,
+   "total_with_bags": 646200,
+   "seats_left": 8,
+   "holidays": [
+    "일본연휴"
+   ]
+  },
+  {
+   "depart": "2026-09-29",
+   "return": "2026-10-03",
+   "outbound": {
+    "fare": 80000,
+    "class": "특가",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 529200,
+   "total_with_bags": 729200,
+   "seats_left": 5,
+   "holidays": [
+    "개천절"
+   ]
+  },
+  {
+   "depart": "2026-11-02",
+   "return": "2026-11-06",
+   "outbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 100000,
+    "class": "실속",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 541200,
+   "total_with_bags": 625200,
+   "seats_left": 4,
+   "holidays": [
+    "일본문화의날"
+   ]
+  },
+  {
+   "depart": "2026-11-12",
+   "return": "2026-11-16",
+   "outbound": {
+    "fare": 100000,
+    "class": "실속",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 541200,
+   "total_with_bags": 709200,
+   "seats_left": 4,
+   "holidays": []
+  },
+  {
+   "depart": "2026-11-14",
+   "return": "2026-11-18",
+   "outbound": {
+    "fare": 100000,
+    "class": "실속",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 541200,
+   "total_with_bags": 646200,
+   "seats_left": 6,
+   "holidays": []
+  },
+  {
+   "depart": "2026-11-16",
+   "return": "2026-11-20",
+   "outbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 100000,
+    "class": "실속",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 541200,
+   "total_with_bags": 667200,
+   "seats_left": 2,
+   "holidays": []
+  },
+  {
+   "depart": "2026-11-22",
+   "return": "2026-11-26",
+   "outbound": {
+    "fare": 100000,
+    "class": "실속",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 541200,
+   "total_with_bags": 604200,
+   "seats_left": 7,
+   "holidays": [
+    "일본연휴"
+   ]
+  },
+  {
+   "depart": "2026-10-30",
+   "return": "2026-11-03",
+   "outbound": {
+    "fare": 70000,
+    "class": "특가",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 60000,
+    "class": "특가",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 562200,
+   "total_with_bags": 688200,
+   "seats_left": 10,
+   "holidays": [
+    "일본문화의날"
+   ]
+  },
+  {
+   "depart": "2026-11-01",
+   "return": "2026-11-05",
+   "outbound": {
+    "fare": 70000,
+    "class": "특가",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 60000,
+    "class": "특가",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 562200,
+   "total_with_bags": 688200,
+   "seats_left": 7,
+   "holidays": [
+    "일본문화의날"
+   ]
+  },
+  {
+   "depart": "2026-11-05",
+   "return": "2026-11-09",
+   "outbound": {
+    "fare": 60000,
+    "class": "특가",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 80000,
+    "class": "특가",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 583200,
+   "total_with_bags": 688200,
+   "seats_left": 6,
+   "holidays": []
+  },
+  {
+   "depart": "2026-11-06",
+   "return": "2026-11-10",
+   "outbound": {
+    "fare": 120000,
+    "class": "일반",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 583200,
+   "total_with_bags": 688200,
+   "seats_left": 8,
+   "holidays": []
+  },
+  {
+   "depart": "2026-11-19",
+   "return": "2026-11-23",
+   "outbound": {
+    "fare": 70000,
+    "class": "특가",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 70000,
+    "class": "특가",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 583200,
+   "total_with_bags": 709200,
+   "seats_left": 11,
+   "holidays": [
+    "일본연휴"
+   ]
+  },
+  {
+   "depart": "2026-10-26",
+   "return": "2026-10-30",
+   "outbound": {
+    "fare": 60000,
+    "class": "특가",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 100000,
+    "class": "실속",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 625200,
+   "total_with_bags": 688200,
+   "seats_left": 7,
+   "holidays": []
+  },
+  {
+   "depart": "2026-11-07",
+   "return": "2026-11-11",
+   "outbound": {
+    "fare": 140000,
+    "class": "일반",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 625200,
+   "total_with_bags": 667200,
+   "seats_left": 9,
+   "holidays": []
+  },
+  {
+   "depart": "2026-11-10",
+   "return": "2026-11-14",
+   "outbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 140000,
+    "class": "일반",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 625200,
+   "total_with_bags": 751200,
+   "seats_left": 2,
+   "holidays": []
+  },
+  {
+   "depart": "2026-10-19",
+   "return": "2026-10-23",
+   "outbound": {
+    "fare": 70000,
+    "class": "특가",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 80000,
+    "class": "특가",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 629200,
+   "total_with_bags": 729200,
+   "seats_left": 9,
+   "holidays": []
+  },
+  {
+   "depart": "2026-10-20",
+   "return": "2026-10-24",
+   "outbound": {
+    "fare": 55000,
+    "class": "특가",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 100000,
+    "class": "실속",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 639200,
+   "total_with_bags": 689200,
+   "seats_left": 9,
+   "holidays": []
+  },
+  {
+   "depart": "2026-10-27",
+   "return": "2026-10-31",
+   "outbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 150000,
+    "class": "일반",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 646200,
+   "total_with_bags": 751200,
+   "seats_left": 6,
+   "holidays": []
+  },
+  {
+   "depart": "2026-11-09",
+   "return": "2026-11-13",
+   "outbound": {
+    "fare": 100000,
+    "class": "실속",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 70000,
+    "class": "특가",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 646200,
+   "total_with_bags": 709200,
+   "seats_left": 5,
+   "holidays": []
+  },
+  {
+   "depart": "2026-11-13",
+   "return": "2026-11-17",
+   "outbound": {
+    "fare": 150000,
+    "class": "일반",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 646200,
+   "total_with_bags": 751200,
+   "seats_left": 6,
+   "holidays": []
+  },
+  {
+   "depart": "2026-11-17",
+   "return": "2026-11-21",
+   "outbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 150000,
+    "class": "일반",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 646200,
+   "total_with_bags": 709200,
+   "seats_left": 9,
+   "holidays": []
+  },
+  {
+   "depart": "2026-10-11",
+   "return": "2026-10-15",
+   "outbound": {
+    "fare": 80000,
+    "class": "특가",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 80000,
+    "class": "특가",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 649200,
+   "total_with_bags": 729200,
+   "seats_left": 6,
+   "holidays": [
+    "일본연휴"
+   ]
+  },
+  {
+   "depart": "2026-10-14",
+   "return": "2026-10-18",
+   "outbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 140000,
+    "class": "일반",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 649200,
+   "total_with_bags": 769200,
+   "seats_left": 2,
+   "holidays": []
+  },
+  {
+   "depart": "2026-11-08",
+   "return": "2026-11-12",
+   "outbound": {
+    "fare": 160000,
+    "class": "일반",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 667200,
+   "total_with_bags": 793200,
+   "seats_left": 6,
+   "holidays": []
+  },
+  {
+   "depart": "2026-11-23",
+   "return": "2026-11-27",
+   "outbound": {
+    "fare": 160000,
+    "class": "일반",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 667200,
+   "total_with_bags": 793200,
+   "seats_left": 3,
+   "holidays": [
+    "일본연휴"
+   ]
+  },
+  {
+   "depart": "2026-10-18",
+   "return": "2026-10-22",
+   "outbound": {
+    "fare": 150000,
+    "class": "일반",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 669200,
+   "total_with_bags": 829200,
+   "seats_left": 2,
+   "holidays": []
+  },
+  {
+   "depart": "2026-10-25",
+   "return": "2026-10-29",
+   "outbound": {
+    "fare": 125000,
+    "class": "일반",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 60000,
+    "class": "특가",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 677700,
+   "total_with_bags": 740700,
+   "seats_left": 6,
+   "holidays": []
+  },
+  {
+   "depart": "2026-10-22",
+   "return": "2026-10-26",
+   "outbound": {
+    "fare": 80000,
+    "class": "특가",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 100000,
+    "class": "실속",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 679200,
+   "total_with_bags": 719200,
+   "seats_left": 8,
+   "holidays": []
+  },
+  {
+   "depart": "2026-10-02",
+   "return": "2026-10-06",
+   "outbound": {
+    "fare": 160000,
+    "class": "일반",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 689200,
+   "total_with_bags": 809200,
+   "seats_left": 4,
+   "holidays": [
+    "개천절"
+   ]
+  },
+  {
+   "depart": "2026-10-23",
+   "return": "2026-10-27",
+   "outbound": {
+    "fare": 170000,
+    "class": "일반",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 691200,
+   "total_with_bags": 838200,
+   "seats_left": 3,
+   "holidays": []
+  },
+  {
+   "depart": "2026-10-16",
+   "return": "2026-10-20",
+   "outbound": {
+    "fare": 170000,
+    "class": "일반",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 709200,
+   "total_with_bags": 849200,
+   "seats_left": 7,
+   "holidays": []
+  },
+  {
+   "depart": "2026-10-17",
+   "return": "2026-10-21",
+   "outbound": {
+    "fare": 170000,
+    "class": "일반",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 709200,
+   "total_with_bags": 789200,
+   "seats_left": 9,
+   "holidays": []
+  },
+  {
+   "depart": "2026-11-03",
+   "return": "2026-11-07",
+   "outbound": {
+    "fare": 50000,
+    "class": "특가",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 150000,
+    "class": "일반",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 709200,
+   "total_with_bags": 751200,
+   "seats_left": 6,
+   "holidays": [
+    "일본문화의날"
+   ]
+  },
+  {
+   "depart": "2026-10-04",
+   "return": "2026-10-08",
+   "outbound": {
+    "fare": 100000,
+    "class": "실속",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 100000,
+    "class": "실속",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 729200,
+   "total_with_bags": 729200,
+   "seats_left": 11,
+   "holidays": [
+    "대체휴일"
+   ]
+  },
+  {
+   "depart": "2026-10-13",
+   "return": "2026-10-17",
+   "outbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 180000,
+    "class": "일반",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 729200,
+   "total_with_bags": 849200,
+   "seats_left": 7,
+   "holidays": []
+  },
+  {
+   "depart": "2026-10-28",
+   "return": "2026-11-01",
+   "outbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 190000,
+    "class": "일반",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 730200,
+   "total_with_bags": 835200,
+   "seats_left": 7,
+   "holidays": []
+  },
+  {
+   "depart": "2026-11-18",
+   "return": "2026-11-22",
+   "outbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 190000,
+    "class": "일반",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 730200,
+   "total_with_bags": 835200,
+   "seats_left": 5,
+   "holidays": []
+  },
+  {
+   "depart": "2026-11-25",
+   "return": "2026-11-29",
+   "outbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 190000,
+    "class": "일반",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 730200,
+   "total_with_bags": 835200,
+   "seats_left": 9,
+   "holidays": []
+  },
+  {
+   "depart": "2026-11-11",
+   "return": "2026-11-15",
+   "outbound": {
+    "fare": 55000,
+    "class": "특가",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 160000,
+    "class": "일반",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 740700,
+   "total_with_bags": 793200,
+   "seats_left": 10,
+   "holidays": []
+  },
+  {
+   "depart": "2026-10-21",
+   "return": "2026-10-25",
+   "outbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 190000,
+    "class": "일반",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 748200,
+   "total_with_bags": 908200,
+   "seats_left": 8,
+   "holidays": []
+  },
+  {
+   "depart": "2026-10-09",
+   "return": "2026-10-13",
+   "outbound": {
+    "fare": 190000,
+    "class": "일반",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 749200,
+   "total_with_bags": 909200,
+   "seats_left": 7,
+   "holidays": [
+    "한글날"
+   ]
+  },
+  {
+   "depart": "2026-10-05",
+   "return": "2026-10-09",
+   "outbound": {
+    "fare": 70000,
+    "class": "특가",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 150000,
+    "class": "일반",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 769200,
+   "total_with_bags": 829200,
+   "seats_left": 5,
+   "holidays": [
+    "대체휴일"
+   ]
+  },
+  {
+   "depart": "2026-11-15",
+   "return": "2026-11-19",
+   "outbound": {
+    "fare": 130000,
+    "class": "일반",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 100000,
+    "class": "실속",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 772200,
+   "total_with_bags": 772200,
+   "seats_left": 10,
+   "holidays": []
+  },
+  {
+   "depart": "2026-10-24",
+   "return": "2026-10-28",
+   "outbound": {
+    "fare": 180000,
+    "class": "일반",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 55000,
+    "class": "특가",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 784700,
+   "total_with_bags": 837200,
+   "seats_left": 14,
+   "holidays": []
+  },
+  {
+   "depart": "2026-09-25",
+   "return": "2026-09-29",
+   "outbound": {
+    "fare": 209800,
+    "class": "일반",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 788800,
+   "total_with_bags": 948800,
+   "seats_left": 3,
+   "holidays": [
+    "추석"
+   ]
+  },
+  {
+   "depart": "2026-09-26",
+   "return": "2026-09-30",
+   "outbound": {
+    "fare": 209800,
+    "class": "일반",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 788800,
+   "total_with_bags": 868800,
+   "seats_left": 2,
+   "holidays": [
+    "추석연휴"
+   ]
+  },
+  {
+   "depart": "2026-10-06",
+   "return": "2026-10-10",
+   "outbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 209800,
+    "class": "일반",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 788800,
+   "total_with_bags": 888800,
+   "seats_left": 2,
+   "holidays": [
+    "한글날"
+   ]
+  },
+  {
+   "depart": "2026-10-07",
+   "return": "2026-10-11",
+   "outbound": {
+    "fare": 20000,
+    "class": "숏트립",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 209800,
+    "class": "일반",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 788800,
+   "total_with_bags": 888800,
+   "seats_left": 5,
+   "holidays": [
+    "한글날"
+   ]
+  },
+  {
+   "depart": "2026-10-08",
+   "return": "2026-10-12",
+   "outbound": {
+    "fare": 150000,
+    "class": "일반",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 80000,
+    "class": "특가",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 789200,
+   "total_with_bags": 829200,
+   "seats_left": 8,
+   "holidays": [
+    "한글날"
+   ]
+  },
+  {
+   "depart": "2026-09-27",
+   "return": "2026-10-01",
+   "outbound": {
+    "fare": 160000,
+    "class": "일반",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 80000,
+    "class": "특가",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 809200,
+   "total_with_bags": 849200,
+   "seats_left": 9,
+   "holidays": [
+    "추석연휴"
+   ]
+  },
+  {
+   "depart": "2026-10-03",
+   "return": "2026-10-07",
+   "outbound": {
+    "fare": 209800,
+    "class": "일반",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 55000,
+    "class": "특가",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 858800,
+   "total_with_bags": 908800,
+   "seats_left": 9,
+   "holidays": [
+    "개천절"
+   ]
+  },
+  {
+   "depart": "2026-10-15",
+   "return": "2026-10-19",
+   "outbound": {
+    "fare": 170000,
+    "class": "일반",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 100000,
+    "class": "실속",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 869200,
+   "total_with_bags": 869200,
+   "seats_left": 12,
+   "holidays": []
+  },
+  {
+   "depart": "2026-10-12",
+   "return": "2026-10-16",
+   "outbound": {
+    "fare": 160000,
+    "class": "일반",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 130000,
+    "class": "일반",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 909200,
+   "total_with_bags": 909200,
+   "seats_left": 14,
+   "holidays": [
+    "일본연휴"
+   ]
+  },
+  {
+   "depart": "2026-11-04",
+   "return": "2026-11-08",
+   "outbound": {
+    "fare": 120000,
+    "class": "일반",
+    "dep": "16:35",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 180000,
+    "class": "일반",
+    "dep": "18:40",
+    "arr": "19:50"
+   },
+   "total": 919200,
+   "total_with_bags": 919200,
+   "seats_left": 16,
+   "holidays": []
+  },
+  {
+   "depart": "2026-09-30",
+   "return": "2026-10-04",
+   "outbound": {
+    "fare": 100000,
+    "class": "실속",
+    "dep": "16:30",
+    "arr": "17:40"
+   },
+   "inbound": {
+    "fare": 209800,
+    "class": "일반",
+    "dep": "18:35",
+    "arr": "19:55"
+   },
+   "total": 948800,
+   "total_with_bags": 948800,
+   "seats_left": 9,
+   "holidays": [
+    "개천절"
+   ]
+  }
+ ]
+}
