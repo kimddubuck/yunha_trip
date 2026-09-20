@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>마쓰야마 4박5일 가이드맵</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --paper:#FBF6EC; --ink:#1F2A33; --ink-soft:#5B6670;
+  --sea:#2F6F8F; --sea-light:#BFD9E6; --land:#EEE4CF;
+  --mikan:#E8892B; --moss:#5E7A4F; --line:#D8CFBC; --card:#FFFDF8;
+  --d1:#8A8F96; --d2:#E8892B; --d3:#2F6F8F; --d4:#5E7A4F; --d5:#B24A3B;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15191E; --ink:#EDE6D8; --ink-soft:#A9B1B9;
+    --sea:#5FA3C4; --sea-light:#1E3A4A; --land:#2A2F35;
+    --line:#333A42; --card:#1D2228;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15191E; --ink:#EDE6D8; --ink-soft:#A9B1B9;
+  --sea:#5FA3C4; --sea-light:#1E3A4A; --land:#2A2F35;
+  --line:#333A42; --card:#1D2228;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+*{box-sizing:inherit;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans KR",system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.65;font-size:16px}
+img{max-width:100%}
+h1,h2,h3,.serif{font-family:"Gowun Batang","Noto Serif KR",Georgia,serif}
+.wrap{max-width:760px;margin:0 auto;padding-block:0 60px;padding-left:18px;padding-right:18px}
+header{padding-block:28px 12px}
+header .kicker{color:var(--mikan);font-weight:700;font-size:14px}
+header h1{font-size:30px;line-height:1.25;margin:6px 0 10px;text-wrap:balance}
+header p{color:var(--ink-soft);font-size:15px}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:16px 0 6px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14px}
+.fact b{display:block;font-size:12px;color:var(--ink-soft);font-weight:500;margin-bottom:2px}
+/* map */
+.mapbox{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:18px}
+.mapbox svg{display:block;width:100%;height:auto}
+.dayfilter{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--line);overflow-x:auto}
+.dayfilter button{flex:0 0 auto;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer;white-space:nowrap}
+.dayfilter button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+button:focus-visible,a:focus-visible,.pin:focus-visible{outline:2px solid var(--mikan);outline-offset:2px}
+.legend{padding:10px 14px 12px;font-size:13px;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:10px 14px}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px;background:var(--c)}
+.pin{cursor:pointer}
+.pin circle.dot{stroke:#fff;stroke-width:2}
+.pin text{font-family:"Noto Sans KR",sans-serif;font-size:11px;font-weight:700;fill:var(--ink);paint-order:stroke;stroke:var(--card);stroke-width:3px;stroke-linejoin:round}
+.pin.dim{opacity:.18}
+.route{fill:none;stroke-width:2.5;stroke-linecap:round;stroke-dasharray:5 5}
+.route.dim{opacity:.12}
+.sealabel{font-family:"Gowun Batang",serif;font-size:12px;fill:var(--sea);opacity:.85;letter-spacing:1px}
+.svgtext{font-family:"Noto Sans KR",sans-serif;font-size:10px;fill:var(--ink-soft)}
+/* live google map panel */
+.gbox{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:12px}
+.gbox .ghead{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.gbox .gname{font-weight:700;font-size:15px}
+.gbox .gname .jp{font-weight:400;font-size:13px;color:var(--ink-soft);margin-left:6px}
+.gframe{position:relative;width:100%;max-width:100%;aspect-ratio:4/3;background:var(--sea-light)}
+@media(min-width:560px){.gframe{aspect-ratio:16/9}}
+.gframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.gfallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:18px;font-size:14px;color:var(--ink-soft)}
+/* buttons */
+.btn{display:inline-block;font:inherit;font-size:13px;font-weight:700;line-height:1.3;border:1px solid var(--mikan);background:var(--mikan);color:#fff;border-radius:8px;padding:7px 12px;text-decoration:none;cursor:pointer;white-space:nowrap}
+.btn.ghost{background:transparent;color:var(--mikan)}
+.btn.quiet{background:transparent;color:var(--ink-soft);border-color:var(--line)}
+.acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+/* sections */
+section{margin-top:34px}
+section > h2{font-size:22px;margin-bottom:6px;text-wrap:balance}
+section > .lead{color:var(--ink-soft);font-size:15px;margin-bottom:14px}
+.day{border-left:4px solid var(--c);padding-left:14px;margin-bottom:26px}
+.day h3{font-size:19px;margin-bottom:2px}
+.day .sub{font-size:14px;color:var(--ink-soft);margin-bottom:10px}
+.stop{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:8px;scroll-margin-top:12px}
+.stop.flash{box-shadow:0 0 0 3px var(--mikan)}
+.stop .t{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.stop .time{font-size:13px;color:var(--c);font-weight:700;min-width:44px}
+.stop .name{font-weight:700;font-size:16px}
+.stop .jp{font-size:13px;color:var(--ink-soft)}
+.stop p{font-size:14.5px;margin-top:4px}
+.stop .baby{margin-top:6px;font-size:13.5px;color:var(--moss);background:color-mix(in srgb,var(--moss) 10%,transparent);border-radius:8px;padding:6px 9px}
+.stop .baby::before{content:"👶 ";}
+.stop .drive{font-size:13px;color:var(--ink-soft);margin-top:6px}
+.stop .drive::before{content:"🚗 ";}
+.grid{display:grid;grid-template-columns:1fr;gap:8px}
+@media(min-width:560px){.grid.two{grid-template-columns:1fr 1fr}}
+.food{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.food b{font-size:15.5px}
+.food .jp{color:var(--ink-soft);font-size:13px}
+.food p{font-size:14px;margin-top:4px}
+.tag{display:inline-block;font-size:12px;border-radius:6px;padding:1px 7px;margin-left:4px;vertical-align:1px;background:color-mix(in srgb,var(--mikan) 15%,transparent);color:var(--mikan);font-weight:700}
+.tag.ok{background:color-mix(in srgb,var(--moss) 14%,transparent);color:var(--moss)}
+/* rental cards */
+.rent{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.rent.pick{border-color:var(--mikan);border-width:2px}
+.rent .rh{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.rent .rh b{font-size:15.5px}
+.rent .rh .jp{font-size:12.5px;color:var(--ink-soft)}
+.rent dl{margin-top:8px;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:14px;align-items:baseline}
+.rent dt{color:var(--ink-soft);font-size:12.5px;white-space:nowrap}
+.rent dd{font-variant-numeric:tabular-nums}
+.rent .warn{color:var(--d5);font-weight:700}
+.rent .good{color:var(--moss);font-weight:700}
+ul.plain{list-style:none}
+ul.plain li{padding:9px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+ul.plain li:last-child{border-bottom:none}
+ul.plain li b{display:block;font-size:15px}
+.note{background:color-mix(in srgb,var(--mikan) 9%,transparent);border-left:4px solid var(--mikan);border-radius:0 10px 10px 0;padding:10px 14px;font-size:14.5px;margin:12px 0}
+.note.sea{background:color-mix(in srgb,var(--sea) 9%,transparent);border-left-color:var(--sea)}
+/* save list */
+.savelist{list-style:none;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.savelist li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line)}
+.savelist li:last-child{border-bottom:none}
+.savelist li.hd{background:color-mix(in srgb,var(--ink) 5%,transparent);font-weight:700;font-size:13px;color:var(--ink-soft);letter-spacing:.04em}
+.savelist .pl{min-width:0}
+.savelist .pl b{display:block;font-size:14.5px;font-weight:500}
+.savelist .pl span{font-size:12.5px;color:var(--ink-soft)}
+.steps{list-style:none;counter-reset:s}
+.steps li{counter-increment:s;display:flex;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.steps li:last-child{border-bottom:none}
+.steps li::before{content:counter(s);flex:0 0 22px;height:22px;border-radius:50%;background:var(--sea);color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center;margin-top:2px}
+.check{list-style:none}
+.check li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.check li:last-child{border:none}
+.check input{margin-top:5px;width:18px;height:18px;flex:0 0 auto;accent-color:var(--mikan)}
+.check label{cursor:pointer}
+.check input:checked + label{color:var(--ink-soft);text-decoration:line-through}
+footer{margin-top:40px;font-size:12.5px;color:var(--ink-soft);line-height:1.6}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">부산 → 마쓰야마 · 에어부산 직항 · 렌터카</div>
+  <h1>마쓰야마 4박5일<br>15개월 아기와 소도시 감성 여행 가이드맵</h1>
+  <p>10월, 성인 2명 + 아기 1명. 도착 첫 밤은 마쓰야마 시내, 가운데 2박3일은 렌터카로 소도시, 마지막 1박은 시내 중심부 호텔. 꼭 가는 곳: 시모나다역 · 온천 · 로컬 음식.</p>
+  <div class="facts">
+    <div class="fact"><b>가는 비행기</b>부산 16:30 → 마쓰야마 17:40</div>
+    <div class="fact"><b>오는 비행기</b>마쓰야마 18:35 → 부산 19:55</div>
+    <div class="fact"><b>10월 날씨</b>낮 20~24℃ · 아침저녁 13~16℃</div>
+    <div class="fact"><b>10월 중순 일몰</b>약 17:30 (시모나다역 기준)</div>
+    <div class="fact" style="grid-column:1/-1"><b>공항 이동</b>한국 여권 제시 → 한국인 전용 무료 셔틀 (공항 → JR마쓰야마역 → 마쓰야마시역 → 오카이도 → 도고온천역)</div>
+  </div>
+</header>
+
+<!-- ===== MAP ===== -->
+<div class="mapbox" id="map">
+  <div class="dayfilter" role="group" aria-label="일차별 보기">
+    <button type="button" data-day="all" aria-pressed="true">전체</button>
+    <button type="button" data-day="1">1일차 셔틀</button>
+    <button type="button" data-day="2">2일차 시내·온천</button>
+    <button type="button" data-day="3">3일차 시모나다</button>
+    <button type="button" data-day="4">4일차 우치코·오즈</button>
+    <button type="button" data-day="5">5일차 시내·귀국</button>
+  </div>
+
+  <svg viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="에히메현 마쓰야마 주변 여행 지도">
+    <rect width="400" height="520" fill="var(--sea-light)"/>
+    <!-- land (Ehime coast, stylised) -->
+    <path d="M400,0 L400,520 L0,520 L0,405 C15,398 30,388 48,372 C68,356 85,346 95,338 C110,326 122,312 132,296 C142,280 146,262 150,238 C153,214 156,196 166,178 C178,160 190,146 203,122 C216,100 232,92 250,86 C272,78 300,72 328,48 C352,28 372,14 400,0 Z" fill="var(--land)" stroke="var(--sea)" stroke-opacity=".35" stroke-width="1.2"/>
+    <!-- islands -->
+    <ellipse cx="136" cy="162" rx="11" ry="7" fill="var(--land)" stroke="var(--sea)" stroke-opacity=".35"/>
+    <ellipse cx="196" cy="98" rx="8" ry="6" fill="var(--land)" stroke="var(--sea)" stroke-opacity=".35"/>
+    <ellipse cx="315" cy="28" rx="14" ry="8" fill="var(--land)" stroke="var(--sea)" stroke-opacity=".35"/>
+    <ellipse cx="350" cy="14" rx="12" ry="7" fill="var(--land)" stroke="var(--sea)" stroke-opacity=".35"/>
+    <ellipse cx="290" cy="42" rx="9" ry="6" fill="var(--land)" stroke="var(--sea)" stroke-opacity=".35"/>
+    <text class="sealabel" x="60" y="120">세토내해 (瀬戸内海)</text>
+    <text class="sealabel" x="18" y="300">이요나다 (伊予灘)</text>
+    <text class="svgtext" x="332" y="20">시마나미 해도 →</text>
+    <text class="svgtext" x="272" y="300">← 시내에서 약 20분</text>
+    <text class="svgtext" x="150" y="505">내륙 · 산길 (국도 56호)</text>
+    <!-- N arrow -->
+    <g transform="translate(372,470)"><path d="M0,-14 L6,6 L0,2 L-6,6 Z" fill="var(--ink)"/><text class="svgtext" x="-4" y="20" style="font-weight:700">N</text></g>
+
+    <!-- routes -->
+    <path class="route" data-day="1" d="M167,218 C180,218 190,217 199,216 C210,210 218,203 224,198" stroke="var(--d1)"/>
+    <path class="route" data-day="2" d="M224,198 C220,204 216,206 211,204 C206,202 200,204 194,208" stroke="var(--d2)"/>
+    <path class="route" data-day="3" d="M224,198 C205,190 188,184 170,178 C160,200 150,230 148,262 C140,290 120,315 106,334" stroke="var(--d3)"/>
+    <path class="route" data-day="4" d="M224,198 C215,250 190,300 170,340 C160,380 150,420 135,452 C112,462 85,470 64,475" stroke="var(--d4)"/>
+    <path class="route" data-day="5" d="M211,204 C220,230 228,258 228,280 C210,275 190,262 173,248 C170,238 168,228 167,218" stroke="var(--d5)"/>
+
+    <!-- pins -->
+    <g class="pin" data-day="1 5" data-target="s-airport" data-q="松山空港" data-label="마쓰야마 공항" tabindex="0" role="button" aria-label="마쓰야마 공항"><circle class="dot" cx="167" cy="218" r="8" fill="var(--d1)"/><text x="167" y="222" text-anchor="middle" fill="#fff" style="fill:#fff;stroke:none;font-size:9px">✈</text><text x="178" y="214">마쓰야마 공항</text></g>
+    <g class="pin" data-day="2" data-target="s-castle" data-q="松山城" data-label="마쓰야마성" tabindex="0" role="button" aria-label="마쓰야마성"><circle class="dot" cx="211" cy="204" r="6" fill="var(--d2)"/><text x="219" y="200">마쓰야마성</text></g>
+    <g class="pin" data-day="1 2" data-target="s-dogo" data-q="道後温泉本館" data-label="도고온천" tabindex="0" role="button" aria-label="도고온천"><circle class="dot" cx="228" cy="188" r="6" fill="var(--d2)"/><text x="236" y="186">도고온천 · 숙소</text></g>
+    <g class="pin" data-day="3" data-target="s-mitsu" data-q="三津の渡し" data-label="미쓰하마" tabindex="0" role="button" aria-label="미쓰하마"><circle class="dot" cx="170" cy="178" r="6" fill="var(--d3)"/><text x="176" y="172">미쓰하마</text></g>
+    <g class="pin" data-day="3" data-target="s-futami" data-q="道の駅 ふたみ" data-label="미치노에키 후타미" tabindex="0" role="button" aria-label="미치노에키 후타미"><circle class="dot" cx="122" cy="316" r="5" fill="var(--d3)"/><text x="130" y="314">미치노에키 후타미</text></g>
+    <g class="pin" data-day="3" data-target="s-shimonada" data-q="下灘駅" data-label="시모나다역" tabindex="0" role="button" aria-label="시모나다역"><circle class="dot" cx="106" cy="334" r="8" fill="var(--d3)"/><text x="116" y="345">시모나다역 ★</text></g>
+    <g class="pin" data-day="4" data-target="s-uchiko" data-q="内子座" data-label="우치코 옛거리" tabindex="0" role="button" aria-label="우치코"><circle class="dot" cx="135" cy="452" r="6" fill="var(--d4)"/><text x="143" y="448">우치코</text></g>
+    <g class="pin" data-day="4" data-target="s-ozu" data-q="大洲城" data-label="오즈성" tabindex="0" role="button" aria-label="오즈"><circle class="dot" cx="64" cy="475" r="6" fill="var(--d4)"/><text x="30" y="493">오즈</text></g>
+    <g class="pin" data-day="5" data-target="s-tobe" data-q="砥部焼伝統産業会館" data-label="도베 도자기 마을" tabindex="0" role="button" aria-label="도베 도자기 마을"><circle class="dot" cx="228" cy="280" r="6" fill="var(--d5)"/><text x="236" y="284">도베 도자기 마을</text></g>
+    <g class="pin" data-day="5" data-target="s-emifull" data-q="エミフルMASAKI" data-label="에미풀 마사키" tabindex="0" role="button" aria-label="에미풀 마사키"><circle class="dot" cx="173" cy="248" r="6" fill="var(--d5)"/><text x="181" y="252">에미풀 마사키</text></g>
+    <g class="pin" data-day="1 2 4 5" data-target="s-hotel" data-q="トヨタレンタカー 松山店" data-label="시내 렌터카 영업소·호텔" tabindex="0" role="button" aria-label="시내 렌터카 영업소와 호텔"><circle class="dot" cx="199" cy="216" r="6" fill="var(--d4)"/><text x="100" y="227">시내 렌터카·호텔</text></g>
+  </svg>
+  <div class="legend">
+    <span style="--c:var(--d1)">1일차 무료 셔틀</span>
+    <span style="--c:var(--d2)">2일차 시내·온천</span>
+    <span style="--c:var(--d3)">3일차 바다·시모나다</span>
+    <span style="--c:var(--d4)">4일차 우치코·오즈</span>
+    <span style="--c:var(--d5)">5일차 시내·귀국</span>
+  </div>
+</div>
+
+<!-- ===== LIVE GOOGLE MAP ===== -->
+<div class="gbox" id="gbox">
+  <div class="ghead">
+    <div class="gname" id="g-name">마쓰야마 공항 <span class="jp">松山空港</span></div>
+    <a class="btn" id="g-open" href="https://www.google.com/maps/search/?api=1&amp;query=松山空港" target="_blank" rel="noopener">구글맵 앱에서 열기 ↗</a>
+  </div>
+  <div class="gframe" id="g-frame">
+    <div class="gfallback" id="g-fallback">
+      <div>실제 지도는 위 버튼으로 구글맵에서 열어 주세요.</div>
+    </div>
+  </div>
+</div>
+<p style="font-size:13px;color:var(--ink-soft);margin-top:8px">위쪽은 위치 관계를 한눈에 보는 약도, 아래는 실제 구글 지도입니다. 약도의 핀이나 일정 카드의 <b>‘여기 지도 보기’</b>를 누르면 아래 지도가 그 장소로 바뀝니다. <b>‘구글맵 열기’</b>를 누르면 폰의 구글맵 앱으로 넘어가서 바로 ★ 저장할 수 있어요.</p>
+
+<!-- ===== RENTAL CAR (WHERE TO RENT) ===== -->
+<section id="rental">
+  <h2>렌터카, 공항에서 빌릴까 시내에서 빌릴까</h2>
+  <p class="lead">결론: <b>시내(JR마쓰야마역 주변)에서 빌리세요.</b> 한국인 무료 셔틀이 있고, 시내에서 자는 밤이 2박(첫날·마지막날)이나 되기 때문입니다. 핵심은 “어디서”가 아니라 <b>“차를 며칠이나 붙잡고 있느냐”</b>입니다.</p>
+
+  <div class="note sea">
+    <b>차가 정말 필요한 건 소도시 2박3일뿐입니다.</b><br>
+    첫날 밤과 마지막 밤은 시내에 있고, 시내는 노면전차·버스·도보로 다 됩니다. 그런데 공항에서 빌리면 <b>차를 5일치 빌리고, 시내 숙소 주차비를 2박치 내는</b> 구조가 돼요. 시내에서 빌리면 3일치면 끝납니다.
+  </div>
+
+  <div class="grid two" style="margin-top:14px">
+    <div class="rent pick">
+      <div class="rh"><b>시내 렌트</b> <span class="jp">2일차 아침 픽업 · 4일차 저녁 반납</span> <span class="tag">추천</span></div>
+      <dl>
+        <dt>렌트 일수</dt><dd class="good">3일</dd>
+        <dt>1일차 이동</dt><dd class="good">무료 셔틀 · 0엔</dd>
+        <dt>시내 주차비</dt><dd class="good">2박 모두 0엔</dd>
+        <dt>밤 운전</dt><dd class="good">없음</dd>
+        <dt>시내 운전</dt><dd class="good">아침에 10분만 통과</dd>
+      </dl>
+      <p style="font-size:13.5px;margin-top:8px;color:var(--ink-soft)">도착 당일은 셔틀 타고 숙소로 직행. 다음 날 아침 맑은 정신에 차를 받아 바로 소도시로 빠져나갑니다.</p>
+    </div>
+    <div class="rent">
+      <div class="rh"><b>공항 렌트</b> <span class="jp">1일차 저녁 픽업 · 5일차 반납</span></div>
+      <dl>
+        <dt>렌트 일수</dt><dd class="warn">5일</dd>
+        <dt>1일차 이동</dt><dd>내 차로 편하게</dd>
+        <dt>시내 주차비</dt><dd class="warn">2박 유료</dd>
+        <dt>밤 운전</dt><dd class="warn">도착 당일 1시간</dd>
+        <dt>수속</dt><dd class="warn">지친 저녁에 40~60분</dd>
+      </dl>
+      <p style="font-size:13.5px;margin-top:8px;color:var(--ink-soft)">짐과 아기를 한 번도 안 옮겨도 된다는 건 분명한 장점. 하지만 그 대가가 렌트 2일치 + 주차 2박 + 밤 운전입니다.</p>
+    </div>
+  </div>
+
+  <div class="note" style="margin-top:14px">
+    <b>“시내 운전이 힘들 것 같다”는 걱정 — 오히려 시내 렌트가 답입니다</b><br>
+    마쓰야마 시내에서 진짜 부담스러운 건 <b>노면전차(트램)</b>입니다. 도로 한가운데를 전차가 달리고, 오카이도·마쓰야마시역 부근은 차선과 선로가 겹쳐서 우회전할 때 전차 신호를 따로 봐야 해요. 좌측통행 첫날 밤에 이걸 하는 건 확실히 부담입니다.<br>
+    그런데 시내에서 빌리면 <b>아침에 차를 받아 국도·고속도로로 곧장 빠져나가니 트램 구간을 지나는 시간이 10분 남짓</b>입니다. 차를 시내에 세워두는 날이 아예 없으니 시내 운전 총량이 오히려 줄어요.
+  </div>
+
+  <h3 style="font-size:18px;margin-top:24px;margin-bottom:8px">1일차 — 한국인 전용 무료 셔틀</h3>
+  <div class="grid two">
+    <div class="rent">
+      <div class="rh"><b>무료 셔틀버스</b> <span class="jp">한국 여권 제시 · 예약 불필요</span></div>
+      <dl>
+        <dt>노선</dt><dd>공항 → JR마쓰야마역 → 마쓰야마시역 → 이치반초(오카이도) → 도고온천역 → 도고프린스호텔 → 오쿠도고</dd>
+        <dt>요금</dt><dd class="good">무료 (한국 여권)</dd>
+        <dt>수속</dt><dd>공항 1층 인포메이션에서 여권 제시 후 쿠폰 수령</dd>
+        <dt>주의</dt><dd class="warn">선착순 · 편당 1회 운행</dd>
+        <dt>문의</dt><dd>우에니시 운송 아이버스 089-983-2244</dd>
+      </dl>
+      <p style="font-size:13.5px;margin-top:8px;color:var(--ink-soft)">에어부산 편 기준 시각은 항공 일정이 바뀔 수 있으니 <b>Visit Ehime 공식 페이지에서 출발 직전 재확인</b>하세요. 인포메이션에서 주는 쿠폰북(약 8곳 무료·할인)도 같이 챙기고요.</p>
+    </div>
+    <div class="rent">
+      <div class="rh"><b>셔틀을 놓쳤다면</b> <span class="jp">이요테쓰 리무진버스</span></div>
+      <dl>
+        <dt>배차</dt><dd>거의 매시간</dd>
+        <dt>마쓰야마시역</dt><dd>약 15~20분</dd>
+        <dt>도고온천역</dt><dd>약 40분 · 1,200엔</dd>
+        <dt>택시</dt><dd>시내까지 20~30분</dd>
+      </dl>
+      <p style="font-size:13.5px;margin-top:8px;color:var(--ink-soft)">무료 셔틀은 선착순이라 못 탈 수도 있지만, 일반 리무진버스가 바로 뒤에 있습니다. 유모차는 접어서 짐칸에.</p>
+    </div>
+  </div>
+
+  <h3 style="font-size:18px;margin-top:24px;margin-bottom:8px">2일차 아침에 갈 시내 영업소</h3>
+  <p class="lead">전부 JR마쓰야마역에서 도보 2~5분. <b>4일차 저녁에 반납</b>할 거라 마감 시각이 가장 중요합니다.</p>
+  <div class="grid two">
+    <div class="rent pick">
+      <div class="rh"><b>토요타 렌터카 마쓰야마점</b> <span class="jp">トヨタレンタカー 松山店</span> <span class="tag">추천</span></div>
+      <dl>
+        <dt>마감</dt><dd class="good">20:00</dd>
+        <dt>위치</dt><dd>宮田町109-6 · JR마쓰야마역 도보 5분</dd>
+        <dt>장점</dt><dd>차량 상태 · 차일드시트 재고</dd>
+      </dl>
+      <p style="font-size:13.5px;margin-top:8px;color:var(--ink-soft)">20시 마감이라 4일차에 소도시에서 늦게 돌아와도 여유가 있습니다. 아기 일정은 늘 밀리니 이 1시간이 큽니다.</p>
+    </div>
+    <div class="rent">
+      <div class="rh"><b>오릭스 마쓰야마역앞점</b> <span class="jp">オリックスレンタカー 松山駅前店</span></div>
+      <dl>
+        <dt>마감</dt><dd class="warn">19:00</dd>
+        <dt>위치</dt><dd>JR마쓰야마역 도보 3분</dd>
+        <dt>장점</dt><dd>요금이 저렴한 편</dd>
+      </dl>
+      <p style="font-size:13.5px;margin-top:8px;color:var(--ink-soft)">싸지만 19시 마감. 4일차 복귀를 18시로 잡을 자신이 있을 때만.</p>
+    </div>
+    <div class="rent">
+      <div class="rh"><b>타임즈 카 마쓰야마역앞점</b> <span class="jp">タイムズカー 松山駅前店</span></div>
+      <dl>
+        <dt>영업</dt><dd class="warn">08:00 ~ 19:00</dd>
+        <dt>위치</dt><dd>三番町8-9-3 · JR마쓰야마역 도보 4분</dd>
+      </dl>
+      <p style="font-size:13.5px;margin-top:8px;color:var(--ink-soft)">오릭스와 같은 조건. 가격 비교해서 싼 쪽으로.</p>
+    </div>
+    <div class="rent">
+      <div class="rh"><b>그래도 공항에서 받겠다면</b> <span class="jp">松山空港 レンタカーカウンター</span></div>
+      <dl>
+        <dt>위치</dt><dd>짐 찾는 곳 나와 오른쪽 끝</dd>
+        <dt>토요타·오릭스</dt><dd class="good">~20:00 · 직원 상주</dd>
+        <dt>타임즈</dt><dd class="warn">접수 19:00 마감</dd>
+        <dt>닛산</dt><dd class="warn">무인 · 전화 후 10~15분 대기</dd>
+      </dl>
+      <p style="font-size:13.5px;margin-top:8px;color:var(--ink-soft)">공항은 사무실이 안에 없고 셔틀로 3~5분 이동합니다. 17:40 도착이면 <b>19:00쯤 출발</b>이 현실적. 토요타·오릭스만 고르세요.</p>
+    </div>
+  </div>
+
+  <h3 style="font-size:18px;margin-top:24px;margin-bottom:8px">시내 렌트 기준 타임라인</h3>
+  <ol class="steps">
+    <li><b>1일차 17:40</b> 공항 도착 → 1층 인포메이션 여권 제시 → 무료 셔틀 → 시내 숙소. 저녁·장보기는 걸어서.</li>
+    <li><b>2일차 09:00</b> JR마쓰야마역 영업소 픽업. 차일드시트 장착 확인하고 바로 소도시로 출발.</li>
+    <li><b>2~4일차</b> 소도시 2박3일. 숙소 주차는 대부분 무료.</li>
+    <li><b>4일차 18:00</b> 시내 복귀 → 주유(満タン) → 반납. 중심부 호텔 체크인, <b>주차비 0엔</b>.</li>
+    <li><b>5일차</b> 시내에서 도고온천·쇼핑 → 무료 셔틀 또는 리무진버스로 공항 → 18:35 출발.</li>
+  </ol>
+
+  <h3 style="font-size:18px;margin-top:24px;margin-bottom:8px">예약할 때 놓치기 쉬운 것</h3>
+  <ul class="plain">
+    <li><b>차일드시트는 ‘재고 한정 옵션’</b>일본은 6세 미만 의무라 안 하면 아예 차를 못 받습니다. 15개월(약 10kg)은 <b>幼児用チャイルドシート</b>. 예약 화면에서 수량 1을 꼭 체크하세요. 보통 1회 550~1,100엔.</li>
+    <li><b>차는 한 급 크게</b>성인 2 + 아기 + 캐리어 2 + 유모차 + 아기띠. 경차·콤팩트(ヤリス급)는 트렁크가 모자랍니다. <b>시엔타·프리드 같은 소형 미니밴</b>이나 최소 준중형으로. 뒷문이 슬라이딩이면 좁은 주차장에서 아기 태우기가 훨씬 편해요.</li>
+    <li><b>면책보상 + NOC 보상은 무조건 가입</b>좌측통행 + 좁은 시골길 + 아기. 하루 1,100~2,200엔이면 긁었을 때 마음이 완전히 달라집니다.</li>
+    <li><b>ETC 카드 대여</b>소도시로 나갈 때 고속도로(마쓰야마 자동차도)를 씁니다. 300~500엔이면 톨게이트에서 안 멈춰도 돼요.</li>
+    <li><b>픽업·반납은 같은 영업소로</b>다른 지점 반납(乗り捨て)은 추가 요금이 붙습니다. 공항 픽업 → 시내 반납도 마찬가지.</li>
+    <li><b>비교 사이트가 쌉니다</b>じゃらんレンタカー·楽天トラベル 쪽이 공식 홈페이지보다 20~30% 싼 경우가 많아요. 단 차일드시트 옵션이 예약에 포함됐는지 꼭 확인.</li>
+  </ul>
+
+  <div class="acts">
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=トヨタレンタカー 松山店 宮田町" target="_blank" rel="noopener">토요타 마쓰야마점 지도</a>
+    <a class="btn quiet" href="https://www.google.com/maps/search/?api=1&amp;query=松山空港 レンタカーカウンター" target="_blank" rel="noopener">공항 카운터 지도</a>
+    <button type="button" class="btn ghost" data-q="トヨタレンタカー 松山店" data-label="토요타 렌터카 마쓰야마점">여기 지도 보기</button>
+  </div>
+</section>
+
+<!-- ===== ITINERARY ===== -->
+<section id="plan">
+  <h2>일정표 — 아기 낮잠 시간에 맞춘 하루 한 코스</h2>
+  <p class="lead">15개월 아기는 하루에 큰 일정 하나가 딱 좋습니다. 오전에 움직이고, 점심 후 차에서 낮잠, 오후에 한 곳 더. 저녁은 무리하지 않고 숙소로.</p>
+
+  <div class="day" style="--c:var(--d1)">
+    <h3>1일차 · 도착하는 날</h3>
+    <div class="sub">공항 → 무료 셔틀 → 시내 숙소 → 장보기 (차 없는 날)</div>
+    <div class="stop" id="s-airport"><div class="t"><span class="time">17:40</span><span class="name">마쓰야마 공항 도착</span><span class="jp">松山空港</span></div>
+      <p>작은 공항이라 입국심사~짐 찾기까지 보통 30~40분. 나오자마자 <b>1층 인포메이션</b>으로 가서 한국 여권을 보여주고 <b>무료 셔틀 쿠폰</b>과 쿠폰북을 받으세요. 셔틀은 JR마쓰야마역·마쓰야마시역·오카이도·도고온천역을 지납니다. 공항 1층에 그 유명한 <b>귤주스 수도꼭지</b>(蛇口みかんジュース)도 있어요.</p>
+      <div class="baby">첫날은 차를 안 받습니다. 지친 저녁에 렌터카 수속 40~60분 + 밤 운전 1시간을 아기와 함께 하지 않는 것 — 이게 이 일정의 핵심입니다.</div>
+      <div class="drive">왜 공항이 아니라 시내에서 빌리는지는 <a href="#rental" style="color:var(--mikan);font-weight:700">‘공항에서 빌릴까 시내에서 빌릴까’</a>에 정리했습니다. 셔틀은 선착순이라 못 타면 리무진버스(매시간 운행).</div>
+      <div class="acts">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=松山空港" target="_blank" rel="noopener">구글맵 열기</a>
+        <button type="button" class="btn ghost" data-q="松山空港" data-label="마쓰야마 공항">여기 지도 보기</button>
+      </div>
+    </div>
+    <div class="stop" id="s-dogo"><div class="t"><span class="time">19:00</span><span class="name">시내 숙소 체크인 + 장보기</span><span class="jp">道後・市内</span></div>
+      <p>첫날 숙소는 <b>무료 셔틀이 서는 정류장 근처</b>로 잡는 게 제일 편합니다 — 도고온천역, 오카이도(이치반초), 마쓰야마시역, JR마쓰야마역. 차를 안 받으니 <b>주차장 유무는 신경 쓸 필요 없고</b>, 대신 도보권에 슈퍼와 식당이 있는지만 보세요.</p>
+      <div class="baby">가는 길 슈퍼 <b>フジ(후지)</b>·<b>マルナカ</b>은 밤 10~11시까지. 아기 이유식(레토르트 12개월~ ‘和光堂’, ‘キユーピー’), 바나나·두부·낫토·우동은 슈퍼에서 다 해결. 기저귀·물티슈는 드럭스토어(マツキヨ, ココカラ).</div>
+      <div class="acts">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=道後温泉本館" target="_blank" rel="noopener">구글맵 열기</a>
+        <a class="btn quiet" href="https://www.google.com/maps/search/?api=1&amp;query=フジ 松山" target="_blank" rel="noopener">가까운 후지 슈퍼</a>
+        <button type="button" class="btn ghost" data-q="道後温泉本館" data-label="도고온천 본관">여기 지도 보기</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="day" style="--c:var(--d2)">
+    <h3>2일차 · 마쓰야마 시내와 도고온천</h3>
+    <div class="sub">차는 세워두고 걸어다니는 날 · 이동 짧음</div>
+    <div class="stop" id="s-castle"><div class="t"><span class="time">09:30</span><span class="name">마쓰야마성</span><span class="jp">松山城</span></div>
+      <p>일본에 12개뿐인 ‘원형 그대로 남은 천수각’ 중 하나. 산 위에 있어 <b>로프웨이(곤돌라)</b>로 올라갑니다. 정상 광장에서 시내와 바다가 다 보여요. 천수각 안은 가파른 계단이라 아기 있으면 밖에서 성벽·광장만 즐겨도 충분.</p>
+      <div class="baby">리프트는 아기 불가, 로프웨이는 유모차 접어서 탑승 OK. 정상 매점에서 귤 아이스크림.</div>
+      <div class="drive">주차: 로프웨이 승강장 근처 코인주차(松山城ロープウェイ駐車場) 또는 大街道 주차타워.</div>
+      <div class="acts">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=松山城ロープウェイ 東雲口駅舎" target="_blank" rel="noopener">구글맵 열기</a>
+        <button type="button" class="btn ghost" data-q="松山城" data-label="마쓰야마성">여기 지도 보기</button>
+      </div>
+    </div>
+    <div class="stop" id="s-okaido"><div class="t"><span class="time">12:00</span><span class="name">오카이도 · 긴텐가이 아케이드 점심</span><span class="jp">大街道・銀天街</span></div>
+      <p>지붕 있는 상점가라 비 와도 유모차로 편하게. 점심은 마쓰야마식 <b>타이메시</b>(도미솥밥) 또는 <b>나베야키 우동</b>(アサヒ·ことり — 달달한 국물, 아기랑 나눠 먹기 좋음).</p>
+      <div class="baby">いよてつ高島屋(다카시마야) 백화점에 수유실·기저귀 교환대. 지하 식품관에서 반찬 사서 숙소 저녁으로.</div>
+      <div class="acts">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=大街道商店街" target="_blank" rel="noopener">구글맵 열기</a>
+        <a class="btn quiet" href="https://www.google.com/maps/search/?api=1&amp;query=鍋焼きうどん ことり 松山" target="_blank" rel="noopener">나베야키 우동 ことり</a>
+        <button type="button" class="btn ghost" data-q="大街道商店街" data-label="오카이도 상점가">여기 지도 보기</button>
+      </div>
+    </div>
+    <div class="stop" id="s-onsen"><div class="t"><span class="time">15:30</span><span class="name">도고온천 거리 산책 + 가족탕</span><span class="jp">道後温泉</span></div>
+      <p>낮잠 후 도고로. <b>도고온천 본관</b>(3,000년 역사, 2024년 보수 완료)은 밖에서 보고 사진 찍고, 앞 상점가 <b>하이카라도리</b>를 유모차로 한 바퀴. <b>카라쿠리 시계</b>는 매시 정각 인형이 움직여요(아기가 좋아함). 무료 <b>족탕</b>도 여러 곳.</p>
+      <div class="baby"><b>기저귀 뗀 아이만 대욕장 입욕 가능한 곳이 대부분</b>입니다. 15개월이면 <b>가시키리(貸切=가족 전세탕)</b>로 가세요. 추천: <b>도고온천 별관 아스카노유 특별욕실</b>(예약제, 개인실+탕), 또는 공항 가는 길 슈퍼센토 <b>다카노코노유</b>(たかのこの湯, 가족탕 있음). 둘 다 전화·홈페이지 예약 후 방문.</div>
+      <div class="drive">도고 주차: 도고온천 주차장(道後温泉駐車場) 1시간 무료권 주는 가게 많음.</div>
+      <div class="acts">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=道後温泉別館 飛鳥乃湯泉" target="_blank" rel="noopener">아스카노유 지도</a>
+        <a class="btn quiet" href="https://www.google.com/maps/search/?api=1&amp;query=たかのこの湯" target="_blank" rel="noopener">다카노코노유</a>
+        <button type="button" class="btn ghost" data-q="道後温泉別館 飛鳥乃湯泉" data-label="아스카노유">여기 지도 보기</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="day" style="--c:var(--d3)">
+    <h3>3일차 · 바다 마을 미쓰하마, 그리고 시모나다역 일몰 ★</h3>
+    <div class="sub">렌터카 진가 발휘 · 총 운전 약 1시간 40분</div>
+    <div class="stop" id="s-mitsu"><div class="t"><span class="time">10:00</span><span class="name">미쓰하마 옛 항구마을</span><span class="jp">三津浜</span></div>
+      <p>오래된 목조 상점과 골목이 남은 조용한 항구 동네. 강 건너편으로 가는 <b>미쓰노와타시</b>(三津の渡し) 무료 나룻배가 아직 다닙니다(2분, 유모차도 OK). 딱 ‘소도시 감성’.</p>
+      <p>점심은 이 동네 소울푸드 <b>미쓰하마야키</b>(三津浜焼き — 오코노미야키에 국수 넣은 것, 얇고 담백).</p>
+      <div class="drive">시내에서 20분. 미쓰 페리터미널 근처 무료·코인주차.</div>
+      <div class="acts">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=三津の渡し" target="_blank" rel="noopener">구글맵 열기</a>
+        <button type="button" class="btn ghost" data-q="三津の渡し" data-label="미쓰노와타시 나룻배">여기 지도 보기</button>
+      </div>
+    </div>
+    <div class="stop" id="s-futami"><div class="t"><span class="time">14:30</span><span class="name">미치노에키 후타미 (휴게소)</span><span class="jp">道の駅 ふたみ</span></div>
+      <p>바다 바로 앞 휴게소. 넓은 주차장, 화장실·기저귀 교환대, 지역 특산품(귤·잔멸치). 일몰 전 아기 기저귀 갈고 간식 먹이는 베이스캠프로 딱.</p>
+      <div class="drive">시내에서 약 45분 (국도 378호 해안도로, 경치 좋음).</div>
+      <div class="acts">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=道の駅 ふたみ" target="_blank" rel="noopener">구글맵 열기</a>
+        <button type="button" class="btn ghost" data-q="道の駅 ふたみ" data-label="미치노에키 후타미">여기 지도 보기</button>
+      </div>
+    </div>
+    <div class="stop" id="s-shimonada"><div class="t"><span class="time">16:30</span><span class="name">시모나다역 — 바다 앞 무인역</span><span class="jp">下灘駅</span></div>
+      <p>플랫폼 바로 앞이 바다인 JR 요산선의 작은 역. 10월 중순 일몰은 <b>약 17:30</b>이니 16:30쯤 도착해 자리 잡고, 기차가 지나가는 장면(1시간에 1대 정도)도 노려보세요. 역 옆 작은 카페에서 커피 한 잔.</p>
+      <div class="baby">역 주차장은 아주 작습니다(무료, 6~10대). 주말·일몰 시간은 만차 → 후타미 휴게소에 세우고 걸어오면 15분, 아기띠 추천. 플랫폼에 난간이 낮으니 아기는 꼭 안고.</div>
+      <div class="drive">일몰 후 시내까지 50분. 어두운 해안도로라 천천히. 저녁은 숙소 근처에서 간단히.</div>
+      <div class="acts">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=下灘駅" target="_blank" rel="noopener">구글맵 열기</a>
+        <button type="button" class="btn ghost" data-q="下灘駅" data-label="시모나다역">여기 지도 보기</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="day" style="--c:var(--d4)">
+    <h3>4일차 · 우치코 · 오즈 — 시간이 멈춘 두 마을</h3>
+    <div class="sub">소도시 체크아웃 → 우치코·오즈 → 저녁 시내 복귀·렌터카 반납</div>
+    <div class="stop" id="s-uchiko"><div class="t"><span class="time">10:00</span><span class="name">우치코 요카이치 옛거리</span><span class="jp">内子・八日市護国</span></div>
+      <p>목랍(나무 초) 장사로 부자였던 마을. 크림색 흙벽 집들이 600m 이어지는 거리가 그대로 남아 있어요. <b>우치코자</b>(内子座, 100년 된 가부키 극장)는 내부 관람 가능. 관광객 적고 조용해서 유모차로 천천히 걷기 좋음.</p>
+      <p>점심은 옛집을 개조한 식당(下芳我邸 등)에서 소바·우동, 또는 미치노에키 <b>우치코 프레시파크 카라리</b>에서 지역 채소 요리와 아이스크림.</p>
+      <div class="drive">시내에서 고속도로로 40분 (마쓰야마 자동차도 → 内子五十崎 IC). 옛거리 입구에 관광 주차장.</div>
+      <div class="acts">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=内子座" target="_blank" rel="noopener">우치코자 지도</a>
+        <a class="btn quiet" href="https://www.google.com/maps/search/?api=1&amp;query=道の駅 内子フレッシュパークからり" target="_blank" rel="noopener">카라리 휴게소</a>
+        <button type="button" class="btn ghost" data-q="内子座" data-label="우치코자">여기 지도 보기</button>
+      </div>
+    </div>
+    <div class="stop" id="s-ozu"><div class="t"><span class="time">14:00</span><span class="name">오즈 성곽마을 · 히지카와 강변</span><span class="jp">大洲</span></div>
+      <p>‘이요의 작은 교토’. 강가에 나무로 복원된 <b>오즈성</b>, 옛 상가 골목 <b>오하나한도리</b>, 강 위 절벽의 별장 <b>가류산소</b>(臥龍山荘, 정원이 예쁨). 마을이 작아 2시간이면 충분.</p>
+      <div class="baby">오하나한도리 근처 관광안내소에 화장실·기저귀 교환대. 가류산소는 계단·자갈길 → 아기띠.</div>
+      <div class="drive">우치코에서 20분. 마쓰야마로 돌아오면 50분.</div>
+      <div class="acts">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=大洲城" target="_blank" rel="noopener">오즈성 지도</a>
+        <a class="btn quiet" href="https://www.google.com/maps/search/?api=1&amp;query=臥龍山荘" target="_blank" rel="noopener">가류산소</a>
+        <button type="button" class="btn ghost" data-q="大洲城" data-label="오즈성">여기 지도 보기</button>
+      </div>
+    </div>
+    <div class="stop" id="s-hotel"><div class="t"><span class="time">18:00</span><span class="name">렌터카 반납 → 중심부 호텔 체크인</span><span class="jp">松山市中心部</span></div>
+      <p>소도시에서 시내로 돌아와 주유(満タン) 후 영업소에 차를 반납합니다. <b>토요타 마쓰야마점은 20:00 마감</b>이라 조금 늦어도 괜찮지만, 아기 일정은 늘 밀리니 18시 복귀를 목표로. 반납 후 호텔까지는 도보 또는 택시 기본요금 거리.</p>
+      <p>중심부 호텔은 <b>오카이도·마쓰야마시역 주변</b>이 편합니다. 차를 반납했으니 <b>주차비 0엔</b>, 저녁 먹을 곳과 편의점이 다 도보권이에요.</p>
+      <div class="baby">마지막 저녁은 도미솥밥 포장이나 호텔 근처 패밀리 레스토랑(ガスト·ジョイフル — 아기 의자·이유식 메뉴 있음).</div>
+      <div class="acts">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=トヨタレンタカー 松山店 宮田町" target="_blank" rel="noopener">반납 영업소 지도</a>
+        <a class="btn quiet" href="https://www.google.com/maps/search/?api=1&amp;query=松山空港 ガソリンスタンド 松山市" target="_blank" rel="noopener">근처 주유소</a>
+        <button type="button" class="btn ghost" data-q="トヨタレンタカー 松山店" data-label="토요타 마쓰야마점 (반납)">여기 지도 보기</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="day" style="--c:var(--d5)">
+    <h3>5일차 · 도베 도자기 마을, 쇼핑, 귀국</h3>
+    <div class="sub">차 없이 시내에서 · 18:35 출발이라 오후 3시 반까지는 자유</div>
+    <div class="stop" id="s-tobe"><div class="t"><span class="time">10:00</span><span class="name">도고온천 거리 다시 한 번 · 또는 도베 도자기</span><span class="jp">道後温泉 / 砥部焼の里</span></div>
+      <p>차를 반납한 뒤라 오늘은 시내 중심. 도고온천은 오카이도에서 <b>노면전차로 20분</b>이라 아기와 다녀오기 딱 좋습니다. 봇짱 당고와 족탕, 카라쿠리 시계까지.</p>
+      <p>도자기 <b>도베야키</b>가 꼭 보고 싶다면 4일차에 소도시에서 돌아오는 길에 들르세요(국도 33호변, 시내에서 25분). 5일차에 차 없이 가기엔 버스가 불편합니다.</p>
+      <div class="drive">시내 이동은 이요테쓰 노면전차 1회 200엔 안팎. 유모차 그대로 탑승 가능.</div>
+      <div class="acts">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=道後温泉本館" target="_blank" rel="noopener">도고온천 지도</a>
+        <a class="btn quiet" href="https://www.google.com/maps/search/?api=1&amp;query=砥部焼伝統産業会館" target="_blank" rel="noopener">도베야키 회관</a>
+        <button type="button" class="btn ghost" data-q="道後温泉本館" data-label="도고온천 본관">여기 지도 보기</button>
+      </div>
+    </div>
+    <div class="stop" id="s-emifull"><div class="t"><span class="time">12:30</span><span class="name">다카시마야 · 긴텐가이에서 점심 · 기념품</span><span class="jp">いよてつ高島屋・銀天街</span></div>
+      <p>마쓰야마시역 바로 위 백화점. 수유실·기저귀 교환대가 있고, 지하 식품관에서 <b>이치로쿠 타르트·귤 과자·자코텐</b> 같은 기념품을 한 번에 살 수 있습니다. 비 와도 아케이드라 유모차로 편하게.</p>
+      <p>대형 몰 <b>에미풀 마사키</b>(エミフルMASAKI)는 아기 놀이공간까지 있어 더 좋지만 차가 있어야 갑니다 — 4일차에 시내로 돌아오는 길에 들르는 게 현실적이에요.</p>
+      <div class="baby">비행 전 아기 마지막 낮잠·식사는 백화점 수유실과 옥상 정원에서. 마쓰야마시역 버스 승차장이 바로 아래라 이동이 짧습니다.</div>
+      <div class="acts">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=いよてつ高島屋" target="_blank" rel="noopener">다카시마야 지도</a>
+        <a class="btn quiet" href="https://www.google.com/maps/search/?api=1&amp;query=エミフルMASAKI" target="_blank" rel="noopener">에미풀 마사키</a>
+        <button type="button" class="btn ghost" data-q="いよてつ高島屋" data-label="이요테쓰 다카시마야">여기 지도 보기</button>
+      </div>
+    </div>
+    <div class="stop" id="s-return"><div class="t"><span class="time">15:30</span><span class="name">무료 셔틀 · 리무진버스로 공항</span><span class="jp">松山空港</span></div>
+      <p>차는 어제 반납했으니 오늘은 몸만 움직이면 됩니다. 한국인 무료 셔틀이 시내에서 공항으로도 운행하니 시각을 미리 확인해 두세요(에어부산 편 기준 오후 출발 1회). 놓쳐도 리무진버스가 매시간 있고 마쓰야마시역에서 15~20분. 16:30 체크인, 출발 전 공항 2층 식당·귤주스 수도꼭지 한 잔 더.</p>
+      <div class="baby">에어부산 유아 동반: 액상 이유식·분유는 보안검색 시 따로 꺼내면 통과. 기내 압력 변화 때 젖병·물 빨게 준비.</div>
+      <div class="acts">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=松山空港" target="_blank" rel="noopener">공항 지도</a>
+        <a class="btn quiet" href="https://www.google.com/maps/search/?api=1&amp;query=松山市駅 リムジンバス のりば" target="_blank" rel="noopener">마쓰야마시역 버스 승차장</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SAVE TO GOOGLE MAPS ===== -->
+<section id="save">
+  <h2>구글맵에 전부 저장해 두기</h2>
+  <p class="lead">폰에서 이 페이지를 열고 아래 이름을 하나씩 누르면 구글맵 앱이 열립니다. 거기서 <b>저장 ★ → ‘마쓰야마 여행’ 목록</b>을 만들어 담아두면, 현지에서 인터넷이 느려도 목록에서 바로 길찾기가 돼요. 총 <b>20곳</b>입니다.</p>
+
+  <ul class="savelist">
+    <li class="hd">1일차 · 도착 (무료 셔틀)</li>
+    <li><div class="pl"><b>마쓰야마 공항</b><span>松山空港 · 1층 인포메이션에서 여권 제시</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=松山空港" target="_blank" rel="noopener">열기</a></li>
+    <li><div class="pl"><b>마쓰야마시역 (셔틀 정류장)</b><span>松山市駅 · 리무진버스 승차장도 여기</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=松山市駅" target="_blank" rel="noopener">열기</a></li>
+    <li><div class="pl"><b>도고온천 본관</b><span>道後温泉本館 · 셔틀 종점 부근</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=道後温泉本館" target="_blank" rel="noopener">열기</a></li>
+    <li class="hd">2일차 · 렌터카 픽업</li>
+    <li><div class="pl"><b>토요타 렌터카 마쓰야마점</b><span>トヨタレンタカー 松山店 · 宮田町 · 20시 마감</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=トヨタレンタカー 松山店 宮田町" target="_blank" rel="noopener">열기</a></li>
+    <li><div class="pl"><b>오릭스 마쓰야마역앞점</b><span>オリックスレンタカー 松山駅前店 · 19시 마감</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=オリックスレンタカー 松山駅前店" target="_blank" rel="noopener">열기</a></li>
+    <li class="hd">시내에서 걸어다니는 날</li>
+    <li><div class="pl"><b>마쓰야마성 로프웨이 승강장</b><span>松山城ロープウェイ 東雲口駅舎</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=松山城ロープウェイ 東雲口駅舎" target="_blank" rel="noopener">열기</a></li>
+    <li><div class="pl"><b>오카이도 상점가</b><span>大街道商店街 · 점심과 백화점 수유실</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=大街道商店街" target="_blank" rel="noopener">열기</a></li>
+    <li><div class="pl"><b>나베야키 우동 ことり</b><span>鍋焼きうどん ことり</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=鍋焼きうどん ことり 松山" target="_blank" rel="noopener">열기</a></li>
+    <li><div class="pl"><b>도고온천 별관 아스카노유</b><span>道後温泉別館 飛鳥乃湯泉 · 가족탕 예약</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=道後温泉別館 飛鳥乃湯泉" target="_blank" rel="noopener">열기</a></li>
+    <li><div class="pl"><b>다카노코노유</b><span>たかのこの湯 · 가족탕 대안</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=たかのこの湯" target="_blank" rel="noopener">열기</a></li>
+    <li class="hd">3일차 · 바다와 일몰</li>
+    <li><div class="pl"><b>미쓰노와타시 나룻배</b><span>三津の渡し · 무료 2분</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=三津の渡し" target="_blank" rel="noopener">열기</a></li>
+    <li><div class="pl"><b>미치노에키 후타미</b><span>道の駅 ふたみ · 기저귀 교환대 · 예비 주차장</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=道の駅 ふたみ" target="_blank" rel="noopener">열기</a></li>
+    <li><div class="pl"><b>시모나다역 ★</b><span>下灘駅 · 일몰 약 17:30</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=下灘駅" target="_blank" rel="noopener">열기</a></li>
+    <li class="hd">4일차 · 우치코와 오즈</li>
+    <li><div class="pl"><b>우치코자</b><span>内子座 · 옛거리 입구</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=内子座" target="_blank" rel="noopener">열기</a></li>
+    <li><div class="pl"><b>미치노에키 카라리</b><span>道の駅 内子フレッシュパークからり</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=道の駅 内子フレッシュパークからり" target="_blank" rel="noopener">열기</a></li>
+    <li><div class="pl"><b>오즈성</b><span>大洲城</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=大洲城" target="_blank" rel="noopener">열기</a></li>
+    <li><div class="pl"><b>가류산소</b><span>臥龍山荘 · 계단 많음, 아기띠</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=臥龍山荘" target="_blank" rel="noopener">열기</a></li>
+    <li class="hd">차로 돌아오는 길에 (4일차)</li>
+    <li><div class="pl"><b>도베야키 전통산업회관</b><span>砥部焼伝統産業会館 · 국도 33호변</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=砥部焼伝統産業会館" target="_blank" rel="noopener">열기</a></li>
+    <li><div class="pl"><b>에미풀 마사키</b><span>エミフルMASAKI · 수유실 · 기념품 · 주차 무료</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=エミフルMASAKI" target="_blank" rel="noopener">열기</a></li>
+    <li class="hd">5일차 · 차 없이 시내에서</li>
+    <li><div class="pl"><b>이요테쓰 다카시마야</b><span>いよてつ高島屋 · 수유실 · 기념품 · 마쓰야마시역 위</span></div><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=いよてつ高島屋" target="_blank" rel="noopener">열기</a></li>
+  </ul>
+
+  <div class="note sea" style="margin-top:14px">
+    <b>17곳을 한 번에 담고 싶다면 — ‘내 지도(My Maps)’</b><br>
+    구글맵 ★저장은 하나씩 눌러야 하지만, <b>내 지도</b>는 표를 통째로 가져올 수 있습니다. 같이 드린 <b>matsuyama-places.csv</b> 파일을 쓰세요.
+  </div>
+  <ol class="steps">
+    <li>PC 브라우저에서 <b>google.com/mymaps</b> 접속 → ‘새 지도 만들기’</li>
+    <li>‘가져오기’를 누르고 <b>matsuyama-places.csv</b> 업로드</li>
+    <li>위치 열로 <b>검색어</b>를, 제목 열로 <b>이름</b>을 선택</li>
+    <li>핀이 20개 찍히면, 몇 개는 위치가 어긋날 수 있으니 눈으로 한 번 확인</li>
+    <li>폰 구글맵 앱 → <b>저장됨 → 지도</b> 탭에서 방금 만든 지도가 보입니다</li>
+  </ol>
+</section>
+
+<!-- ===== FOOD ===== -->
+<section id="food">
+  <h2>꼭 먹어야 할 에히메 로컬 음식</h2>
+  <p class="lead"><span class="tag ok">아기 OK</span>는 15개월 아기와 나눠 먹기 좋은 것.</p>
+  <div class="grid two">
+    <div class="food"><b>타이메시 (도미솥밥)</b> <span class="jp">鯛めし</span><span class="tag ok">아기 OK</span><p>마쓰야마식은 도미를 밥과 함께 짓는 솥밥 — 간이 순해서 아기도 한 숟갈. 우와지마식은 회를 날달걀 양념에 비벼 먹는 것(어른용). 두 가지 다 파는 집이 시내에 많아요.</p></div>
+    <div class="food"><b>나베야키 우동</b> <span class="jp">鍋焼きうどん</span><span class="tag ok">아기 OK</span><p>알루미늄 냄비에 나오는 달달한 국물 우동. 마쓰야마 사람들의 소울푸드. 시내 ‘アサヒ’·‘ことり’가 원조.</p></div>
+    <div class="food"><b>미쓰하마야키</b> <span class="jp">三津浜焼き</span><p>오코노미야키 안에 국수와 어묵을 넣은 항구마을 스타일. 3일차 미쓰하마에서.</p></div>
+    <div class="food"><b>자코텐</b> <span class="jp">じゃこ天</span><p>잔생선을 통째 갈아 튀긴 어묵. 미치노에키·슈퍼 어디서나. 갓 튀긴 게 최고.</p></div>
+    <div class="food"><b>봇짱 당고</b> <span class="jp">坊っちゃん団子</span><p>도고온천의 명물. 녹차·노른자·팥 3색 경단 꼬치.</p></div>
+    <div class="food"><b>이치로쿠 타르트</b> <span class="jp">一六タルト</span><p>유자 향 팥앙금 롤케이크. 기념품 1순위, 공항·에미풀에서.</p></div>
+    <div class="food"><b>귤주스 수도꼭지</b> <span class="jp">蛇口みかんジュース</span><span class="tag ok">아기 OK</span><p>공항 1층과 도고 상점가에 있음. 100% 에히메 귤주스가 수도꼭지에서.</p></div>
+    <div class="food"><b>도고 맥주 · 지역 귤</b> <span class="jp">道後ビール・みかん</span><p>어른은 도고 지역맥주, 아기는 10월이 제철인 극조생 귤. 미치노에키에서 한 봉지.</p></div>
+  </div>
+</section>
+
+<!-- ===== BABY ===== -->
+<section id="baby">
+  <h2>아기(15개월)와 다닐 때 알아둘 것</h2>
+  <ul class="plain">
+    <li><b>이유식 재료는 현지 슈퍼가 한국보다 편합니다</b>フジ·マルナカ에 유아식 코너(12개월~ 레토르트, 아기 국수, 아기 간장). 첫날 밤 시내 숙소 근처에서 한 번 크게 장 보고, 2일차에 차로 소도시 숙소까지 싣고 가면 끝.</li>
+    <li><b>유모차 + 아기띠 둘 다</b>시내·아케이드·에미풀은 유모차, 마쓰야마성·시모나다·오즈 가류산소는 아기띠. 렌터카라 둘 다 싣고 다니면 됩니다.</li>
+    <li><b>온천은 ‘가시키리(貸切)’</b>기저귀 아기는 대욕장 불가가 원칙. 가족 전세탕이나 객실 노천탕이 있는 곳을 예약하세요. 물 온도 41~42℃는 아기에겐 뜨거우니 3~5분만, 어른이 안고.</li>
+    <li><b>낮잠은 차에서</b>점심 후 다음 목적지로 이동하는 40~50분이 딱 낮잠 시간. 일정을 ‘오전 한 곳 → 이동(낮잠) → 오후 한 곳’으로 짜둔 이유.</li>
+    <li><b>수유실·기저귀 교환대</b>다카시마야 백화점, 에미풀, 미치노에키 전부 있음. 편의점은 없음. 작은 관광지는 관광안내소 화장실을 이용.</li>
+    <li><b>병원·약</b>급할 땐 <b>#7119</b>(응급상담) 또는 119. 여행자보험 가입 후 보험증서 캡처. 해열제(어린이용 카론)는 드럭스토어에서 살 수 있지만 한국에서 챙겨오는 게 마음 편해요.</li>
+  </ul>
+</section>
+
+<!-- ===== CAR ===== -->
+<section id="car">
+  <h2>렌터카 운전 메모</h2>
+  <div class="note">일본은 <b>좌측통행</b>. 첫 30분만 긴장하면 금방 익숙해집니다. 마쓰야마는 신호가 많고 시골길은 좁아요. 도로에 ‘止まれ’(멈춤) 역삼각형 표지는 완전 정지 필수.</div>
+  <ul class="plain">
+    <li><b>필요 서류</b>국제운전면허증(한국 발급) + 한국 면허증 + 여권. 셋 다 없으면 차 못 받습니다.</li>
+    <li><b>내비게이션</b>구글맵으로 충분. 목적지는 일본어 이름(예: 下灘駅)이나 전화번호로 검색이 정확. 위 <a href="#save" style="color:var(--mikan);font-weight:700">저장 목록</a>을 미리 담아두면 현지에서 타이핑할 일이 없어요.</li>
+    <li><b>노면전차 주의</b>마쓰야마 시내는 도로 한가운데를 전차가 달립니다. 오카이도·마쓰야마시역 부근에서 우회전할 땐 전차 신호를 따로 확인하세요. 2일차 아침에 영업소를 나와 국도로 빠지는 10분만 조심하면 됩니다.</li>
+    <li><b>고속도로</b>소도시로 나갈 때 사용(마쓰야마 자동차도). ETC 카드 대여(300~500엔)하면 톨게이트 정차 없음.</li>
+    <li><b>주유</b>반납 전 ‘満タン(만탄)’ = 가득. 셀프 주유소에서 ‘레귤러’ 선택.</li>
+    <li><b>주차</b>시내는 코인주차(1시간 200~400엔). 관광지·미치노에키는 대부분 무료.</li>
+  </ul>
+</section>
+
+<!-- ===== CHECKLIST ===== -->
+<section id="check">
+  <h2>출발 전 체크리스트</h2>
+  <ul class="check">
+    <li><input type="checkbox" id="c1"><label for="c1">에어부산 항공권 (아기 유아 요금 별도 발권 — 좌석 없음)</label></li>
+    <li><input type="checkbox" id="c2"><label for="c2">1일차 시내 숙소 1박 — 무료 셔틀 정류장 도보권, 슈퍼 가까운 곳</label></li>
+    <li><input type="checkbox" id="c14"><label for="c14">소도시 2박 (주차 무료 여부, 아기 밥 준비 가능한 부엌)</label></li>
+    <li><input type="checkbox" id="c3"><label for="c3">마지막 밤 중심부 호텔 1박 — 차 반납 후라 주차장 불필요</label></li>
+    <li><input type="checkbox" id="c4"><label for="c4">렌터카 <b>3일치</b> 예약 — 시내 영업소 픽업·반납 (토요타 마쓰야마점 20시 마감)</label></li>
+    <li><input type="checkbox" id="c11"><label for="c11">차일드시트(幼児用) 수량 1 신청 + ETC 카드 + 면책보상·NOC 가입</label></li>
+    <li><input type="checkbox" id="c12"><label for="c12">차종은 소형 미니밴급 이상 (시엔타·프리드) — 짐 + 유모차 적재 확인</label></li>
+    <li><input type="checkbox" id="c15"><label for="c15">한국인 무료 셔틀 시각 확인 (Visit Ehime 공식 페이지 · 아이버스 089-983-2244)</label></li>
+    <li><input type="checkbox" id="c5"><label for="c5">국제운전면허증 발급 (경찰서·운전면허시험장, 당일 발급)</label></li>
+    <li><input type="checkbox" id="c6"><label for="c6">가족탕 온천 예약 (아스카노유 특별욕실 또는 다카노코노유)</label></li>
+    <li><input type="checkbox" id="c7"><label for="c7">여행자보험 (아기 포함) · 아기 해열제 · 체온계</label></li>
+    <li><input type="checkbox" id="c8"><label for="c8">비짓재팬웹(Visit Japan Web) 입국 등록 · 유심/eSIM</label></li>
+    <li><input type="checkbox" id="c9"><label for="c9">아기띠 + 접이식 유모차 + 차량용 햇빛가리개</label></li>
+    <li><input type="checkbox" id="c13"><label for="c13">구글맵 ‘마쓰야마 여행’ 목록에 20곳 저장 (또는 내 지도 CSV 가져오기)</label></li>
+    <li><input type="checkbox" id="c10"><label for="c10">시모나다역 일몰 시각 재확인 (날짜별 10~15분 차이)</label></li>
+  </ul>
+</section>
+
+<footer>
+  항공 시각은 2026년 10월 에어부산 부산–마쓰야마 편 기준. 렌터카 영업시간·전화번호는 2026년 9월 각 사 공식 안내 기준이며, 출발 전 다시 확인하세요(특히 타임즈의 19시 마감). 한국인 무료 셔틀은 운행 구간·조건만 확인된 상태이고 <b>정확한 시각은 Visit Ehime 공식 페이지 또는 아이버스 089-983-2244로 재확인</b>하세요. 위쪽 약도는 실제 축척이 아닌 개념도이며, 아래 구글 지도가 실제 위치입니다.
+</footer>
+</div>
+
+<script>
+(function(){
+  var buttons=document.querySelectorAll('.dayfilter button');
+  var pins=document.querySelectorAll('.pin');
+  var routes=document.querySelectorAll('.route');
+  function apply(day){
+    buttons.forEach(function(b){b.setAttribute('aria-pressed', b.dataset.day===day ? 'true':'false');});
+    pins.forEach(function(p){
+      var days=p.dataset.day.split(' ');
+      p.classList.toggle('dim', day!=='all' && days.indexOf(day)<0);
+    });
+    routes.forEach(function(r){ r.classList.toggle('dim', day!=='all' && r.dataset.day!==day); });
+  }
+  buttons.forEach(function(b){ b.addEventListener('click',function(){ apply(b.dataset.day); }); });
+
+  /* ---- live google map panel ---- */
+  var frame=document.getElementById('g-frame');
+  var fallback=document.getElementById('g-fallback');
+  var gname=document.getElementById('g-name');
+  var gopen=document.getElementById('g-open');
+  var current=null;
+  function showMap(q,label){
+    if(!frame||!q||q===current) { if(q===current) return; }
+    current=q;
+    var old=frame.querySelector('iframe');
+    if(old) old.remove();
+    var f=document.createElement('iframe');
+    f.setAttribute('loading','lazy');
+    f.setAttribute('referrerpolicy','no-referrer-when-downgrade');
+    f.setAttribute('allowfullscreen','');
+    f.setAttribute('title', (label||q)+' 지도');
+    f.src='https://www.google.com/maps?q='+encodeURIComponent(q)+'&z=14&hl=ko&output=embed';
+    frame.appendChild(f);
+    if(gname) gname.innerHTML='';
+    if(gname){
+      var strong=document.createTextNode(label||q);
+      gname.appendChild(strong);
+      var jp=document.createElement('span'); jp.className='jp'; jp.textContent=q;
+      gname.appendChild(jp);
+    }
+    if(gopen) gopen.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
+    if(fallback) fallback.textContent='지도가 보이지 않으면 위 ‘구글맵 앱에서 열기’를 눌러 주세요.';
+  }
+  showMap('松山空港','마쓰야마 공항');
+
+  function go(p){
+    var t=document.getElementById(p.dataset.target); if(!t) return;
+    t.scrollIntoView({block:'start'});
+    t.classList.add('flash'); setTimeout(function(){t.classList.remove('flash');},1600);
+  }
+  pins.forEach(function(p){
+    function act(){ if(p.dataset.q) showMap(p.dataset.q,p.dataset.label); go(p); }
+    p.addEventListener('click',act);
+    p.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();act();} });
+  });
+
+  document.querySelectorAll('button[data-q]').forEach(function(b){
+    b.addEventListener('click',function(){
+      showMap(b.dataset.q,b.dataset.label);
+      var box=document.getElementById('gbox');
+      if(box) box.scrollIntoView({block:'center'});
+    });
+  });
+
+  /* checklist memory (per viewer only) */
+  var boxes=document.querySelectorAll('.check input');
+  try{ var saved=JSON.parse(localStorage.getItem('myj-check')||'{}'); boxes.forEach(function(b){ if(saved[b.id]) b.checked=true; }); }catch(e){}
+  boxes.forEach(function(b){ b.addEventListener('change',function(){
+    try{ var s={}; boxes.forEach(function(x){ if(x.checked) s[x.id]=1; }); localStorage.setItem('myj-check',JSON.stringify(s)); }catch(e){}
+  }); });
+})();
+</script>
+</body>
+</html>
