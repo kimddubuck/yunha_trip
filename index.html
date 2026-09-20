@@ -250,10 +250,12 @@ footer{margin-top:40px;font-size:12.5px;color:var(--ink-soft);line-height:1.6}
   <p class="lead" style="font-size:14.5px">운임은 체류 일수와 무관하게 <b>날짜로 정해지므로</b>, 날짜별 편도 운임으로 4박5일 조합을 다시 만든 표입니다. 금액은 <b>성인 1명 왕복 운임 합계</b>(세금·유류할증 별도)이고, <b>‘비싼 밤’</b>은 네 밤 중 금·토요일이나 연휴에 걸리는 밤의 수입니다.</p>
   <div id="live" hidden style="background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:12px">
     <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:8px">
-      <b style="font-size:15.5px">실시간 최저가</b>
+      <b style="font-size:15.5px">실시간 항공권 — 에어부산 직항</b>
       <span id="live-when" style="font-size:12.5px;color:var(--ink-soft)"></span>
     </div>
+    <div id="live-ctl" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px"></div>
     <div id="live-body" style="overflow-x:auto"></div>
+    <div id="live-more" style="margin-top:8px"></div>
   </div>
   <div style="overflow-x:auto">
   <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:520px">
@@ -1050,7 +1052,7 @@ footer{margin-top:40px;font-size:12.5px;color:var(--ink-soft);line-height:1.6}
      둘 다 실패하면(파일 없음·CORS 차단·아티팩트 뷰어의 외부 fetch 차단)
      조용히 넘어가고 아래 정적 표가 그대로 남습니다. 규격은 HANDOVER.md 5-2절. */
   var FARES_URLS=['./fares.json','https://pus-myj-fares.netlify.app/fares.json'];
-  var JP_HOL=['2026-10-12'];                                  /* 스포츠의날 */
+  var JP_HOL=['2026-10-12','2026-11-03','2026-11-23'];        /* 스포츠의날·문화의날·근로감사의날 */
   var KR_HOL=['2026-10-03','2026-10-05','2026-10-09'];        /* 개천절·대체·한글날 */
   function dayName(d){ return '일월화수목금토'.charAt(d.getDay()); }
   function iso(d){ return d.toISOString().slice(0,10); }
@@ -1068,18 +1070,52 @@ footer{margin-top:40px;font-size:12.5px;color:var(--ink-soft);line-height:1.6}
     return {days:out.join(''), bad:n};
   }
   function won(v){ return (v==null||isNaN(v))?'—':Number(v).toLocaleString('ko-KR'); }
+  /* 항공권 전체 표. 3박/4박 전환 · 연휴 숨기기 · 더 보기까지 이 패널 안에서 끝낸다. */
+  var LIVE={data:null, nights:4, hideHol:false, limit:8};
+  function btn(label,on){
+    return '<button type="button" data-act style="padding:6px 13px;border-radius:999px;cursor:pointer;'
+      +'font:700 13px inherit;border:1px solid '+(on?'var(--moss)':'var(--line)')+';'
+      +'background:'+(on?'var(--moss)':'var(--card)')+';color:'+(on?'#fff':'var(--ink-soft)')+'">'+label+'</button>';
+  }
+  function liveRows(){
+    var d=LIVE.data; if(!d) return [];
+    var byN=d.by_nights||{}, rows=byN[String(LIVE.nights)]||d.combos||[];
+    rows=rows.slice().sort(function(a,b){ return (a.total||0)-(b.total||0); });
+    if(LIVE.hideHol) rows=rows.filter(function(r){ return !(r.holidays&&r.holidays.length); });
+    return rows;
+  }
   function renderLive(data){
-    var rows=(data&&data.combos)||[]; if(!rows.length) return;
-    var nights=(data.nights!=null)?data.nights:4;
+    if(data) LIVE.data=data;
+    var d=LIVE.data; if(!d) return;
     var box=document.getElementById('live'), body=document.getElementById('live-body'),
-        when=document.getElementById('live-when');
+        when=document.getElementById('live-when'), ctl=document.getElementById('live-ctl'),
+        more=document.getElementById('live-more');
     if(!box||!body) return;
-    rows=rows.slice().sort(function(a,b){ return (a.total||0)-(b.total||0); }).slice(0,6);
+    if(data&&data.nights!=null) LIVE.nights=data.nights;
+
+    var all=liveRows(), rows=all.slice(0,LIVE.limit);
+    if(!rows.length) return;
+    var nights=LIVE.nights;
+
+    if(ctl){
+      var opts=Object.keys(d.by_nights||{}).sort();
+      if(!opts.length) opts=[String(nights)];
+      ctl.innerHTML=opts.map(function(n){ return btn(n+'박'+(Number(n)+1)+'일', String(nights)===n); }).join('')
+        +'<span style="width:6px"></span>'+btn('연휴 빼고 보기', LIVE.hideHol)
+        +'<span style="margin-left:auto;font-size:12.5px;color:var(--ink-soft)">'+all.length+'개 조합</span>';
+      var bs=ctl.querySelectorAll('button');
+      opts.forEach(function(n,i){ bs[i].onclick=function(){ LIVE.nights=Number(n); LIVE.limit=8; renderLive(); }; });
+      bs[opts.length].onclick=function(){ LIVE.hideHol=!LIVE.hideHol; LIVE.limit=8; renderLive(); };
+    }
+
     var t=document.createElement('table');
-    t.style.cssText='width:100%;border-collapse:collapse;font-size:14px;min-width:460px;font-variant-numeric:tabular-nums';
+    t.style.cssText='width:100%;border-collapse:collapse;font-size:14px;min-width:620px;font-variant-numeric:tabular-nums';
+    var th='padding:6px 6px';
     var head='<tr style="border-bottom:2px solid var(--line);text-align:left">'
-      +'<th style="padding:6px 6px">출발 → 귀국</th><th style="padding:6px 6px;text-align:right">최저가</th>'
-      +'<th style="padding:6px 6px">네 밤</th><th style="padding:6px 6px;text-align:right">잔여</th></tr>';
+      +'<th style="'+th+'">출발 → 귀국</th><th style="'+th+'">비행 시각</th>'
+      +'<th style="'+th+';text-align:right">항공권</th><th style="'+th+';text-align:right">짐 포함</th>'
+      +'<th style="'+th+'">밤 구성</th><th style="'+th+';text-align:right">잔여</th>'
+      +'<th style="'+th+';text-align:right">예매</th></tr>';
     var out='';
     rows.forEach(function(r){
       if(!r.depart) return;
@@ -1089,18 +1125,33 @@ footer{margin-top:40px;font-size:12.5px;color:var(--ink-soft);line-height:1.6}
       var dd=new Date(r.depart+'T00:00:00Z'), rr=r['return']?new Date(r['return']+'T00:00:00Z'):null;
       var lbl=(dd.getUTCMonth()+1)+'/'+dd.getUTCDate()+'('+'일월화수목금토'.charAt(dd.getUTCDay())+')'
             + (rr?(' → '+(rr.getUTCMonth()+1)+'/'+rr.getUTCDate()+'('+'일월화수목금토'.charAt(rr.getUTCDay())+')'):'');
+      var ob=r.outbound||{}, ib=r.inbound||{};
+      var times=(ob.dep?ob.dep:'—')+' 출발<br><span style="color:var(--ink-soft)">'+(ib.dep?ib.dep:'—')+' 귀국</span>';
+      var cls=(ob['class']||'')+(ib['class']&&ib['class']!==ob['class']?' / '+ib['class']:'');
       out+='<tr style="border-bottom:1px solid var(--line)'+(good?';background:color-mix(in srgb,var(--moss) 10%,transparent)':'')+'">'
-        +'<td style="padding:6px 6px">'+lbl+(hol?'<br><span style="font-size:12px;color:var(--d5);font-weight:700">'+hol+'</span>':'')+'</td>'
-        +'<td style="padding:6px 6px;text-align:right"><b>'+won(r.total)+'</b></td>'
-        +'<td style="padding:6px 6px">'+q.days+'<br><span style="font-size:12px;font-weight:700;color:'
+        +'<td style="'+th+'">'+lbl+(hol?'<br><span style="font-size:12px;color:var(--d5);font-weight:700">'+hol+'</span>':'')+'</td>'
+        +'<td style="'+th+';font-size:12.5px">'+times+'</td>'
+        +'<td style="'+th+';text-align:right"><b>'+won(r.total)+'</b>'
+          +(cls?'<br><span style="font-size:11.5px;color:var(--ink-soft)">'+cls+'</span>':'')+'</td>'
+        +'<td style="'+th+';text-align:right;color:var(--ink-soft)">'+won(r.total_with_bags)+'</td>'
+        +'<td style="'+th+'">'+q.days+'<br><span style="font-size:12px;font-weight:700;color:'
           +(q.bad?'var(--d5)':'var(--moss)')+'">비싼 밤 '+q.bad+'</span></td>'
-        +'<td style="padding:6px 6px;text-align:right">'+(r.seats_left!=null?r.seats_left+'석':'—')+'</td></tr>';
+        +'<td style="'+th+';text-align:right">'+(r.seats_left!=null?r.seats_left+'석':'—')+'</td>'
+        +'<td style="'+th+';text-align:right">'+(r.book_url
+          ?'<a href="'+r.book_url+'" target="_blank" rel="noopener" style="font-size:12.5px;font-weight:700">예매</a>':'—')+'</td></tr>';
     });
     if(!out) return;
     t.innerHTML=head+out; body.innerHTML=''; body.appendChild(t);
-    if(when&&data.updated_at){
-      var u=new Date(data.updated_at);
-      when.textContent=isNaN(u)?String(data.updated_at):(u.toLocaleString('ko-KR')+' 기준');
+
+    if(more){
+      more.innerHTML = all.length>rows.length
+        ? btn('나머지 '+(all.length-rows.length)+'개 더 보기', false) : '';
+      if(all.length>rows.length) more.firstChild.onclick=function(){ LIVE.limit=all.length; renderLive(); };
+    }
+    if(when&&d.updated_at){
+      var u=new Date(d.updated_at);
+      var rt=(d.refresh_times_kst&&d.refresh_times_kst.length)?(' · 매일 '+d.refresh_times_kst.join(', ')+' 자동 갱신'):'';
+      when.textContent=(isNaN(u)?String(d.updated_at):u.toLocaleString('ko-KR'))+' 기준'+rt;
     }
     box.hidden=false;
   }

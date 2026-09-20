@@ -27,7 +27,8 @@
    "seats_left": 7,
    "holidays": [
     "일본연휴"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-10&depDate2=2026-10-14&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-29",
@@ -47,7 +48,8 @@
    "total": 457200,
    "total_with_bags": 688200,
    "seats_left": 4,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-29&depDate2=2026-11-02&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-31",
@@ -69,7 +71,8 @@
    "seats_left": 3,
    "holidays": [
     "일본문화의날"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-31&depDate2=2026-11-04&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-21",
@@ -91,7 +94,8 @@
    "seats_left": 9,
    "holidays": [
     "일본연휴"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-21&depDate2=2026-11-25&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-24",
@@ -111,7 +115,8 @@
    "total": 478200,
    "total_with_bags": 625200,
    "seats_left": 2,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-24&depDate2=2026-11-28&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-26",
@@ -131,7 +136,8 @@
    "total": 478200,
    "total_with_bags": 709200,
    "seats_left": 3,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-26&depDate2=2026-11-30&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-09-21",
@@ -153,7 +159,8 @@
    "seats_left": 6,
    "holidays": [
     "일본연휴"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-21&depDate2=2026-09-25&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-20",
@@ -175,7 +182,8 @@
    "seats_left": 8,
    "holidays": [
     "일본연휴"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-20&depDate2=2026-11-24&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-09-29",
@@ -197,7 +205,8 @@
    "seats_left": 5,
    "holidays": [
     "개천절"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-29&depDate2=2026-10-03&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-02",
@@ -219,7 +228,8 @@
    "seats_left": 4,
    "holidays": [
     "일본문화의날"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-02&depDate2=2026-11-06&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-12",
@@ -239,7 +249,8 @@
    "total": 541200,
    "total_with_bags": 709200,
    "seats_left": 4,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-12&depDate2=2026-11-16&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-14",
@@ -259,7 +270,8 @@
    "total": 541200,
    "total_with_bags": 646200,
    "seats_left": 6,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-14&depDate2=2026-11-18&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-16",
@@ -279,7 +291,8 @@
    "total": 541200,
    "total_with_bags": 667200,
    "seats_left": 2,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-16&depDate2=2026-11-20&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-22",
@@ -301,7 +314,8 @@
    "seats_left": 7,
    "holidays": [
     "일본연휴"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-22&depDate2=2026-11-26&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-30",
@@ -323,7 +337,8 @@
    "seats_left": 10,
    "holidays": [
     "일본문화의날"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-30&depDate2=2026-11-03&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-01",
@@ -345,7 +360,8 @@
    "seats_left": 7,
    "holidays": [
     "일본문화의날"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-01&depDate2=2026-11-05&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-05",
@@ -365,7 +381,8 @@
    "total": 583200,
    "total_with_bags": 688200,
    "seats_left": 6,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-05&depDate2=2026-11-09&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-06",
@@ -385,7 +402,8 @@
    "total": 583200,
    "total_with_bags": 688200,
    "seats_left": 8,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-06&depDate2=2026-11-10&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-19",
@@ -407,7 +425,8 @@
    "seats_left": 11,
    "holidays": [
     "일본연휴"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-19&depDate2=2026-11-23&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-26",
@@ -427,7 +446,8 @@
    "total": 625200,
    "total_with_bags": 688200,
    "seats_left": 7,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-26&depDate2=2026-10-30&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-07",
@@ -447,7 +467,8 @@
    "total": 625200,
    "total_with_bags": 667200,
    "seats_left": 9,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-07&depDate2=2026-11-11&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-10",
@@ -467,7 +488,8 @@
    "total": 625200,
    "total_with_bags": 751200,
    "seats_left": 2,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-10&depDate2=2026-11-14&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-19",
@@ -487,7 +509,8 @@
    "total": 629200,
    "total_with_bags": 729200,
    "seats_left": 9,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-19&depDate2=2026-10-23&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-20",
@@ -507,7 +530,8 @@
    "total": 639200,
    "total_with_bags": 689200,
    "seats_left": 9,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-20&depDate2=2026-10-24&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-27",
@@ -527,7 +551,8 @@
    "total": 646200,
    "total_with_bags": 751200,
    "seats_left": 6,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-27&depDate2=2026-10-31&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-09",
@@ -547,7 +572,8 @@
    "total": 646200,
    "total_with_bags": 709200,
    "seats_left": 5,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-09&depDate2=2026-11-13&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-13",
@@ -567,7 +593,8 @@
    "total": 646200,
    "total_with_bags": 751200,
    "seats_left": 6,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-13&depDate2=2026-11-17&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-17",
@@ -587,7 +614,8 @@
    "total": 646200,
    "total_with_bags": 709200,
    "seats_left": 9,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-17&depDate2=2026-11-21&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-11",
@@ -609,7 +637,8 @@
    "seats_left": 6,
    "holidays": [
     "일본연휴"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-11&depDate2=2026-10-15&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-14",
@@ -629,7 +658,8 @@
    "total": 649200,
    "total_with_bags": 769200,
    "seats_left": 2,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-14&depDate2=2026-10-18&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-08",
@@ -649,7 +679,8 @@
    "total": 667200,
    "total_with_bags": 793200,
    "seats_left": 6,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-08&depDate2=2026-11-12&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-23",
@@ -671,7 +702,8 @@
    "seats_left": 3,
    "holidays": [
     "일본연휴"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-23&depDate2=2026-11-27&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-18",
@@ -691,7 +723,8 @@
    "total": 669200,
    "total_with_bags": 829200,
    "seats_left": 2,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-18&depDate2=2026-10-22&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-25",
@@ -711,7 +744,8 @@
    "total": 677700,
    "total_with_bags": 740700,
    "seats_left": 6,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-25&depDate2=2026-10-29&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-22",
@@ -731,7 +765,8 @@
    "total": 679200,
    "total_with_bags": 719200,
    "seats_left": 8,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-22&depDate2=2026-10-26&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-02",
@@ -753,7 +788,8 @@
    "seats_left": 4,
    "holidays": [
     "개천절"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-02&depDate2=2026-10-06&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-23",
@@ -773,7 +809,8 @@
    "total": 691200,
    "total_with_bags": 838200,
    "seats_left": 3,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-23&depDate2=2026-10-27&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-16",
@@ -793,7 +830,8 @@
    "total": 709200,
    "total_with_bags": 849200,
    "seats_left": 7,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-16&depDate2=2026-10-20&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-17",
@@ -813,7 +851,8 @@
    "total": 709200,
    "total_with_bags": 789200,
    "seats_left": 9,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-17&depDate2=2026-10-21&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-03",
@@ -835,7 +874,8 @@
    "seats_left": 6,
    "holidays": [
     "일본문화의날"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-03&depDate2=2026-11-07&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-04",
@@ -857,7 +897,8 @@
    "seats_left": 11,
    "holidays": [
     "대체휴일"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-04&depDate2=2026-10-08&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-13",
@@ -877,7 +918,8 @@
    "total": 729200,
    "total_with_bags": 849200,
    "seats_left": 7,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-13&depDate2=2026-10-17&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-28",
@@ -897,7 +939,8 @@
    "total": 730200,
    "total_with_bags": 835200,
    "seats_left": 7,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-28&depDate2=2026-11-01&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-18",
@@ -917,7 +960,8 @@
    "total": 730200,
    "total_with_bags": 835200,
    "seats_left": 5,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-18&depDate2=2026-11-22&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-25",
@@ -937,7 +981,8 @@
    "total": 730200,
    "total_with_bags": 835200,
    "seats_left": 9,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-25&depDate2=2026-11-29&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-11",
@@ -957,7 +1002,8 @@
    "total": 740700,
    "total_with_bags": 793200,
    "seats_left": 10,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-11&depDate2=2026-11-15&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-21",
@@ -977,7 +1023,8 @@
    "total": 748200,
    "total_with_bags": 908200,
    "seats_left": 8,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-21&depDate2=2026-10-25&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-09",
@@ -999,7 +1046,8 @@
    "seats_left": 7,
    "holidays": [
     "한글날"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-09&depDate2=2026-10-13&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-05",
@@ -1021,7 +1069,8 @@
    "seats_left": 5,
    "holidays": [
     "대체휴일"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-05&depDate2=2026-10-09&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-15",
@@ -1041,7 +1090,8 @@
    "total": 772200,
    "total_with_bags": 772200,
    "seats_left": 10,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-15&depDate2=2026-11-19&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-24",
@@ -1061,7 +1111,8 @@
    "total": 784700,
    "total_with_bags": 837200,
    "seats_left": 14,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-24&depDate2=2026-10-28&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-09-25",
@@ -1083,7 +1134,8 @@
    "seats_left": 3,
    "holidays": [
     "추석"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-25&depDate2=2026-09-29&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-09-26",
@@ -1105,7 +1157,8 @@
    "seats_left": 2,
    "holidays": [
     "추석연휴"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-26&depDate2=2026-09-30&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-06",
@@ -1127,7 +1180,8 @@
    "seats_left": 2,
    "holidays": [
     "한글날"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-06&depDate2=2026-10-10&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-07",
@@ -1149,7 +1203,8 @@
    "seats_left": 5,
    "holidays": [
     "한글날"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-07&depDate2=2026-10-11&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-08",
@@ -1171,7 +1226,8 @@
    "seats_left": 8,
    "holidays": [
     "한글날"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-08&depDate2=2026-10-12&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-09-27",
@@ -1193,7 +1249,8 @@
    "seats_left": 9,
    "holidays": [
     "추석연휴"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-27&depDate2=2026-10-01&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-03",
@@ -1215,7 +1272,8 @@
    "seats_left": 9,
    "holidays": [
     "개천절"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-03&depDate2=2026-10-07&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-15",
@@ -1235,7 +1293,8 @@
    "total": 869200,
    "total_with_bags": 869200,
    "seats_left": 12,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-15&depDate2=2026-10-19&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-10-12",
@@ -1257,7 +1316,8 @@
    "seats_left": 14,
    "holidays": [
     "일본연휴"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-12&depDate2=2026-10-16&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-11-04",
@@ -1277,7 +1337,8 @@
    "total": 919200,
    "total_with_bags": 919200,
    "seats_left": 16,
-   "holidays": []
+   "holidays": [],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-04&depDate2=2026-11-08&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   },
   {
    "depart": "2026-09-30",
@@ -1299,7 +1360,2769 @@
    "seats_left": 9,
    "holidays": [
     "개천절"
-   ]
+   ],
+   "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-30&depDate2=2026-10-04&paxCountAd=2&paxCountCh=0&paxCountIn=1"
   }
- ]
+ ],
+ "by_nights": {
+  "3": [
+   {
+    "depart": "2026-11-24",
+    "return": "2026-11-27",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 373200,
+    "total_with_bags": 583200,
+    "seats_left": 2,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-24&depDate2=2026-11-27&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-10",
+    "return": "2026-10-13",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 409200,
+    "total_with_bags": 729200,
+    "seats_left": 7,
+    "holidays": [
+     "일본연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-10&depDate2=2026-10-13&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-02",
+    "return": "2026-11-05",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 60000,
+     "class": "특가",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 457200,
+    "total_with_bags": 604200,
+    "seats_left": 4,
+    "holidays": [
+     "일본문화의날"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-02&depDate2=2026-11-05&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-30",
+    "return": "2026-11-02",
+    "outbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 478200,
+    "total_with_bags": 709200,
+    "seats_left": 4,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-30&depDate2=2026-11-02&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-01",
+    "return": "2026-11-04",
+    "outbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 478200,
+    "total_with_bags": 667200,
+    "seats_left": 3,
+    "holidays": [
+     "일본문화의날"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-01&depDate2=2026-11-04&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-10",
+    "return": "2026-11-13",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 478200,
+    "total_with_bags": 667200,
+    "seats_left": 2,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-10&depDate2=2026-11-13&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-21",
+    "return": "2026-11-24",
+    "outbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 478200,
+    "total_with_bags": 646200,
+    "seats_left": 9,
+    "holidays": [
+     "일본연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-21&depDate2=2026-11-24&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-25",
+    "return": "2026-11-28",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 478200,
+    "total_with_bags": 646200,
+    "seats_left": 9,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-25&depDate2=2026-11-28&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-09-21",
+    "return": "2026-09-24",
+    "outbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 1000,
+     "class": "특가",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 491200,
+    "total_with_bags": 549200,
+    "seats_left": 6,
+    "holidays": [
+     "일본연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-21&depDate2=2026-09-24&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-19",
+    "return": "2026-10-22",
+    "outbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 509200,
+    "total_with_bags": 729200,
+    "seats_left": 2,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-19&depDate2=2026-10-22&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-09-29",
+    "return": "2026-10-02",
+    "outbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 529200,
+    "total_with_bags": 729200,
+    "seats_left": 3,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-29&depDate2=2026-10-02&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-11",
+    "return": "2026-10-14",
+    "outbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 529200,
+    "total_with_bags": 689200,
+    "seats_left": 7,
+    "holidays": [
+     "일본연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-11&depDate2=2026-10-14&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-26",
+    "return": "2026-10-29",
+    "outbound": {
+     "fare": 60000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 60000,
+     "class": "특가",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 541200,
+    "total_with_bags": 667200,
+    "seats_left": 6,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-26&depDate2=2026-10-29&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-27",
+    "return": "2026-10-30",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 541200,
+    "total_with_bags": 646200,
+    "seats_left": 6,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-27&depDate2=2026-10-30&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-09",
+    "return": "2026-11-12",
+    "outbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 541200,
+    "total_with_bags": 667200,
+    "seats_left": 6,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-09&depDate2=2026-11-12&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-14",
+    "return": "2026-11-17",
+    "outbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 541200,
+    "total_with_bags": 646200,
+    "seats_left": 6,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-14&depDate2=2026-11-17&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-16",
+    "return": "2026-11-19",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 541200,
+    "total_with_bags": 667200,
+    "seats_left": 2,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-16&depDate2=2026-11-19&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-17",
+    "return": "2026-11-20",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 541200,
+    "total_with_bags": 604200,
+    "seats_left": 9,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-17&depDate2=2026-11-20&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-22",
+    "return": "2026-11-25",
+    "outbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "특가",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 541200,
+    "total_with_bags": 583200,
+    "seats_left": 7,
+    "holidays": [
+     "일본연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-22&depDate2=2026-11-25&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-27",
+    "return": "2026-11-30",
+    "outbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 541200,
+    "total_with_bags": 709200,
+    "seats_left": 3,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-27&depDate2=2026-11-30&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-31",
+    "return": "2026-11-03",
+    "outbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 60000,
+     "class": "특가",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 562200,
+    "total_with_bags": 688200,
+    "seats_left": 11,
+    "holidays": [
+     "일본문화의날"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-31&depDate2=2026-11-03&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-09-30",
+    "return": "2026-10-03",
+    "outbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 569200,
+    "total_with_bags": 729200,
+    "seats_left": 5,
+    "holidays": [
+     "개천절"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-30&depDate2=2026-10-03&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-21",
+    "return": "2026-10-24",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 569200,
+    "total_with_bags": 729200,
+    "seats_left": 8,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-21&depDate2=2026-10-24&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-20",
+    "return": "2026-10-23",
+    "outbound": {
+     "fare": 55000,
+     "class": "특가",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 599200,
+    "total_with_bags": 689200,
+    "seats_left": 9,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-20&depDate2=2026-10-23&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-03",
+    "return": "2026-11-06",
+    "outbound": {
+     "fare": 50000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 604200,
+    "total_with_bags": 646200,
+    "seats_left": 4,
+    "holidays": [
+     "일본문화의날"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-03&depDate2=2026-11-06&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-15",
+    "return": "2026-11-18",
+    "outbound": {
+     "fare": 130000,
+     "class": "일반",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 604200,
+    "total_with_bags": 709200,
+    "seats_left": 6,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-15&depDate2=2026-11-18&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-20",
+    "return": "2026-11-23",
+    "outbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 604200,
+    "total_with_bags": 709200,
+    "seats_left": 8,
+    "holidays": [
+     "일본연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-20&depDate2=2026-11-23&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-07",
+    "return": "2026-11-10",
+    "outbound": {
+     "fare": 140000,
+     "class": "일반",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 625200,
+    "total_with_bags": 730200,
+    "seats_left": 8,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-07&depDate2=2026-11-10&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-13",
+    "return": "2026-10-16",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 130000,
+     "class": "일반",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 629200,
+    "total_with_bags": 749200,
+    "seats_left": 7,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-13&depDate2=2026-10-16&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-04",
+    "return": "2026-10-07",
+    "outbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 55000,
+     "class": "특가",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 639200,
+    "total_with_bags": 689200,
+    "seats_left": 11,
+    "holidays": [
+     "대체휴일"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-04&depDate2=2026-10-07&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-28",
+    "return": "2026-10-31",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 150000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 646200,
+    "total_with_bags": 751200,
+    "seats_left": 7,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-28&depDate2=2026-10-31&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-13",
+    "return": "2026-11-16",
+    "outbound": {
+     "fare": 150000,
+     "class": "일반",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 646200,
+    "total_with_bags": 814200,
+    "seats_left": 4,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-13&depDate2=2026-11-16&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-18",
+    "return": "2026-11-21",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 150000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 646200,
+    "total_with_bags": 751200,
+    "seats_left": 5,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-18&depDate2=2026-11-21&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-25",
+    "return": "2026-10-28",
+    "outbound": {
+     "fare": 125000,
+     "class": "일반",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 55000,
+     "class": "특가",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 667200,
+    "total_with_bags": 719700,
+    "seats_left": 14,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-25&depDate2=2026-10-28&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-08",
+    "return": "2026-11-11",
+    "outbound": {
+     "fare": 160000,
+     "class": "일반",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 667200,
+    "total_with_bags": 709200,
+    "seats_left": 9,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-08&depDate2=2026-11-11&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-23",
+    "return": "2026-11-26",
+    "outbound": {
+     "fare": 160000,
+     "class": "일반",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 667200,
+    "total_with_bags": 730200,
+    "seats_left": 9,
+    "holidays": [
+     "일본연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-23&depDate2=2026-11-26&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-05",
+    "return": "2026-10-08",
+    "outbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 669200,
+    "total_with_bags": 729200,
+    "seats_left": 5,
+    "holidays": [
+     "대체휴일"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-05&depDate2=2026-10-08&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-06",
+    "return": "2026-10-09",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 150000,
+     "class": "일반",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 669200,
+    "total_with_bags": 769200,
+    "seats_left": 7,
+    "holidays": [
+     "한글날"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-06&depDate2=2026-10-09&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-18",
+    "return": "2026-10-21",
+    "outbound": {
+     "fare": 150000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 669200,
+    "total_with_bags": 749200,
+    "seats_left": 9,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-18&depDate2=2026-10-21&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-09-27",
+    "return": "2026-09-30",
+    "outbound": {
+     "fare": 160000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 689200,
+    "total_with_bags": 769200,
+    "seats_left": 6,
+    "holidays": [
+     "추석연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-27&depDate2=2026-09-30&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-11",
+    "return": "2026-11-14",
+    "outbound": {
+     "fare": 55000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 140000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 698700,
+    "total_with_bags": 751200,
+    "seats_left": 10,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-11&depDate2=2026-11-14&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-17",
+    "return": "2026-10-20",
+    "outbound": {
+     "fare": 170000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 709200,
+    "total_with_bags": 849200,
+    "seats_left": 7,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-17&depDate2=2026-10-20&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-06",
+    "return": "2026-11-09",
+    "outbound": {
+     "fare": 120000,
+     "class": "일반",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 709200,
+    "total_with_bags": 751200,
+    "seats_left": 6,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-06&depDate2=2026-11-09&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-24",
+    "return": "2026-10-27",
+    "outbound": {
+     "fare": 180000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 711200,
+    "total_with_bags": 858200,
+    "seats_left": 3,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-24&depDate2=2026-10-27&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-14",
+    "return": "2026-10-17",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 180000,
+     "class": "일반",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 729200,
+    "total_with_bags": 849200,
+    "seats_left": 2,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-14&depDate2=2026-10-17&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-09-26",
+    "return": "2026-09-29",
+    "outbound": {
+     "fare": 209800,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 788800,
+    "total_with_bags": 948800,
+    "seats_left": 2,
+    "holidays": [
+     "추석연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-26&depDate2=2026-09-29&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-03",
+    "return": "2026-10-06",
+    "outbound": {
+     "fare": 209800,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 788800,
+    "total_with_bags": 908800,
+    "seats_left": 4,
+    "holidays": [
+     "개천절"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-03&depDate2=2026-10-06&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-07",
+    "return": "2026-10-10",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 209800,
+     "class": "일반",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 788800,
+    "total_with_bags": 888800,
+    "seats_left": 2,
+    "holidays": [
+     "한글날"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-07&depDate2=2026-10-10&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-05",
+    "return": "2026-11-08",
+    "outbound": {
+     "fare": 60000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 180000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 793200,
+    "total_with_bags": 856200,
+    "seats_left": 11,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-05&depDate2=2026-11-08&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-12",
+    "return": "2026-10-15",
+    "outbound": {
+     "fare": 160000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 809200,
+    "total_with_bags": 849200,
+    "seats_left": 6,
+    "holidays": [
+     "일본연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-12&depDate2=2026-10-15&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-29",
+    "return": "2026-11-01",
+    "outbound": {
+     "fare": 60000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 190000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 814200,
+    "total_with_bags": 877200,
+    "seats_left": 10,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-29&depDate2=2026-11-01&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-12",
+    "return": "2026-11-15",
+    "outbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 160000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 835200,
+    "total_with_bags": 835200,
+    "seats_left": 9,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-12&depDate2=2026-11-15&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-19",
+    "return": "2026-11-22",
+    "outbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 190000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 835200,
+    "total_with_bags": 898200,
+    "seats_left": 11,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-19&depDate2=2026-11-22&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-26",
+    "return": "2026-11-29",
+    "outbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 190000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 835200,
+    "total_with_bags": 898200,
+    "seats_left": 13,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-26&depDate2=2026-11-29&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-04",
+    "return": "2026-11-07",
+    "outbound": {
+     "fare": 120000,
+     "class": "일반",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 150000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 856200,
+    "total_with_bags": 856200,
+    "seats_left": 16,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-04&depDate2=2026-11-07&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-23",
+    "return": "2026-10-26",
+    "outbound": {
+     "fare": 170000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 859200,
+    "total_with_bags": 859200,
+    "seats_left": 15,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-23&depDate2=2026-10-26&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-22",
+    "return": "2026-10-25",
+    "outbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 190000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 868200,
+    "total_with_bags": 908200,
+    "seats_left": 8,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-22&depDate2=2026-10-25&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-09",
+    "return": "2026-10-12",
+    "outbound": {
+     "fare": 190000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 869200,
+    "total_with_bags": 909200,
+    "seats_left": 8,
+    "holidays": [
+     "한글날"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-09&depDate2=2026-10-12&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-16",
+    "return": "2026-10-19",
+    "outbound": {
+     "fare": 170000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 869200,
+    "total_with_bags": 869200,
+    "seats_left": 12,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-16&depDate2=2026-10-19&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-01",
+    "return": "2026-10-04",
+    "outbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 209800,
+     "class": "일반",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 908800,
+    "total_with_bags": 948800,
+    "seats_left": 9,
+    "holidays": [
+     "개천절"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-01&depDate2=2026-10-04&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-15",
+    "return": "2026-10-18",
+    "outbound": {
+     "fare": 170000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 140000,
+     "class": "일반",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 949200,
+    "total_with_bags": 949200,
+    "seats_left": 14,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-15&depDate2=2026-10-18&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-08",
+    "return": "2026-10-11",
+    "outbound": {
+     "fare": 150000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 209800,
+     "class": "일반",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 1048800,
+    "total_with_bags": 1048800,
+    "seats_left": 16,
+    "holidays": [
+     "한글날"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-08&depDate2=2026-10-11&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-09-25",
+    "return": "2026-09-28",
+    "outbound": {
+     "fare": 209800,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 160000,
+     "class": "일반",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 1068800,
+    "total_with_bags": 1068800,
+    "seats_left": 12,
+    "holidays": [
+     "추석"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-25&depDate2=2026-09-28&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-09-23",
+    "return": "2026-09-26",
+    "outbound": {
+     "fare": 209800,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 209800,
+     "class": "일반",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 1168400,
+    "total_with_bags": 1168400,
+    "seats_left": 2,
+    "holidays": [
+     "일본추분"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-23&depDate2=2026-09-26&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   }
+  ],
+  "4": [
+   {
+    "depart": "2026-10-10",
+    "return": "2026-10-14",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 409200,
+    "total_with_bags": 689200,
+    "seats_left": 7,
+    "holidays": [
+     "일본연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-10&depDate2=2026-10-14&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-29",
+    "return": "2026-11-02",
+    "outbound": {
+     "fare": 60000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 457200,
+    "total_with_bags": 688200,
+    "seats_left": 4,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-29&depDate2=2026-11-02&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-31",
+    "return": "2026-11-04",
+    "outbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 478200,
+    "total_with_bags": 667200,
+    "seats_left": 3,
+    "holidays": [
+     "일본문화의날"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-31&depDate2=2026-11-04&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-21",
+    "return": "2026-11-25",
+    "outbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "특가",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 478200,
+    "total_with_bags": 583200,
+    "seats_left": 9,
+    "holidays": [
+     "일본연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-21&depDate2=2026-11-25&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-24",
+    "return": "2026-11-28",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 478200,
+    "total_with_bags": 625200,
+    "seats_left": 2,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-24&depDate2=2026-11-28&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-26",
+    "return": "2026-11-30",
+    "outbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 478200,
+    "total_with_bags": 709200,
+    "seats_left": 3,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-26&depDate2=2026-11-30&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-09-21",
+    "return": "2026-09-25",
+    "outbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 1000,
+     "class": "특가",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 491200,
+    "total_with_bags": 549200,
+    "seats_left": 6,
+    "holidays": [
+     "일본연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-21&depDate2=2026-09-25&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-20",
+    "return": "2026-11-24",
+    "outbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 499200,
+    "total_with_bags": 646200,
+    "seats_left": 8,
+    "holidays": [
+     "일본연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-20&depDate2=2026-11-24&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-09-29",
+    "return": "2026-10-03",
+    "outbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 529200,
+    "total_with_bags": 729200,
+    "seats_left": 5,
+    "holidays": [
+     "개천절"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-29&depDate2=2026-10-03&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-02",
+    "return": "2026-11-06",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 541200,
+    "total_with_bags": 625200,
+    "seats_left": 4,
+    "holidays": [
+     "일본문화의날"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-02&depDate2=2026-11-06&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-12",
+    "return": "2026-11-16",
+    "outbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 541200,
+    "total_with_bags": 709200,
+    "seats_left": 4,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-12&depDate2=2026-11-16&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-14",
+    "return": "2026-11-18",
+    "outbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 541200,
+    "total_with_bags": 646200,
+    "seats_left": 6,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-14&depDate2=2026-11-18&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-16",
+    "return": "2026-11-20",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 541200,
+    "total_with_bags": 667200,
+    "seats_left": 2,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-16&depDate2=2026-11-20&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-22",
+    "return": "2026-11-26",
+    "outbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 541200,
+    "total_with_bags": 604200,
+    "seats_left": 7,
+    "holidays": [
+     "일본연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-22&depDate2=2026-11-26&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-30",
+    "return": "2026-11-03",
+    "outbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 60000,
+     "class": "특가",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 562200,
+    "total_with_bags": 688200,
+    "seats_left": 10,
+    "holidays": [
+     "일본문화의날"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-30&depDate2=2026-11-03&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-01",
+    "return": "2026-11-05",
+    "outbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 60000,
+     "class": "특가",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 562200,
+    "total_with_bags": 688200,
+    "seats_left": 7,
+    "holidays": [
+     "일본문화의날"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-01&depDate2=2026-11-05&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-05",
+    "return": "2026-11-09",
+    "outbound": {
+     "fare": 60000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 583200,
+    "total_with_bags": 688200,
+    "seats_left": 6,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-05&depDate2=2026-11-09&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-06",
+    "return": "2026-11-10",
+    "outbound": {
+     "fare": 120000,
+     "class": "일반",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 583200,
+    "total_with_bags": 688200,
+    "seats_left": 8,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-06&depDate2=2026-11-10&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-19",
+    "return": "2026-11-23",
+    "outbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 583200,
+    "total_with_bags": 709200,
+    "seats_left": 11,
+    "holidays": [
+     "일본연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-19&depDate2=2026-11-23&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-26",
+    "return": "2026-10-30",
+    "outbound": {
+     "fare": 60000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 625200,
+    "total_with_bags": 688200,
+    "seats_left": 7,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-26&depDate2=2026-10-30&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-07",
+    "return": "2026-11-11",
+    "outbound": {
+     "fare": 140000,
+     "class": "일반",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 625200,
+    "total_with_bags": 667200,
+    "seats_left": 9,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-07&depDate2=2026-11-11&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-10",
+    "return": "2026-11-14",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 140000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 625200,
+    "total_with_bags": 751200,
+    "seats_left": 2,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-10&depDate2=2026-11-14&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-19",
+    "return": "2026-10-23",
+    "outbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 629200,
+    "total_with_bags": 729200,
+    "seats_left": 9,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-19&depDate2=2026-10-23&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-20",
+    "return": "2026-10-24",
+    "outbound": {
+     "fare": 55000,
+     "class": "특가",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 639200,
+    "total_with_bags": 689200,
+    "seats_left": 9,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-20&depDate2=2026-10-24&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-27",
+    "return": "2026-10-31",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 150000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 646200,
+    "total_with_bags": 751200,
+    "seats_left": 6,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-27&depDate2=2026-10-31&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-09",
+    "return": "2026-11-13",
+    "outbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 646200,
+    "total_with_bags": 709200,
+    "seats_left": 5,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-09&depDate2=2026-11-13&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-13",
+    "return": "2026-11-17",
+    "outbound": {
+     "fare": 150000,
+     "class": "일반",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 646200,
+    "total_with_bags": 751200,
+    "seats_left": 6,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-13&depDate2=2026-11-17&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-17",
+    "return": "2026-11-21",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 150000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 646200,
+    "total_with_bags": 709200,
+    "seats_left": 9,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-17&depDate2=2026-11-21&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-11",
+    "return": "2026-10-15",
+    "outbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 649200,
+    "total_with_bags": 729200,
+    "seats_left": 6,
+    "holidays": [
+     "일본연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-11&depDate2=2026-10-15&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-14",
+    "return": "2026-10-18",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 140000,
+     "class": "일반",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 649200,
+    "total_with_bags": 769200,
+    "seats_left": 2,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-14&depDate2=2026-10-18&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-08",
+    "return": "2026-11-12",
+    "outbound": {
+     "fare": 160000,
+     "class": "일반",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 667200,
+    "total_with_bags": 793200,
+    "seats_left": 6,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-08&depDate2=2026-11-12&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-23",
+    "return": "2026-11-27",
+    "outbound": {
+     "fare": 160000,
+     "class": "일반",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 667200,
+    "total_with_bags": 793200,
+    "seats_left": 3,
+    "holidays": [
+     "일본연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-23&depDate2=2026-11-27&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-18",
+    "return": "2026-10-22",
+    "outbound": {
+     "fare": 150000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 669200,
+    "total_with_bags": 829200,
+    "seats_left": 2,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-18&depDate2=2026-10-22&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-25",
+    "return": "2026-10-29",
+    "outbound": {
+     "fare": 125000,
+     "class": "일반",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 60000,
+     "class": "특가",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 677700,
+    "total_with_bags": 740700,
+    "seats_left": 6,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-25&depDate2=2026-10-29&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-22",
+    "return": "2026-10-26",
+    "outbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 679200,
+    "total_with_bags": 719200,
+    "seats_left": 8,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-22&depDate2=2026-10-26&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-02",
+    "return": "2026-10-06",
+    "outbound": {
+     "fare": 160000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 689200,
+    "total_with_bags": 809200,
+    "seats_left": 4,
+    "holidays": [
+     "개천절"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-02&depDate2=2026-10-06&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-23",
+    "return": "2026-10-27",
+    "outbound": {
+     "fare": 170000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 691200,
+    "total_with_bags": 838200,
+    "seats_left": 3,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-23&depDate2=2026-10-27&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-16",
+    "return": "2026-10-20",
+    "outbound": {
+     "fare": 170000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 709200,
+    "total_with_bags": 849200,
+    "seats_left": 7,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-16&depDate2=2026-10-20&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-17",
+    "return": "2026-10-21",
+    "outbound": {
+     "fare": 170000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 709200,
+    "total_with_bags": 789200,
+    "seats_left": 9,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-17&depDate2=2026-10-21&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-03",
+    "return": "2026-11-07",
+    "outbound": {
+     "fare": 50000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 150000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 709200,
+    "total_with_bags": 751200,
+    "seats_left": 6,
+    "holidays": [
+     "일본문화의날"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-03&depDate2=2026-11-07&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-04",
+    "return": "2026-10-08",
+    "outbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 729200,
+    "total_with_bags": 729200,
+    "seats_left": 11,
+    "holidays": [
+     "대체휴일"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-04&depDate2=2026-10-08&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-13",
+    "return": "2026-10-17",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 180000,
+     "class": "일반",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 729200,
+    "total_with_bags": 849200,
+    "seats_left": 7,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-13&depDate2=2026-10-17&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-28",
+    "return": "2026-11-01",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 190000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 730200,
+    "total_with_bags": 835200,
+    "seats_left": 7,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-28&depDate2=2026-11-01&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-18",
+    "return": "2026-11-22",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 190000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 730200,
+    "total_with_bags": 835200,
+    "seats_left": 5,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-18&depDate2=2026-11-22&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-25",
+    "return": "2026-11-29",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 190000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 730200,
+    "total_with_bags": 835200,
+    "seats_left": 9,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-25&depDate2=2026-11-29&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-11",
+    "return": "2026-11-15",
+    "outbound": {
+     "fare": 55000,
+     "class": "특가",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 160000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 740700,
+    "total_with_bags": 793200,
+    "seats_left": 10,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-11&depDate2=2026-11-15&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-21",
+    "return": "2026-10-25",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 190000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 748200,
+    "total_with_bags": 908200,
+    "seats_left": 8,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-21&depDate2=2026-10-25&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-09",
+    "return": "2026-10-13",
+    "outbound": {
+     "fare": 190000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 749200,
+    "total_with_bags": 909200,
+    "seats_left": 7,
+    "holidays": [
+     "한글날"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-09&depDate2=2026-10-13&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-05",
+    "return": "2026-10-09",
+    "outbound": {
+     "fare": 70000,
+     "class": "특가",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 150000,
+     "class": "일반",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 769200,
+    "total_with_bags": 829200,
+    "seats_left": 5,
+    "holidays": [
+     "대체휴일"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-05&depDate2=2026-10-09&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-15",
+    "return": "2026-11-19",
+    "outbound": {
+     "fare": 130000,
+     "class": "일반",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 772200,
+    "total_with_bags": 772200,
+    "seats_left": 10,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-15&depDate2=2026-11-19&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-24",
+    "return": "2026-10-28",
+    "outbound": {
+     "fare": 180000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 55000,
+     "class": "특가",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 784700,
+    "total_with_bags": 837200,
+    "seats_left": 14,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-24&depDate2=2026-10-28&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-09-25",
+    "return": "2026-09-29",
+    "outbound": {
+     "fare": 209800,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 788800,
+    "total_with_bags": 948800,
+    "seats_left": 3,
+    "holidays": [
+     "추석"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-25&depDate2=2026-09-29&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-09-26",
+    "return": "2026-09-30",
+    "outbound": {
+     "fare": 209800,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 788800,
+    "total_with_bags": 868800,
+    "seats_left": 2,
+    "holidays": [
+     "추석연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-26&depDate2=2026-09-30&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-06",
+    "return": "2026-10-10",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 209800,
+     "class": "일반",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 788800,
+    "total_with_bags": 888800,
+    "seats_left": 2,
+    "holidays": [
+     "한글날"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-06&depDate2=2026-10-10&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-07",
+    "return": "2026-10-11",
+    "outbound": {
+     "fare": 20000,
+     "class": "숏트립",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 209800,
+     "class": "일반",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 788800,
+    "total_with_bags": 888800,
+    "seats_left": 5,
+    "holidays": [
+     "한글날"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-07&depDate2=2026-10-11&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-08",
+    "return": "2026-10-12",
+    "outbound": {
+     "fare": 150000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 789200,
+    "total_with_bags": 829200,
+    "seats_left": 8,
+    "holidays": [
+     "한글날"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-08&depDate2=2026-10-12&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-09-27",
+    "return": "2026-10-01",
+    "outbound": {
+     "fare": 160000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 80000,
+     "class": "특가",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 809200,
+    "total_with_bags": 849200,
+    "seats_left": 9,
+    "holidays": [
+     "추석연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-27&depDate2=2026-10-01&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-03",
+    "return": "2026-10-07",
+    "outbound": {
+     "fare": 209800,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 55000,
+     "class": "특가",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 858800,
+    "total_with_bags": 908800,
+    "seats_left": 9,
+    "holidays": [
+     "개천절"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-03&depDate2=2026-10-07&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-15",
+    "return": "2026-10-19",
+    "outbound": {
+     "fare": 170000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 869200,
+    "total_with_bags": 869200,
+    "seats_left": 12,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-15&depDate2=2026-10-19&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-10-12",
+    "return": "2026-10-16",
+    "outbound": {
+     "fare": 160000,
+     "class": "일반",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 130000,
+     "class": "일반",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 909200,
+    "total_with_bags": 909200,
+    "seats_left": 14,
+    "holidays": [
+     "일본연휴"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-10-12&depDate2=2026-10-16&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-11-04",
+    "return": "2026-11-08",
+    "outbound": {
+     "fare": 120000,
+     "class": "일반",
+     "dep": "16:35",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 180000,
+     "class": "일반",
+     "dep": "18:40",
+     "arr": "19:50"
+    },
+    "total": 919200,
+    "total_with_bags": 919200,
+    "seats_left": 16,
+    "holidays": [],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-11-04&depDate2=2026-11-08&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   },
+   {
+    "depart": "2026-09-30",
+    "return": "2026-10-04",
+    "outbound": {
+     "fare": 100000,
+     "class": "실속",
+     "dep": "16:30",
+     "arr": "17:40"
+    },
+    "inbound": {
+     "fare": 209800,
+     "class": "일반",
+     "dep": "18:35",
+     "arr": "19:55"
+    },
+    "total": 948800,
+    "total_with_bags": 948800,
+    "seats_left": 9,
+    "holidays": [
+     "개천절"
+    ],
+    "book_url": "https://www.airbusan.com/web/individual/booking/flightsAvail?tripType=RT&depCity1=PUS&arrCity1=MYJ&depCity=PUS&arrCity=MYJ&depDate1=2026-09-30&depDate2=2026-10-04&paxCountAd=2&paxCountCh=0&paxCountIn=1"
+   }
+  ]
+ },
+ "refresh_times_kst": [
+  "08:47",
+  "21:47"
+ ],
+ "source": "https://pus-myj-fares.netlify.app"
 }
