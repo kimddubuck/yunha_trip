@@ -136,6 +136,36 @@ ul.plain li b{display:block;font-size:15px}
 .check input:checked + label{color:var(--ink-soft);text-decoration:line-through}
 footer{margin-top:40px;font-size:12.5px;color:var(--ink-soft);line-height:1.6}
 
+/* ── 구글 지도 · 이야기 카드 · 안내원 ── */
+#gmap{width:100%;height:440px;background:var(--sea-light)}
+#gfail{padding:14px;font-size:14px;color:var(--ink-soft)}
+#gcard{border-top:1px solid var(--line);padding:14px 16px;background:var(--card)}
+#gcard .gc-top{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+#gcard .gc-name{font-size:17px;font-weight:700}
+#gcard .gc-tag{font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:999px;
+background:color-mix(in srgb,var(--sea) 15%,transparent);color:var(--sea)}
+#gcard .gc-tag.food{background:color-mix(in srgb,var(--mikan) 18%,transparent);color:var(--mikan)}
+#gcard .gc-story{margin-top:8px;font-size:14.5px;line-height:1.7}
+#gcard .gc-baby{margin-top:8px;font-size:13.5px;padding:8px 11px;border-radius:9px;
+background:color-mix(in srgb,var(--moss) 10%,transparent);border-left:3px solid var(--moss)}
+#gcard .gc-approx{margin-top:6px;font-size:12px;color:var(--ink-soft)}
+#gcard .gc-act{display:flex;gap:8px;flex-wrap:wrap;margin-top:11px}
+#gcard .gc-act a,#gcard .gc-act button{font:700 13px inherit;padding:7px 13px;border-radius:999px;
+border:1px solid var(--line);background:var(--paper);color:var(--ink);text-decoration:none;cursor:pointer}
+#gcard .gc-act button.on{background:var(--mikan);border-color:var(--mikan);color:#fff}
+#guide{position:sticky;bottom:0;z-index:30;display:flex;align-items:center;gap:11px;
+margin:12px 0 0;padding:11px 13px;border:1px solid var(--line);border-radius:14px;
+background:color-mix(in srgb,var(--card) 94%,transparent);backdrop-filter:blur(8px)}
+#guide .gv-face{font-size:26px;flex:0 0 auto}
+#guide .gv-body{flex:1 1 auto;min-width:0}
+#guide .gv-when{font-size:11.5px;font-weight:700;color:var(--sea);letter-spacing:.03em}
+#guide .gv-text{font-size:14px;line-height:1.5;margin-top:2px}
+#guide .gv-btns{display:flex;align-items:center;gap:4px;flex:0 0 auto}
+#guide button{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);
+background:var(--paper);color:var(--ink);font-size:13px;cursor:pointer}
+#guide button:disabled{opacity:.35;cursor:default}
+#guide .gv-count{font-size:11.5px;color:var(--ink-soft);min-width:38px;text-align:center}
+
 /* ── 섹션 접기 ── 긴 글을 한 번에 다 펼치지 않는다. 제목을 누르면 열린다. */
 .sectoggle{all:unset;display:flex;align-items:center;gap:8px;width:100%;cursor:pointer}
 .sectoggle:focus-visible{outline:2px solid var(--sea);outline-offset:3px;border-radius:8px}
@@ -253,13 +283,25 @@ background:var(--card);font-size:13px;font-weight:700;color:var(--ink-soft);text
 <!-- ===== LIVE GOOGLE MAP ===== -->
 <div class="gbox" id="gbox">
   <div class="ghead">
-    <div class="gname" id="g-name">마쓰야마 공항 <span class="jp">松山空港</span></div>
+    <div class="gname" id="g-name">마쓰야마 여행 지도 <span class="jp">33곳</span></div>
     <a class="btn" id="g-open" href="https://www.google.com/maps/search/?api=1&amp;query=松山空港" target="_blank" rel="noopener">구글맵 앱에서 열기 ↗</a>
   </div>
-  <div class="gframe" id="g-frame">
-    <div class="gfallback" id="g-fallback">
-      <div>실제 지도는 위 버튼으로 구글맵에서 열어 주세요.</div>
-    </div>
+  <div id="gmap" role="application" aria-label="마쓰야마 여행 지도"></div>
+  <div id="gcard" hidden></div>
+  <div id="gfail" hidden>
+    지도를 불러오지 못했습니다. 위 <b>약도</b>와 <b>구글맵 앱에서 열기</b>를 이용해 주세요.
+  </div>
+</div>
+<div id="guide" hidden>
+  <div class="gv-face" aria-hidden="true">🧭</div>
+  <div class="gv-body">
+    <div class="gv-when" id="gv-when"></div>
+    <div class="gv-text" id="gv-text"></div>
+  </div>
+  <div class="gv-btns">
+    <button type="button" id="gv-prev" aria-label="이전">◀</button>
+    <span class="gv-count" id="gv-count"></span>
+    <button type="button" id="gv-next" aria-label="다음">▶</button>
   </div>
 </div>
 <p style="font-size:13px;color:var(--ink-soft);margin-top:8px">위쪽은 위치 관계를 한눈에 보는 약도, 아래는 실제 구글 지도입니다. 약도의 핀이나 일정 카드의 <b>‘여기 지도 보기’</b>를 누르면 아래 지도가 그 장소로 바뀝니다. <b>‘구글맵 열기’</b>를 누르면 폰의 구글맵 앱으로 넘어가서 바로 ★ 저장할 수 있어요.</p>
@@ -1036,34 +1078,30 @@ background:var(--card);font-size:13px;font-weight:700;color:var(--ink-soft);text
   buttons.forEach(function(b){ b.addEventListener('click',function(){ apply(b.dataset.day); }); });
 
   /* ---- live google map panel ---- */
-  var frame=document.getElementById('g-frame');
-  var fallback=document.getElementById('g-fallback');
   var gname=document.getElementById('g-name');
   var gopen=document.getElementById('g-open');
-  var current=null;
+  /* 약도 핀과 일정 카드의 '여기 지도 보기'가 아래 구글 지도를 그 장소로 옮긴다.
+     예전에는 iframe 을 갈아 끼웠는데, 이제 진짜 지도가 있으니 해당 핀을 골라 준다. */
   function showMap(q,label){
-    if(!frame||!q||q===current) { if(q===current) return; }
-    current=q;
-    var old=frame.querySelector('iframe');
-    if(old) old.remove();
-    var f=document.createElement('iframe');
-    f.setAttribute('loading','lazy');
-    f.setAttribute('referrerpolicy','no-referrer-when-downgrade');
-    f.setAttribute('allowfullscreen','');
-    f.setAttribute('title', (label||q)+' 지도');
-    f.src='https://www.google.com/maps?q='+encodeURIComponent(q)+'&z=14&hl=ko&output=embed';
-    frame.appendChild(f);
-    if(gname) gname.innerHTML='';
     if(gname){
-      var strong=document.createTextNode(label||q);
-      gname.appendChild(strong);
+      gname.innerHTML='';
+      gname.appendChild(document.createTextNode(label||q));
       var jp=document.createElement('span'); jp.className='jp'; jp.textContent=q;
       gname.appendChild(jp);
     }
     if(gopen) gopen.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
-    if(fallback) fallback.textContent='지도가 보이지 않으면 위 ‘구글맵 앱에서 열기’를 눌러 주세요.';
+    if(!window.GM||!GM.map||!GM.places.length) return;
+    var hit=-1;
+    GM.places.forEach(function(p,i){
+      if(hit>=0) return;
+      if(p.query===q || p.name===label || (label&&p.name.indexOf(label)>=0)) hit=i;
+    });
+    if(hit<0) return;
+    GM.day='all'; refreshPins();
+    showCard(hit);
+    GM.map.setZoom(15);
+    document.getElementById('gbox').scrollIntoView({block:'center'});
   }
-  showMap('松山空港','마쓰야마 공항');
 
   function go(p){
     var t=document.getElementById(p.dataset.target); if(!t) return;
@@ -1203,6 +1241,139 @@ background:var(--card);font-size:13px;font-weight:700;color:var(--ink-soft);text
         .catch(function(){ loadFares(i+1); });
     }catch(e){ loadFares(i+1); }
   })(0);
+
+  /* ---- 구글 지도 · 이야기 · 스탬프 · 안내원 ----
+     places.json 에 좌표와 이야기가 들어 있고, 지도는 구글 Maps JavaScript API 로 그린다.
+     지도가 안 뜨면(키 제한·오프라인) 위쪽 손그림 약도가 그대로 남는다. */
+  var GKEY='AIzaSyCmcMxn5dB6vRAMkTjN1PeIEVBCwFu6JEA';
+  var DAYCOLOR={1:'#3b82f6',2:'#8b5cf6',3:'#0ea5e9',4:'#f59e0b',5:'#10b981'};
+  var GM={map:null,places:[],markers:[],day:'all',stamps:{},cur:-1};
+
+  try{ GM.stamps=JSON.parse(localStorage.getItem('myj-stamp')||'{}'); }catch(e){ GM.stamps={}; }
+  function saveStamps(){ try{ localStorage.setItem('myj-stamp',JSON.stringify(GM.stamps)); }catch(e){} }
+
+  function pinIcon(p,on){
+    var c=p.food?'#e2662c':(DAYCOLOR[(p.days&&p.days[0])||1]||'#64748b');
+    var svg='<svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" viewBox="0 0 30 40">'
+      +'<path d="M15 39C15 39 28 24.5 28 14.5A13 13 0 1 0 2 14.5C2 24.5 15 39 15 39Z" fill="'+c+'" stroke="#fff" stroke-width="2.4"/>'
+      +'<circle cx="15" cy="14.5" r="5.4" fill="#fff"/>'
+      +(on?'<circle cx="15" cy="14.5" r="3" fill="'+c+'"/>':'')+'</svg>';
+    return {url:'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(svg),
+            scaledSize:new google.maps.Size(30,40), anchor:new google.maps.Point(15,39)};
+  }
+
+  function showCard(i){
+    GM.cur=i;
+    var p=GM.places[i], box=document.getElementById('gcard');
+    if(!p||!box) return;
+    var done=!!GM.stamps[p.name];
+    var tag=p.food?'맛집':((p.days&&p.days.length)?p.days.map(function(d){return d+'일차'}).join(' · '):p.day);
+    box.innerHTML='<div class="gc-top"><span class="gc-name">'+p.name+'</span>'
+      +'<span class="gc-tag'+(p.food?' food':'')+'">'+tag+'</span></div>'
+      +(p.story?'<p class="gc-story">'+p.story+'</p>':'')
+      +(p.baby?'<div class="gc-baby">👶 '+p.baby+'</div>':'')
+      +(p.approx?'<p class="gc-approx">※ 핀은 대략 위치입니다. 정확한 자리는 구글맵에서 확인하세요.</p>':'')
+      +'<div class="gc-act">'
+      +'<a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.query||p.name)+'" target="_blank" rel="noopener">구글맵에서 열기 ↗</a>'
+      +'<button type="button" id="gc-stamp" class="'+(done?'on':'')+'">'+(done?'✓ 다녀왔어요':'스탬프 찍기')+'</button>'
+      +'</div>';
+    var b=document.getElementById('gc-stamp');
+    if(b) b.onclick=function(){
+      if(GM.stamps[p.name]) delete GM.stamps[p.name]; else GM.stamps[p.name]=1;
+      saveStamps(); refreshPins(); showCard(i);
+    };
+    box.hidden=false;
+    var m=GM.markers[i];
+    if(m&&GM.map){ GM.map.panTo(m.getPosition()); if(GM.map.getZoom()<12) GM.map.setZoom(13); }
+  }
+
+  function refreshPins(){
+    GM.markers.forEach(function(m,i){
+      var p=GM.places[i];
+      var vis=(GM.day==='all')||(p.days&&p.days.indexOf(Number(GM.day))>=0);
+      m.setVisible(vis);
+      m.setIcon(pinIcon(p,!!GM.stamps[p.name]));
+    });
+  }
+
+  /* 안내원 대본 — 일정표를 따라가며 한 곳씩 짚어 준다 */
+  var GUIDE=[
+   [1,'16:35 도착','마쓰야마 공항에 내리면 1층 인포메이션부터 가세요. 한국 여권을 보여주면 무료 셔틀 쿠폰과 쿠폰북을 줍니다.','마쓰야마 공항'],
+   [1,'18:00 이동','셔틀로 도고온천 쪽으로 갑니다. 첫날은 씻고 자기만 하면 되는 날이에요.','도고온천 본관'],
+   [2,'09:00 렌터카','시내 영업소에서 차를 받습니다. 카시트는 예약할 때 같이 신청했는지 확인하세요.','토요타 렌터카 마쓰야마점'],
+   [2,'10:30 마쓰야마성','로프웨이로 올라갑니다. 유모차는 접어서 실을 수 있어요. 리프트는 아기와 못 탑니다.','마쓰야마성 천수각'],
+   [2,'12:30 점심','줄 서기 전에 일찍 가세요. 나베야키우동은 국물이 달아 아기도 한 술 뜹니다.','나베야키우동 車井戸'],
+   [2,'15:00 간식','오카이도 아케이드에서 로켄만주 하나. 1930년대 고학생들 먹이려고 만든 빵입니다.','로켄만주 다케우치'],
+   [2,'17:00 온천','아스카노유 가족탕이면 셋이 같이 들어갈 수 있습니다. 예약 잊지 마세요.','도고온천 별관 아스카노유'],
+   [3,'10:00 나룻배','미쓰 나룻배는 시도(市道)라서 공짜입니다. 유모차째 타면 됩니다.','미쓰노와타시 나룻배'],
+   [3,'11:30 점심','미쓰 동네가 미쓰하마야키의 고향입니다. 배 타고 나와 한 장 구워 드세요.','미쓰하마야키 동네 (三津)'],
+   [3,'16:00 시모나다','일몰 전에 도착해야 합니다. 11월 하순은 17시 전후로 해가 집니다.','시모나다역'],
+   [4,'10:00 우치코자','1916년 목조 가부키 극장. 무대 아래 회전 장치까지 들어가 볼 수 있어요.','우치코자'],
+   [4,'13:00 오즈성','2004년에 나무로 다시 올린 천수입니다. 오르막이라 아기띠가 편해요.','오즈성'],
+   [5,'10:00 도베야키','230년 된 에히메 도자기. 깨지는 게 많으니 아기는 안고 들어가세요.','도베야키 전통산업회관'],
+   [5,'13:00 마지막 쇼핑','에미풀에서 기저귀 갈고 기념품까지 해결하면 딱 맞습니다.','에미풀 마사키'],
+   [5,'18:40 귀국','공항으로. 시내에서 15분이면 닿습니다.','마쓰야마 공항']
+  ];
+  function guideShow(i){
+    var g=GUIDE[i]; if(!g) return;
+    GM.gi=i;
+    document.getElementById('gv-when').textContent=g[0]+'일차 · '+g[1];
+    document.getElementById('gv-text').textContent=g[2];
+    document.getElementById('gv-count').textContent=(i+1)+'/'+GUIDE.length;
+    document.getElementById('gv-prev').disabled=(i===0);
+    document.getElementById('gv-next').disabled=(i===GUIDE.length-1);
+    var idx=-1;
+    GM.places.forEach(function(p,n){ if(p.name===g[3]) idx=n; });
+    if(idx>=0){
+      GM.day=String(g[0]); refreshPins();
+      [].slice.call(document.querySelectorAll('.dayfilter button')).forEach(function(b){
+        b.setAttribute('aria-pressed', b.dataset.day===String(g[0])?'true':'false');
+      });
+      showCard(idx);
+    }
+  }
+
+  window.initGmap=function(){
+    fetch('./places.json',{cache:'no-store'}).then(function(r){ return r.json(); }).then(function(list){
+      GM.places=list.filter(function(p){ return p.lat&&p.lng; });
+      GM.map=new google.maps.Map(document.getElementById('gmap'),{
+        center:{lat:33.72,lng:132.72}, zoom:10, mapTypeControl:false, streetViewControl:false,
+        fullscreenControl:true, gestureHandling:'greedy'
+      });
+      GM.places.forEach(function(p,i){
+        var m=new google.maps.Marker({position:{lat:p.lat,lng:p.lng},map:GM.map,
+          title:p.name, icon:pinIcon(p,!!GM.stamps[p.name])});
+        m.addListener('click',function(){ showCard(i); });
+        GM.markers.push(m);
+      });
+      refreshPins();
+      var gv=document.getElementById('guide');
+      if(gv){
+        gv.hidden=false;
+        document.getElementById('gv-prev').onclick=function(){ guideShow(Math.max(0,GM.gi-1)); };
+        document.getElementById('gv-next').onclick=function(){ guideShow(Math.min(GUIDE.length-1,GM.gi+1)); };
+        guideShow(0);
+      }
+      /* 위쪽 일차 필터가 지도에도 걸리게 */
+      [].slice.call(document.querySelectorAll('.dayfilter button')).forEach(function(b){
+        b.addEventListener('click',function(){ GM.day=b.dataset.day; refreshPins(); });
+      });
+    }).catch(function(){
+      var f=document.getElementById('gfail'); if(f) f.hidden=false;
+      var m=document.getElementById('gmap'); if(m) m.style.display='none';
+    });
+  };
+  window.gm_authFailure=function(){
+    var f=document.getElementById('gfail'); if(f) f.hidden=false;
+    var m=document.getElementById('gmap'); if(m) m.style.display='none';
+  };
+  (function(){
+    var s=document.createElement('script');
+    s.src='https://maps.googleapis.com/maps/api/js?key='+GKEY+'&callback=initGmap&language=ko&region=JP&loading=async';
+    s.async=true;
+    s.onerror=window.gm_authFailure;
+    document.head.appendChild(s);
+  })();
 
   /* ---- 읽기 편하게: 빠른 이동 칩 + 좁은 화면에서 섹션 접기 ----
      글이 길어서 폰에서 한 번에 다 펼치면 스크롤만 길어집니다.
