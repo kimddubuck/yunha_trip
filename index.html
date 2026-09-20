@@ -248,6 +248,13 @@ footer{margin-top:40px;font-size:12.5px;color:var(--ink-soft);line-height:1.6}
 
   <h3 style="font-size:18px;margin-top:22px;margin-bottom:8px">4박5일 조합 — 싼 순서</h3>
   <p class="lead" style="font-size:14.5px">운임은 체류 일수와 무관하게 <b>날짜로 정해지므로</b>, 날짜별 편도 운임으로 4박5일 조합을 다시 만든 표입니다. 금액은 <b>성인 1명 왕복 운임 합계</b>(세금·유류할증 별도)이고, <b>‘비싼 밤’</b>은 네 밤 중 금·토요일이나 연휴에 걸리는 밤의 수입니다.</p>
+  <div id="live" hidden style="background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:12px">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:8px">
+      <b style="font-size:15.5px">실시간 최저가</b>
+      <span id="live-when" style="font-size:12.5px;color:var(--ink-soft)"></span>
+    </div>
+    <div id="live-body" style="overflow-x:auto"></div>
+  </div>
   <div style="overflow-x:auto">
   <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:520px">
     <thead>
@@ -306,6 +313,7 @@ footer{margin-top:40px;font-size:12.5px;color:var(--ink-soft);line-height:1.6}
   </table>
   </div>
   <p style="font-size:13.5px;color:var(--ink-soft);margin-top:10px">
+    <b>위 표는 2026-09-20 09:03 기준 수집분으로 제가 직접 계산한 값</b>입니다. 항공 모니터링 쪽에서 <code>fares.json</code>을 공개하면 이 자리에 <b>실시간 표</b>가 자동으로 뜹니다(규격은 레포의 HANDOVER.md).<br><br>
     <b>아직 모르는 조합</b> — 오는편 운임이 3박4일 표에 안 나와서 계산하지 못한 것들입니다: <b>10/13(화)→10/17(토)</b>, <b>10/21(수)→10/25(일)</b>, <b>10/28(수)→11/1(일)</b>. 가는편이 전부 20,000 숏트립이라 오는편만 싸면 최저가가 될 수 있어요. 다만 셋 다 <b>금·토요일 밤이 끼어</b> 숙박비에서 손해를 봅니다. 사이트를 4박 모드로 바꾸면 바로 확인됩니다.
   </p>
 
@@ -1034,6 +1042,72 @@ footer{margin-top:40px;font-size:12.5px;color:var(--ink-soft);line-height:1.6}
       if(box) box.scrollIntoView({block:'center'});
     });
   });
+
+  /* ---- live fares (pus-myj-fares) ----
+     항공 모니터링 쪽에서 fares.json을 공개하면 이 패널이 자동으로 채워집니다.
+     아직 없거나(404), 아티팩트 뷰어처럼 외부 fetch가 막힌 곳에서는
+     조용히 실패하고 아래 정적 표가 그대로 남습니다. 규격은 HANDOVER.md 참고. */
+  var FARES_URL='https://pus-myj-fares.netlify.app/fares.json';
+  var JP_HOL=['2026-10-12'];                                  /* 스포츠의날 */
+  var KR_HOL=['2026-10-03','2026-10-05','2026-10-09'];        /* 개천절·대체·한글날 */
+  function dayName(d){ return '일월화수목금토'.charAt(d.getDay()); }
+  function iso(d){ return d.toISOString().slice(0,10); }
+  function pricyNights(departISO,nights){
+    var out=[], n=0, d=new Date(departISO+'T00:00:00Z');
+    for(var i=0;i<nights;i++){
+      var cur=new Date(d.getTime()+i*86400000);
+      var nxt=iso(new Date(cur.getTime()+86400000));
+      var wd=cur.getUTCDay();                                  /* 0=일 */
+      var bad = wd===5 || wd===6 || JP_HOL.indexOf(iso(cur))>=0 || JP_HOL.indexOf(nxt)>=0
+                || KR_HOL.indexOf(iso(cur))>=0;
+      if(bad) n++;
+      out.push('일월화수목금토'.charAt(wd));
+    }
+    return {days:out.join(''), bad:n};
+  }
+  function won(v){ return (v==null||isNaN(v))?'—':Number(v).toLocaleString('ko-KR'); }
+  function renderLive(data){
+    var rows=(data&&data.combos)||[]; if(!rows.length) return;
+    var nights=(data.nights!=null)?data.nights:4;
+    var box=document.getElementById('live'), body=document.getElementById('live-body'),
+        when=document.getElementById('live-when');
+    if(!box||!body) return;
+    rows=rows.slice().sort(function(a,b){ return (a.total||0)-(b.total||0); }).slice(0,6);
+    var t=document.createElement('table');
+    t.style.cssText='width:100%;border-collapse:collapse;font-size:14px;min-width:460px;font-variant-numeric:tabular-nums';
+    var head='<tr style="border-bottom:2px solid var(--line);text-align:left">'
+      +'<th style="padding:6px 6px">출발 → 귀국</th><th style="padding:6px 6px;text-align:right">최저가</th>'
+      +'<th style="padding:6px 6px">네 밤</th><th style="padding:6px 6px;text-align:right">잔여</th></tr>';
+    var out='';
+    rows.forEach(function(r){
+      if(!r.depart) return;
+      var q=pricyNights(r.depart, nights);
+      var hol=(r.holidays&&r.holidays.length)?r.holidays.join(', '):'';
+      var good=q.bad===0&&!hol;
+      var dd=new Date(r.depart+'T00:00:00Z'), rr=r['return']?new Date(r['return']+'T00:00:00Z'):null;
+      var lbl=(dd.getUTCMonth()+1)+'/'+dd.getUTCDate()+'('+'일월화수목금토'.charAt(dd.getUTCDay())+')'
+            + (rr?(' → '+(rr.getUTCMonth()+1)+'/'+rr.getUTCDate()+'('+'일월화수목금토'.charAt(rr.getUTCDay())+')'):'');
+      out+='<tr style="border-bottom:1px solid var(--line)'+(good?';background:color-mix(in srgb,var(--moss) 10%,transparent)':'')+'">'
+        +'<td style="padding:6px 6px">'+lbl+(hol?'<br><span style="font-size:12px;color:var(--d5);font-weight:700">'+hol+'</span>':'')+'</td>'
+        +'<td style="padding:6px 6px;text-align:right"><b>'+won(r.total)+'</b></td>'
+        +'<td style="padding:6px 6px">'+q.days+'<br><span style="font-size:12px;font-weight:700;color:'
+          +(q.bad?'var(--d5)':'var(--moss)')+'">비싼 밤 '+q.bad+'</span></td>'
+        +'<td style="padding:6px 6px;text-align:right">'+(r.seats_left!=null?r.seats_left+'석':'—')+'</td></tr>';
+    });
+    if(!out) return;
+    t.innerHTML=head+out; body.innerHTML=''; body.appendChild(t);
+    if(when&&data.updated_at){
+      var u=new Date(data.updated_at);
+      when.textContent=isNaN(u)?String(data.updated_at):(u.toLocaleString('ko-KR')+' 기준');
+    }
+    box.hidden=false;
+  }
+  try{
+    fetch(FARES_URL,{mode:'cors',cache:'no-store'})
+      .then(function(r){ return r.ok?r.json():null; })
+      .then(function(d){ if(d) renderLive(d); })
+      .catch(function(){});
+  }catch(e){}
 
   /* checklist memory (per viewer only) */
   var boxes=document.querySelectorAll('.check input');
