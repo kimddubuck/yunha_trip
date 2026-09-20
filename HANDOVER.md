@@ -3,9 +3,13 @@
 작성일: 2026-09-20 (최종 갱신: 2026-09-20, Claude Code 세션)
 작성 환경: Claude 채팅 → 이후 작업은 Claude Code에서 진행
 현재 산출물:
-- `matsuyama-family-guide.html` — 단일 파일. Google Fonts + 구글맵 iframe(임베드) 사용
+- `index.html` — 단일 파일. Google Fonts + 구글맵 iframe(임베드) 사용
 - `matsuyama-places.csv` — 구글 '내 지도(My Maps)' 가져오기용 20곳 목록
 - 게시된 아티팩트: https://claude.ai/artifact/M3NpJDAwm5784yAP5e9XTG
+- GitHub Pages: https://kimddubuck.github.io/yunha_trip/ (`.github/workflows/pages.yml`이 기본 브랜치 푸시마다 자동 배포)
+- `README.md` — 레포 소개와 파일 목록
+
+> 파일명이 `matsuyama-family-guide.html` → `index.html`로 바뀌었습니다. GitHub Pages가 루트의 `index.html`을 첫 페이지로 서빙하기 때문입니다.
 
 ---
 
@@ -39,7 +43,7 @@
 
 설계 원칙: **하루에 큰 일정 1개** — 오전 한 곳 → 이동 중 차에서 낮잠 → 오후 한 곳.
 
-## 4. 파일 구조 (`matsuyama-family-guide.html`)
+## 4. 파일 구조 (`index.html`)
 
 단일 HTML. 섹션 순서:
 
@@ -140,7 +144,7 @@ y = (34.10 - lat) / 0.65 * 520
 3. **숙소 확정 후 핀 위치 실제 좌표로** — 에어비앤비·호텔 주소 기준으로 `s-dogo`, `s-hotel` 핀 재배치
 4. **예산표 섹션** — 항공(pus-myj-fares 연동)·숙박·렌터카·식비 합계
 5. **인쇄용/PDF 버전** — `@media print` 스타일 (지도 1쪽 + 일정 2쪽)
-6. **Netlify 배포** — 기존 `pus-myj-fares.netlify.app`과 같은 계정에 `pus-myj-guide` 사이트 추가, 또는 그 사이트의 `/guide` 하위 페이지로
+6. ~~Netlify 배포~~ **GitHub Pages로 대체 완료** — https://kimddubuck.github.io/yunha_trip/ . `pus-myj-fares`(항공권 수집)와 연동하고 싶으면 이 페이지에서 그쪽으로 링크만 걸면 됨
 7. (선택) 실제 지도 타일 — Netlify 배포 시 Leaflet+OSM 타일 사용 가능. artifact 환경은 외부 **이미지**가 차단되므로 SVG 약도 + 구글맵 **iframe** 조합을 현재 방식으로 유지
 8. 구글맵 임베드는 `https://www.google.com/maps?q=<검색어>&z=14&hl=ko&output=embed` (API 키 불필요). artifact CSP에서 iframe이 막힐 경우를 대비해 `#g-fallback` 안내문 + '구글맵 앱에서 열기' 버튼을 항상 함께 노출하도록 되어 있음 — 이 이중 구조를 지울 것
 
@@ -168,7 +172,7 @@ class P(HTMLParser):
         d=dict(a)
         if 'id' in d: s.ids.append(d['id'])
         if 'data-target' in d: s.targets.append(d['data-target'])
-p=P(); p.feed(open('matsuyama-family-guide.html',encoding='utf-8').read())
+p=P(); p.feed(open('index.html',encoding='utf-8').read())
 missing=[t for t in p.targets if t not in p.ids]
 print('핀 data-target 중 카드 없는 것:', missing or '없음')
 EOF
