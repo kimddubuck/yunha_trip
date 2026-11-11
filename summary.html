@@ -45,7 +45,8 @@ tr.past td{color:#9aa1a8}
 tr.past td .red,tr.past td a.pl{color:#9aa1a8}
 tr.past td a.nav{opacity:.45}
 /* ── 지도 이름표 ── */
-.lbl{position:absolute;left:0;top:0;background:rgba(255,255,255,.95);border:1px solid #9aa1a8;border-radius:4px;padding:0 5px;font-size:11px;font-weight:700;line-height:17px;white-space:nowrap;color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.15);pointer-events:none}
+.lbl{position:absolute;left:0;top:0;background:rgba(255,255,255,.95);border:1px solid #9aa1a8;border-radius:4px;padding:0 5px;font-size:11px;font-weight:700;line-height:17px;white-space:nowrap;color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.15);cursor:pointer}
+.lbl.dim{pointer-events:none}
 .lbl.dim{opacity:.25}
 /* ── 아래 절반: 지도 ── */
 .mapwrap{flex:1 1 auto;display:flex;flex-direction:column;min-height:0;margin-top:8px}
@@ -253,6 +254,8 @@ tr.past td a.nav{opacity:.45}
   }
   function dist(a,b){ var k=Math.cos((a.lat+b.lat)/2*Math.PI/180); var dx=(b.lng-a.lng)*k, dy=b.lat-a.lat; return Math.sqrt(dx*dx+dy*dy); }
   function overlay(p,html,z){ return new kakao.maps.CustomOverlay({position:LL(p),map:S.map,content:html,zIndex:z||1}); }
+  /* 이름표도 누르면 길안내. 핀과 같은 gjNav 를 부른다 */
+  function lblHtml(name,dim,dx,dy){ var q=name.replace(/"/g,'&quot;'); return '<div class="lbl'+(dim?' dim':'')+'" style="transform:translate('+dx+'px,'+dy+'px)" onclick="gjNav(this.getAttribute(\'data-n\'))" data-n="'+q+'" title="카카오맵 길안내">'+name.replace(/</g,'&lt;')+'</div>'; }
   function numHtml(n,c,dim,name){ return '<div class="num'+(dim?' dim':'')+'" style="background:'+c+'" onclick="gjNav(this.getAttribute(\'data-n\'))" data-n="'+(name||'').replace(/"/g,'&quot;')+'" title="카카오맵 길안내">'+n+'</div>'; }
 
   function build(list){
@@ -274,7 +277,7 @@ tr.past td a.nav{opacity:.45}
     S.order.forEach(function(p,i){
       var n=i+1, c=p.role==='home'?COLOR.home:COLOR[p.days[0]];
       var days=p.role?[1,2]:p.days;
-      var lbl=new kakao.maps.CustomOverlay({position:LL(p),map:S.map,xAnchor:0,yAnchor:0,zIndex:50+n,content:'<div class="lbl">'+p.name.replace(/</g,'&lt;')+'</div>'});
+      var lbl=new kakao.maps.CustomOverlay({position:LL(p),map:S.map,xAnchor:0,yAnchor:0,zIndex:50+n,clickable:true,content:lblHtml(p.name,false,0,0)});
       var pin=new kakao.maps.CustomOverlay({position:LL(p),map:S.map,content:numHtml(n,c,false,p.name),zIndex:10+n,clickable:true});
       S.pins.push({n:n,c:c,name:p.name,ov:pin,lbl:lbl,days:days,on:true});
       legend.push('<span data-days="'+days.join(' ')+'"><a href="#" onclick="gjNav(this.getAttribute(\'data-n\'));return false" data-n="'+p.name.replace(/"/g,'&quot;')+'" title="카카오맵 길안내"><b style="background:'+c+'">'+n+'</b>'+p.name.replace(/</g,'&lt;')+(p.role==='home'?' (출발·도착)':'')+'</a></span>');
@@ -317,7 +320,7 @@ tr.past td a.nav{opacity:.45}
         if(score<bestScore){ bestScore=score; best=c; best.box=box; }
       });
       if(x.on) boxes.push(best.box);
-      x.lbl.setContent('<div class="lbl'+(x.on?'':' dim')+'" style="transform:translate('+best.dx.toFixed(0)+'px,'+best.dy.toFixed(0)+'px)">'+x.name.replace(/</g,'&lt;')+'</div>');
+      x.lbl.setContent(lblHtml(x.name,!x.on,best.dx.toFixed(0),best.dy.toFixed(0)));
     });
   }
 
