@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>하온하린윤하네 가족여행 — 한 장 요약</title>
+<meta name="description" content="경주 1박2일 일정표 한 장 요약. 인쇄하면 A4 한 장.">
+<style>
+:root{--ink:#1F2A33;--soft:#5B6670;--line:#999;--red:#C62828;--paper:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#f1efe9;color:var(--ink);font-family:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;font-size:14px;line-height:1.45}
+.page{background:var(--paper);width:210mm;max-width:100%;min-height:297mm;margin:16px auto;padding:14mm 12mm;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+h1{font-size:20px;margin-bottom:2px}
+.sub{color:var(--soft);font-size:13px;margin-bottom:12px}
+.sub b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin-bottom:14px;font-size:13.5px}
+th,td{border:1px solid var(--line);padding:6px 8px;vertical-align:middle}
+th{background:#f4f4f4;font-weight:600;text-align:center}
+td.when{text-align:center;white-space:nowrap;width:15%}
+td.what{width:46%}
+td.how{width:20%;white-space:nowrap}
+td.note{width:19%}
+td.what span{display:block}
+td.what span::before{content:"- "}
+.red{color:var(--red);font-weight:700}
+.gap{height:10px;border:none!important;background:transparent}
+.map{border:1px solid var(--line);height:88mm;position:relative;background:#e8eef2}
+#kmap{width:100%;height:100%}
+.map .alt[hidden]{display:none}
+.map .alt{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--soft);font-size:13px;text-align:center;padding:12px}
+.lbl{background:rgba(255,255,255,.92);border:1px solid #888;border-radius:3px;padding:1px 5px;font-size:11.5px;font-weight:700;white-space:nowrap;transform:translate(10px,-50%)}
+.foot{color:var(--soft);font-size:11.5px;margin-top:8px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.foot a{color:var(--soft)}
+.tools{width:210mm;max-width:100%;margin:0 auto;display:flex;gap:8px;justify-content:flex-end}
+.tools button,.tools a{font:inherit;font-size:13px;padding:6px 12px;border:1px solid #bbb;border-radius:6px;background:#fff;color:var(--ink);text-decoration:none;cursor:pointer}
+@media print{
+  @page{size:A4;margin:10mm}
+  html,body{background:#fff}
+  .page{width:auto;min-height:0;margin:0;padding:0;box-shadow:none}
+  .tools{display:none}
+  table{page-break-inside:avoid}
+  .map{height:84mm}
+}
+@media (max-width:640px){
+  .page{padding:16px 12px;min-height:0}
+  td.how,td.when{white-space:normal}
+  table{font-size:12.5px}
+  th,td{padding:5px 5px}
+  .map{height:280px}
+}
+</style>
+</head>
+<body>
+<div class="tools"><a href="./index.html">자세한 가이드 보기</a><button type="button" onclick="window.print()">인쇄 / PDF 저장</button></div>
+<div class="page">
+  <h1>하온하린윤하네 가족여행 — 경주 1박2일</h1>
+  <p class="sub"><b>11/12(목) ~ 11/13(금)</b> · 출발·도착 부산 동래구 금정마을로 150 · 숙소 코코망고 키즈풀빌라 · 동행은 포워드 카페에서 합류</p>
+
+  <table>
+    <thead><tr><th>일시</th><th>일정</th><th>소요시간</th><th>비고</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="when">11/12(목)<br>12:30</td>
+        <td class="what"><span>집 출발 → 포워드 카페 모임</span></td>
+        <td class="how">집→포워드<br>약 1시간 30분</td>
+        <td class="note"><span class="red">네비검색<br>경주 통일전</span></td>
+      </tr>
+      <tr>
+        <td class="when">14:00<br>~15:00</td>
+        <td class="what"><span>카페 포워드 (동행 집결)</span><span>통일전 은행나무길 잠깐 (선택)</span></td>
+        <td class="how">카페 1시간<br>통일전 15분</td>
+        <td class="note">카페 11시 오픈<br>은행잎 거의 짐</td>
+      </tr>
+      <tr>
+        <td class="when">15:40<br>~16:10</td>
+        <td class="what"><span>마트 장보기 (불국사농협 하나로마트)</span><span>숙소 체크인 (코코망고 키즈풀빌라)</span></td>
+        <td class="how">통일전→마트 20분<br>마트→숙소 10분</td>
+        <td class="note">마트 08:30~22:00<br>입실 15:00</td>
+      </tr>
+      <tr>
+        <td class="when">16:10 ~</td>
+        <td class="what"><span>펜션에서 놀기 (객실 온수풀)</span></td>
+        <td class="how"></td>
+        <td class="note">일몰 17:20</td>
+      </tr>
+      <tr><td class="gap" colspan="4"></td></tr>
+      <tr>
+        <td class="when">11/13(금)<br>10:00</td>
+        <td class="what"><span>체크아웃</span><span>불국사 구경</span></td>
+        <td class="how">숙소→불국사 10분<br>불국사 1시간</td>
+        <td class="note"><span class="red">입장 무료<br>주차장 집결</span><br>주차 1,000원<br>아기띠</td>
+      </tr>
+      <tr>
+        <td class="when">11:40</td>
+        <td class="what"><span>경북천년숲정원 이동 산책</span></td>
+        <td class="how">25분 거리<br>산책 45분</td>
+        <td class="note">10~16시 · 무료<br>주차 빡셈</td>
+      </tr>
+      <tr>
+        <td class="when">12:40~<br>13:40</td>
+        <td class="what"><span>점심식사 (한다솥)</span></td>
+        <td class="how">15분 거리</td>
+        <td class="note">생선구이, 솥밥 등<br>주차는 대릉원 쪽</td>
+      </tr>
+      <tr>
+        <td class="when">14:30</td>
+        <td class="what"><span>울산 언양 카페이동</span><span>(나인힐 베이커리 카페)</span></td>
+        <td class="how">약 40분</td>
+        <td class="note">동물 체험<br>풍경 좋음</td>
+      </tr>
+      <tr>
+        <td class="when">15:30</td>
+        <td class="what"><span>집 복귀</span></td>
+        <td class="how">약 1시간</td>
+        <td class="note">16:30 도착</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="map">
+    <div id="kmap"></div>
+    <div class="alt" id="kalt" hidden>지도는 인터넷이 연결된 사이트(kimddubuck.github.io)에서만 그려집니다.</div>
+  </div>
+  <p class="foot">
+    <span>귤색 점선 1일차 · 파란 점선 2일차 · 검은 핀 집</span>
+    <span>초안 · 영업시간은 출발 전 네이버 지도에서 재확인</span>
+  </p>
+</div>
+
+<script>
+(function(){
+  /* 아래쪽 약도 — index.html 과 같은 places.json 을 읽어 핀·이름표·일차별 점선만 그린다.
+     집은 멀어서 넣으면 경주가 작아지므로, 약도는 경주~언양 구간만 보여 주고 집은 뺀다. */
+  var KAKAO_KEY='a7ad72b0a0bfb78b04ee3b766b947176';
+  var COLOR={1:'#E8892B',2:'#2F6F8F'};
+  function fail(){ var a=document.getElementById('kalt'); if(a) a.hidden=false; }
+  function draw(list){
+    var pts=list.filter(function(p){ return p.lat&&p.lng&&p.role!=='home'; });
+    var map=new kakao.maps.Map(document.getElementById('kmap'),{center:new kakao.maps.LatLng(35.75,129.2),level:10,draggable:true});
+    var b=new kakao.maps.LatLngBounds();
+    var stay=null;
+    pts.forEach(function(p){
+      if(p.role==='stay') stay=p;
+      var pos=new kakao.maps.LatLng(p.lat,p.lng); b.extend(pos);
+      new kakao.maps.Marker({position:pos,map:map,title:p.name});
+      new kakao.maps.CustomOverlay({position:pos,map:map,yAnchor:1.6,xAnchor:0,
+        content:'<div class="lbl">'+p.name.replace(/</g,'&lt;')+'</div>'});
+    });
+    [1,2].forEach(function(d){
+      var s=pts.filter(function(p){ return !p.role&&p.days.indexOf(d)>=0; });
+      if(stay){ d===1?s.push(stay):s.unshift(stay); }
+      if(s.length<2) return;
+      new kakao.maps.Polyline({map:map,path:s.map(function(p){ return new kakao.maps.LatLng(p.lat,p.lng); }),
+        strokeWeight:3,strokeColor:COLOR[d],strokeOpacity:.9,strokeStyle:'shortdash'});
+    });
+    map.setBounds(b,20);
+  }
+  function init(){
+    fetch('./places.json',{cache:'no-store'}).then(function(r){ return r.json(); }).then(function(list){
+      /* index.html 이 보정해 둔 좌표가 이 폰에 있으면 그걸 쓴다 */
+      var cache={}; try{ cache=JSON.parse(localStorage.getItem('gj-geo2')||'{}'); }catch(e){}
+      list.forEach(function(p){ var c=cache[p.address||p.query]; if(c){ p.lat=c.lat; p.lng=c.lng; } });
+      draw(list);
+    }).catch(fail);
+  }
+  var s=document.createElement('script');
+  s.src='https://dapi.kakao.com/v2/maps/sdk.js?appkey='+KAKAO_KEY+'&autoload=false';
+  s.async=true;
+  s.onload=function(){ if(window.kakao&&kakao.maps) kakao.maps.load(init); else fail(); };
+  s.onerror=fail;
+  document.head.appendChild(s);
+})();
+</script>
+</body>
+</html>
