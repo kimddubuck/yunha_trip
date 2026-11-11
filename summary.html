@@ -37,7 +37,9 @@ td.when .d{display:block;font-size:12.5px;font-weight:700;color:var(--ink)}
 td.when .t{display:block;font-variant-numeric:tabular-nums}
 td.when .t i{font-style:normal}
 /* ── 지금 시각 줄 ── 여행 당일, 현재 시각에 해당하는 줄을 노랗게 칠하고 '지금' 표시 */
-tr.now td{background:#FFF4C2}
+tr.now td{background:#FFE9A8}
+tr.next td{background:#EAF2FF}
+tr.next td.when .t::after{content:"다음";display:inline-block;margin-left:5px;font-size:10px;font-weight:700;color:#fff;background:#3C7DFF;border-radius:4px;padding:0 5px;vertical-align:1px}
 tr.now td.when .t::after{content:"지금";display:inline-block;margin-left:5px;font-size:10px;font-weight:700;color:#fff;background:#E8892B;border-radius:4px;padding:0 5px;vertical-align:1px}
 tr.past td{color:#9aa1a8}
 tr.past td .red,tr.past td a.pl{color:#9aa1a8}
@@ -98,13 +100,14 @@ tr.past td a.nav{opacity:.45}
   table{font-size:12.5px;line-height:1.3}
   tr{display:grid;grid-template-columns:64px auto 1fr;grid-template-areas:"when what what" "when how note";column-gap:8px;row-gap:1px;
      padding:5px 0 5px 4px;border:none;border-bottom:1px solid #e4e1da;border-radius:0;margin:0;background:transparent}
-  tr.now{background:#FFF4C2;box-shadow:none;border-color:#E8892B}
+  tr.now{background:#FFE9A8;box-shadow:inset 4px 0 0 #E8892B;border-color:#E8892B}
+  tr.next{background:#EAF2FF;box-shadow:inset 4px 0 0 #3C7DFF}
   td{border:none;padding:0}
   td.when{grid-area:when;text-align:left;white-space:normal;display:block;border:none;margin:0;padding-top:1px}
   td.when .d{display:block;font-size:14px;font-weight:800;color:var(--ink);line-height:1.15;margin-bottom:1px}
   td.when .t{display:block;font-size:13px;font-weight:700;line-height:1.2;white-space:nowrap}
   td.when .t i{display:block;font-size:11px;font-weight:500;color:var(--soft)}
-  tr.now td.when .t::after{content:"지금";font-size:9px;padding:0 4px;margin-left:3px;vertical-align:1px}
+  tr.now td.when .t::after,tr.next td.when .t::after{font-size:9px;padding:0 4px;margin-left:3px;vertical-align:1px}
   td.what{grid-area:what}
   td.what span{display:block;margin:0}
   td.what span::before{content:""}
@@ -225,13 +228,18 @@ tr.past td a.nav{opacity:.45}
     var q=/[?&]now=([^&]+)/.exec(location.search), fixed=q?new Date(decodeURIComponent(q[1])):null;
     function tick(){
       var now=fixed||new Date();
+      var nextRow=null, anyNow=false;
       rows.forEach(function(r,i){
         var a=new Date(r.dataset.at), b=r.dataset.until?new Date(r.dataset.until):(rows[i+1]?new Date(rows[i+1].dataset.at):null);
         var sameDay=a.toDateString()===now.toDateString();
         var isNow=sameDay&&now>=a&&(b?now<b:true);
         var past=now>=(b||a)&&!isNow;
-        r.classList.toggle('now',isNow); r.classList.toggle('past',past);
+        if(isNow) anyNow=true;
+        if(!nextRow&&a>now) nextRow=r;
+        r.classList.toggle('now',isNow); r.classList.toggle('past',past); r.classList.remove('next');
       });
+      /* 지금 진행 중인 줄이 없으면(여행 전, 또는 줄과 줄 사이) 다음에 올 줄을 연하게 칠한다 */
+      if(!anyNow&&nextRow) nextRow.classList.add('next');
     }
     tick(); setInterval(tick,30000);
   })();
