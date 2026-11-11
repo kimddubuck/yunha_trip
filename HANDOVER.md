@@ -39,12 +39,20 @@ A안: 1일차 포워드 14:00 → 천년숲정원 14:50~15:40 → 마트 → 펜
 
 ```
 index.html      가이드맵 본문 (단일 파일)
+summary.html    한 장 요약 — 위 절반 표, 아래 절반 카카오맵(번호 핀·일차 버튼·움직이는 화살표). 인쇄 A4 1장
 places.json     핀 9곳 (집 포함). role:home/stay 가 동선 양 끝, 나머지는 배열 순서 = 방문 순서
 README.md       레포 소개·Pages 설정·고치는 법
 HANDOVER.md     이 문서
 archive/matsuyama/   취소된 여행 자료 (index.html, places.json, fares.json, csv, HANDOVER.md)
 .nojekyll
 ```
+
+### summary.html (한 장 요약)
+
+- 표는 사용자 초안 형식(일시·일정·소요시간·비고) 그대로. 시간·문구를 고치면 `index.html` 일정표와 **같이** 고칠 것 (두 파일이 서로 모른다).
+- 지도는 같은 `places.json`을 읽고, `index.html`이 보정해 둔 좌표 캐시(`gj-geo2`)가 있으면 재사용. 핀은 방문 순서 번호(1 집 → … → 9 나인힐), 아래 번호 목록.
+- 일차 버튼: 전체/1일차/2일차. 누르면 그날 핀·점선·구간 화살표만 남기고, 화살표 하나(`.mover`)가 동선을 7초에 한 바퀴 돌고 0.9초 쉬고 반복(`requestAnimationFrame`). 인쇄 직전엔 전체로 되돌리고 멈춘다.
+- 레이아웃: 화면에서 표 37% · 지도 50%, 인쇄에서 표 34% · 지도 61% (스텁 측정값). PDF 1장 확인.
 
 ### index.html 섹션 순서
 
