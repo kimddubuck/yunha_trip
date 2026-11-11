@@ -35,9 +35,10 @@ tr.gap td{border:none;padding:0;height:6px;background:transparent}
 .days button[data-day="2"][aria-pressed="true"]{background:var(--d2)}
 .days .hint{font-size:11.5px;color:var(--soft);margin-left:auto}
 .map{border:1px solid var(--line);flex:1 1 auto;min-height:120mm;position:relative;background:#e8eef2}
-#kmap{width:100%;height:100%}
+/* 지도는 칸 안에 절대배치로 꽉 채운다. 칸의 높이가 flex 로 정해지면 height:100% 가 0 이 되기 때문 */
+#kmap{position:absolute;inset:0}
 .map .alt[hidden]{display:none}
-.map .alt{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--soft);font-size:13px;text-align:center;padding:12px}
+.map .alt{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;color:var(--soft);font-size:13px;text-align:center;padding:12px}
 .num{width:22px;height:22px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;transform:translate(-50%,-50%)}
 .num.dim{opacity:.25}
 .arrow{width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:11px solid var(--c);filter:drop-shadow(0 0 1px #fff) drop-shadow(0 0 1px #fff);transform:translate(-50%,-50%) rotate(var(--r,0deg))}
@@ -185,6 +186,7 @@ tr.gap td{border:none;padding:0;height:6px;background:transparent}
     S.order=[].concat(home?[home]:[], d1, stay?[stay]:[], d2);   /* 번호 = 방문 순서 */
 
     S.map=new kakao.maps.Map(document.getElementById('kmap'),{center:LL(home||pts[0]),level:10});
+    window.addEventListener('resize',function(){ S.map.relayout(); });
     S.map.addControl(new kakao.maps.ZoomControl(),kakao.maps.ControlPosition.RIGHT);
 
     /* 번호 핀 */
@@ -211,7 +213,8 @@ tr.gap td{border:none;padding:0;height:6px;background:transparent}
     });
 
     var all=new kakao.maps.LatLngBounds(); pts.forEach(function(p){ all.extend(LL(p)); });
-    S.map.setBounds(all,16);
+    S.all=all;
+    S.map.relayout(); S.map.setBounds(all,16);
     setDay('all');
   }
 
@@ -231,9 +234,10 @@ tr.gap td{border:none;padding:0;height:6px;background:transparent}
       if(S.lines[d]) S.lines[d].setMap(on?S.map:null);
       (S.arrows[d]||[]).forEach(function(o){ o.setMap(on?S.map:null); });
     });
+    S.map.relayout();                                   /* 칸 크기가 바뀌었을 수 있으니 지도에 알린다 */
     if(day!=='all'){
       var b=new kakao.maps.LatLngBounds(); S.routes[Number(day)].forEach(function(p){ b.extend(LL(p)); }); S.map.setBounds(b,24);
-    }
+    } else if(S.all){ S.map.setBounds(S.all,16); }
     animate(day==='all'?[1,2]:[Number(day)]);
   }
 
@@ -263,8 +267,8 @@ tr.gap td{border:none;padding:0;height:6px;background:transparent}
   [].slice.call(document.querySelectorAll('.days button')).forEach(function(b){
     b.addEventListener('click',function(){ if(S.map) setDay(b.dataset.day); });
   });
-  window.addEventListener('beforeprint',function(){ if(S.map&&S.day!=='all') setDay('all'); stopAnim(); });
-  window.addEventListener('afterprint',function(){ if(S.map) animate([1,2]); });
+  window.addEventListener('beforeprint',function(){ if(S.map){ setDay('all'); stopAnim(); } });
+  window.addEventListener('afterprint',function(){ if(S.map){ S.map.relayout(); setDay('all'); } });
 
   function init(){
     fetch('./places.json',{cache:'no-store'}).then(function(r){ return r.json(); }).then(function(list){
