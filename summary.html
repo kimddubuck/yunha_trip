@@ -33,10 +33,9 @@ td.what small:empty{display:none}
 tr.gap td{border:none;padding:0;height:6px;background:transparent}
 
 /* ── 일시 칸 ── */
-td.when .d{display:block;font-size:11px;color:var(--soft)}
+td.when .d{display:block;font-size:12.5px;font-weight:700;color:var(--ink)}
 td.when .t{display:block;font-variant-numeric:tabular-nums}
 td.when .t i{font-style:normal}
-tr.gap .daylbl{display:none}
 /* ── 지금 시각 줄 ── 여행 당일, 현재 시각에 해당하는 줄을 노랗게 칠하고 '지금' 표시 */
 tr.now td{background:#FFF4C2}
 tr.now td.when .t::after{content:"지금";display:inline-block;margin-left:5px;font-size:10px;font-weight:700;color:#fff;background:#E8892B;border-radius:4px;padding:0 5px;vertical-align:1px}
@@ -102,7 +101,7 @@ tr.past td a.nav{opacity:.45}
   tr.now{background:#FFF4C2;box-shadow:none;border-color:#E8892B}
   td{border:none;padding:0}
   td.when{grid-area:when;text-align:left;white-space:normal;display:block;border:none;margin:0;padding-top:1px}
-  td.when .d{display:block;font-size:10px;color:var(--soft);line-height:1.1}
+  td.when .d{display:block;font-size:14px;font-weight:800;color:var(--ink);line-height:1.15;margin-bottom:1px}
   td.when .t{display:block;font-size:13px;font-weight:700;line-height:1.2;white-space:nowrap}
   td.when .t i{display:block;font-size:11px;font-weight:500;color:var(--soft)}
   tr.now td.when .t::after{content:"지금";font-size:9px;padding:0 4px;margin-left:3px;vertical-align:1px}
@@ -120,9 +119,8 @@ tr.past td a.nav{opacity:.45}
   .sep br{display:none}
   .sep::after{content:" · "}
   tr.past{opacity:.55}
-  tr.gap{display:block;border:none;padding:0;margin:8px 0 2px;background:transparent}
+  tr.gap{display:block;border:none;padding:0;margin:0;height:10px;background:transparent}
   tr.gap td{height:auto;padding:0}
-  tr.gap .daylbl{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:var(--d2);border-radius:999px;padding:1px 9px}
 }
 </style>
 </head>
@@ -157,7 +155,7 @@ tr.past td a.nav{opacity:.45}
         <td class="how"></td>
         <td class="note">일몰 17:20</td>
       </tr>
-      <tr class="gap"><td colspan="4"><span class="daylbl">2일차 · 11/13(금)</span></td></tr>
+      <tr class="gap"><td colspan="4"></td></tr>
       <tr data-at="2026-11-13T10:00">
         <td class="when"><span class="d">11/13(금)</span><span class="t">10:00</span></td>
         <td class="what"><span>체크아웃</span><span><a class="pl" data-place="불국사" href="#">불국사 구경</a><a class="nav" data-nav="불국사" href="#" target="_blank" rel="noopener">길찾기</a></span><small data-addr="불국사"></small></td>
