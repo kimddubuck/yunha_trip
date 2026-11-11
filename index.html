@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>윤하와 경주 1박2일</title>
-<meta name="description" content="불국사 · 남산 서쪽 · 황리단길 · 언양으로 이어지는 1박2일 가족여행 가이드맵 초안">
+<title>하온하린윤하네 가족여행</title>
+<meta name="description" content="하온하린윤하네 경주 1박2일 가족여행 가이드맵 초안 — 포워드 집결 · 불국사 · 천년숲정원 · 황리단길 · 언양">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -60,7 +60,7 @@ button:focus-visible,a:focus-visible,.pin:focus-visible{outline:2px solid var(--
 .route.dim{opacity:.12}
 .sealabel{font-family:"Gowun Batang",serif;font-size:12px;fill:var(--sea);opacity:.85;letter-spacing:1px}
 .svgtext{font-family:"Noto Sans KR",sans-serif;font-size:10px;fill:var(--ink-soft)}
-/* live google map panel */
+/* 지도 패널 */
 .gbox{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:12px}
 .gbox .ghead{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line);flex-wrap:wrap}
 .gbox .gname{font-weight:700;font-size:15px}
@@ -232,14 +232,16 @@ background:var(--card);font-size:13px;font-weight:700;color:var(--ink-soft);text
 <div class="wrap">
 
 <header>
-  <div class="kicker">윤하와 떠나는 가족여행 · 초안</div>
-  <h1>경주 1박2일 — 불국사에서 언양까지</h1>
+  <div class="kicker">하온하린윤하네 가족여행 · 초안</div>
+  <h1>경주 1박2일 — 포워드에서 만나 언양까지</h1>
   <p>첫날은 포워드 카페에서 동행과 만나 통일전을 지나 펜션으로 들어가 쉬고, 둘째 날은 펜션 옆 불국사부터 천년숲정원·황리단길 점심·언양 카페 순으로 한 방향으로 내려오며 집에 갑니다.</p>
   <div class="facts">
     <div class="fact"><b>날짜 <span class="pend">확정 전</span></b>11/12(목) → 11/13(금)</div>
-    <div class="fact"><b>인원</b>어른 2 + 윤하 (17개월)</div>
+    <div class="fact"><b>출발 · 도착</b>부산 동래구 금정마을로 150</div>
     <div class="fact"><b>일몰</b>11월 중순 경주 약 17:20</div>
     <div class="fact"><b>날씨</b>낮 12~15℃ · 아침 2~5℃ 예상</div>
+    <div class="fact"><b>아이들</b>하온 · 하린 · 윤하 (17개월)</div>
+    <div class="fact"><b>동행</b>포워드 카페 14:00 합류</div>
   </div>
   <p class="note" style="margin-top:12px">처음 초안에는 <b>11/11(목)</b>이라 적혀 있었는데 올해 11/11은 수요일입니다. 목·금 출발이면 11/12·13이 맞아서 그 날짜로 적어 두었습니다. 날짜가 다르면 이 줄만 고치면 됩니다.</p>
 </header>
@@ -247,18 +249,18 @@ background:var(--card);font-size:13px;font-weight:700;color:var(--ink-soft);text
 <!-- ── 지도 ── 구글 지도 위에 1·2일차 핀과 동선. 핀을 누르면 아래에 이야기 카드. -->
 <div class="gbox" id="gbox">
   <div class="ghead">
-    <div class="gname" id="g-name">경주 여행 지도 <span class="jp">8곳</span></div>
-    <a class="btn" id="g-open" href="https://www.google.com/maps/search/?api=1&amp;query=%EA%B2%BD%EC%A3%BC%20%EC%B9%B4%ED%8E%98%20%ED%8F%AC%EC%9B%8C%EB%93%9C" target="_blank" rel="noopener">구글맵 앱에서 열기 ↗</a>
+    <div class="gname" id="g-name">경주 여행 지도 <span class="jp">집 포함 9곳</span></div>
+    <a class="btn" id="g-open" href="https://map.kakao.com/link/search/%EA%B2%BD%EC%A3%BC%20%EC%B9%B4%ED%8E%98%20%ED%8F%AC%EC%9B%8C%EB%93%9C" target="_blank" rel="noopener">카카오맵 앱에서 열기 ↗</a>
   </div>
   <div class="dayfilter" role="group" aria-label="일차 선택">
     <button type="button" data-day="all" aria-pressed="true">전체</button>
     <button type="button" data-day="1" aria-pressed="false">1일차 · 포워드 → 펜션</button>
     <button type="button" data-day="2" aria-pressed="false">2일차 · 불국사 → 언양</button>
   </div>
-  <div id="gmap" role="application" aria-label="경주 여행 지도"></div>
+  <div id="gmap" role="application" aria-label="경주 여행 지도 (카카오맵)"></div>
   <div id="gcard" hidden></div>
   <div id="gfail" hidden>
-    지도를 불러오지 못했습니다. 아래 버튼으로 구글맵 앱에서 바로 열 수 있습니다.
+    <span id="gfail-why">지도를 불러오지 못했습니다.</span> 아래 버튼으로 카카오맵 앱에서 바로 열 수 있습니다.
     <ul id="gfail-list"></ul>
   </div>
 </div>
@@ -284,32 +286,38 @@ background:var(--card);font-size:13px;font-weight:700;color:var(--ink-soft);text
 
   <div class="day" style="--c:var(--d1)">
     <h3>1일차 · 11/12(목) — 포워드에서 만나 펜션으로</h3>
-    <div class="sub">집 12:30 출발 → 포워드 14:00 집결 → 통일전 잠깐 → 마트 → 펜션 16:00 → 펜션에서 놀기</div>
+    <div class="sub">집 12:30 출발 → 포워드 14:00 집결 → 통일전 잠깐 → 마트 → 펜션 16:10 → 펜션에서 놀기</div>
+
+    <div class="stop" id="s-start"><div class="t"><span class="time">12:30</span><span class="name">집 출발</span><span class="jp">부산 동래구 금정마을로 150</span></div>
+      <p>점심을 먹이고 12시 반에 나서면 경부고속도로로 경주까지 1시간 반, 포워드에 2시 조금 전 도착합니다. 내비는 ‘경주 통일전’으로 찍으면 바로 옆입니다.</p>
+      <div class="baby">출발 직전에 기저귀를 갈고 태우면 가는 길이 그대로 낮잠 시간입니다.</div>
+      <div class="acts"><button type="button" class="btn ghost" data-q="부산 동래구 금정마을로 150" data-label="집">지도에서 보기</button><a class="btn quiet" id="nav-go" href="https://map.kakao.com/link/search/%EA%B2%BD%EC%A3%BC%20%ED%86%B5%EC%9D%BC%EC%A0%84" target="_blank" rel="noopener">집 → 포워드 길찾기 ↗</a></div>
+    </div>
 
     <div class="stop" id="s-forward"><div class="t"><span class="time">14:00</span><span class="name">카페 포워드 — 동행과 집결</span><span class="jp">11시 오픈 · 통일전 옆 <span class="pend">영업시간 확인</span></span></div>
       <p>통일전 바로 옆 카페입니다. 큰 대문이 포토존이고 마당이 넓어 아이들이 뛰어도 눈치가 덜 보입니다. 오후 2시면 문 연 지 한참이라 집결지로 무리가 없습니다. 1시간 앉았다 일어납니다.</p>
       <div class="drive">집 → 포워드 약 1시간 30분. 내비에 ‘경주 통일전’으로 찍고 오면 바로 옆입니다.</div>
       <div class="baby">점심 먹고 차에서 자고 왔을 시간입니다. 깨면 마당에서 걷게 두고 간식은 과일 정도만.</div>
-      <div class="acts"><button type="button" class="btn ghost" data-q="경주 카페 포워드" data-label="카페 포워드">지도에서 보기</button><a class="btn quiet" href="https://www.google.com/maps/search/?api=1&amp;query=%EA%B2%BD%EC%A3%BC%20%EC%B9%B4%ED%8E%98%20%ED%8F%AC%EC%9B%8C%EB%93%9C" target="_blank" rel="noopener">구글맵 열기 ↗</a></div>
+      <div class="acts"><button type="button" class="btn ghost" data-q="경주 카페 포워드" data-label="카페 포워드">지도에서 보기</button><a class="btn quiet" href="https://map.kakao.com/link/search/%EA%B2%BD%EC%A3%BC%20%EC%B9%B4%ED%8E%98%20%ED%8F%AC%EC%9B%8C%EB%93%9C" target="_blank" rel="noopener">카카오맵 열기 ↗</a></div>
     </div>
 
     <div class="stop" id="s-tongil"><div class="t"><span class="time">15:00</span><span class="name">통일전 은행나무길 잠깐</span><span class="jp">선택 · 15분</span></div>
       <p>카페에서 걸어가도 되는 거리입니다. 은행나무길은 11월 초가 절정이라 중순엔 잎이 거의 진 뒤입니다. 사진 한 장 찍고 바로 출발하거나, 차창으로만 보고 지나가도 됩니다.</p>
       <div class="baby">전각까지는 계단이라 올라가지 않아도 됩니다. 진입로만 걷습니다.</div>
-      <div class="acts"><button type="button" class="btn ghost" data-q="경주 통일전" data-label="통일전">지도에서 보기</button><a class="btn quiet" href="https://www.google.com/maps/search/?api=1&amp;query=%EA%B2%BD%EC%A3%BC%20%ED%86%B5%EC%9D%BC%EC%A0%84" target="_blank" rel="noopener">구글맵 열기 ↗</a></div>
+      <div class="acts"><button type="button" class="btn ghost" data-q="경주 통일전" data-label="통일전">지도에서 보기</button><a class="btn quiet" href="https://map.kakao.com/link/search/%EA%B2%BD%EC%A3%BC%20%ED%86%B5%EC%9D%BC%EC%A0%84" target="_blank" rel="noopener">카카오맵 열기 ↗</a></div>
     </div>
 
     <div class="stop" id="s-mart"><div class="t"><span class="time">15:40</span><span class="name">불국사농협 하나로마트 장보기</span><span class="jp">산업로 3019</span></div>
       <p>통일로를 따라 동쪽으로 넘어가면 7번 국도에 닿고, 펜션 들어가기 직전에 이 마트가 있습니다. 08:30~22:00. 저녁거리와 내일 아침거리를 여기서 한 번에 삽니다. 목록은 아래 ‘장보기’에 있습니다.</p>
       <div class="drive">통일전 → 마트 약 20분 · 마트 → 펜션 10분</div>
       <div class="baby">한 명은 차에서 윤하와 기다리고 한 명만 들어가면 20분이면 끝납니다.</div>
-      <div class="acts"><button type="button" class="btn ghost" data-q="불국사농협 하나로마트" data-label="불국사농협 하나로마트">지도에서 보기</button><a class="btn quiet" href="https://www.google.com/maps/search/?api=1&amp;query=%EB%B6%88%EA%B5%AD%EC%82%AC%EB%86%8D%ED%98%91%20%ED%95%98%EB%82%98%EB%A1%9C%EB%A7%88%ED%8A%B8" target="_blank" rel="noopener">구글맵 열기 ↗</a></div>
+      <div class="acts"><button type="button" class="btn ghost" data-q="불국사농협 하나로마트" data-label="불국사농협 하나로마트">지도에서 보기</button><a class="btn quiet" href="https://map.kakao.com/link/search/%EB%B6%88%EA%B5%AD%EC%82%AC%EB%86%8D%ED%98%91%20%ED%95%98%EB%82%98%EB%A1%9C%EB%A7%88%ED%8A%B8" target="_blank" rel="noopener">카카오맵 열기 ↗</a></div>
     </div>
 
     <div class="stop" id="s-pension"><div class="t"><span class="time">16:10</span><span class="name">코코망고 키즈풀빌라 체크인</span><span class="jp">입실 15:00 · 퇴실 11:00</span></div>
       <p>객실 안에 온수 수영장이 있어 입실부터 퇴실까지 물놀이가 됩니다. 해가 17시 20분쯤 지니 들어가자마자 짐을 풀고 저녁 전에 한 번, 자기 전에 한 번 놀면 됩니다.</p>
       <div class="baby">수영복 · 물놀이 기저귀 · 수건 여분 · 목욕 후 입힐 내복. 물놀이는 한 번에 20분 안쪽으로 짧게.</div>
-      <div class="acts"><button type="button" class="btn ghost" data-q="경주 코코망고키즈풀빌라" data-label="코코망고 키즈풀빌라">지도에서 보기</button><a class="btn quiet" href="https://www.google.com/maps/search/?api=1&amp;query=%EA%B2%BD%EC%A3%BC%20%EC%BD%94%EC%BD%94%EB%A7%9D%EA%B3%A0%ED%82%A4%EC%A6%88%ED%92%80%EB%B9%8C%EB%9D%BC" target="_blank" rel="noopener">구글맵 열기 ↗</a></div>
+      <div class="acts"><button type="button" class="btn ghost" data-q="경주 코코망고키즈풀빌라" data-label="코코망고 키즈풀빌라">지도에서 보기</button><a class="btn quiet" href="https://map.kakao.com/link/search/%EA%B2%BD%EC%A3%BC%20%EC%BD%94%EC%BD%94%EB%A7%9D%EA%B3%A0%ED%82%A4%EC%A6%88%ED%92%80%EB%B9%8C%EB%9D%BC" target="_blank" rel="noopener">카카오맵 열기 ↗</a></div>
     </div>
   </div>
 
@@ -321,32 +329,33 @@ background:var(--card);font-size:13px;font-weight:700;color:var(--ink-soft);text
       <p>입장료가 없어졌으니 매표소 없이 주차장에서 바로 올라갑니다. 다보탑·석가탑·청운교까지 한 바퀴 1시간이면 충분합니다. 주차는 소형 1,000원 정도. 아침 10시대는 단체 관광버스가 오기 전이라 한가합니다.</p>
       <div class="drive">펜션 → 불국사 주차장 약 10분. 내비에 ‘불국사 주차장’으로.</div>
       <div class="baby">계단과 자갈길이라 유모차보다 아기띠. 아침 기온이 2~5도라 모자와 겉옷을 입히고 내리세요.</div>
-      <div class="acts"><button type="button" class="btn ghost" data-q="경주 불국사" data-label="불국사">지도에서 보기</button><a class="btn quiet" href="https://www.google.com/maps/search/?api=1&amp;query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC" target="_blank" rel="noopener">구글맵 열기 ↗</a></div>
+      <div class="acts"><button type="button" class="btn ghost" data-q="경주 불국사" data-label="불국사">지도에서 보기</button><a class="btn quiet" href="https://map.kakao.com/link/search/%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC" target="_blank" rel="noopener">카카오맵 열기 ↗</a></div>
     </div>
 
     <div class="stop" id="s-garden"><div class="t"><span class="time">11:40</span><span class="name">경북천년숲정원 산책</span><span class="jp">10:00~16:00 · 무료</span></div>
       <p>불국사에서 황리단길로 가는 남쪽 길(통일로)에 있어 돌아가는 길이 아닙니다. 외나무다리와 메타세쿼이아 길을 돌면 45분. 임시주차장이라 자리가 빠듯하니 입구 앞이 차면 길가 주차장으로 바로 가세요.</p>
       <div class="drive">불국사 → 천년숲정원 약 25분</div>
       <div class="baby">길이 평탄해 유모차 OK. 외나무다리는 난간이 없으니 윤하는 안고 건너세요.</div>
-      <div class="acts"><button type="button" class="btn ghost" data-q="경북천년숲정원" data-label="경북천년숲정원">지도에서 보기</button><a class="btn quiet" href="https://www.google.com/maps/search/?api=1&amp;query=%EA%B2%BD%EB%B6%81%EC%B2%9C%EB%85%84%EC%88%B2%EC%A0%95%EC%9B%90" target="_blank" rel="noopener">구글맵 열기 ↗</a></div>
+      <div class="acts"><button type="button" class="btn ghost" data-q="경북천년숲정원" data-label="경북천년숲정원">지도에서 보기</button><a class="btn quiet" href="https://map.kakao.com/link/search/%EA%B2%BD%EB%B6%81%EC%B2%9C%EB%85%84%EC%88%B2%EC%A0%95%EC%9B%90" target="_blank" rel="noopener">카카오맵 열기 ↗</a></div>
     </div>
 
     <div class="stop" id="s-lunch"><div class="t"><span class="time">12:40</span><span class="name">한다솥 점심</span><span class="jp">솥밥 · 생선구이 · 첨성로 111</span></div>
       <p>11:00~21:00, 공휴일은 쉽니다. 황리단길 바로 옆이라 점심시간엔 골목 주차가 어렵습니다. 대릉원 쪽 공영주차장에 대고 5분 걸어가는 편이 빠릅니다. 1시간이면 식사가 끝납니다.</p>
       <div class="drive">천년숲정원 → 한다솥 약 15분</div>
       <div class="baby">솥밥 흰밥과 생선 살이 그대로 윤하 밥입니다. 아기의자가 있는지 미리 전화로 물어보세요. 낮잠이 12시대면 불국사를 1시간에서 45분으로 줄여 12:15에 앉으면 됩니다.</div>
-      <div class="acts"><button type="button" class="btn ghost" data-q="경주 한다솥 첨성로" data-label="한다솥">지도에서 보기</button><a class="btn quiet" href="https://www.google.com/maps/search/?api=1&amp;query=%EA%B2%BD%EC%A3%BC%20%ED%95%9C%EB%8B%A4%EC%86%A5%20%EC%B2%A8%EC%84%B1%EB%A1%9C" target="_blank" rel="noopener">구글맵 열기 ↗</a></div>
+      <div class="acts"><button type="button" class="btn ghost" data-q="경주 한다솥 첨성로" data-label="한다솥">지도에서 보기</button><a class="btn quiet" href="https://map.kakao.com/link/search/%EA%B2%BD%EC%A3%BC%20%ED%95%9C%EB%8B%A4%EC%86%A5%20%EC%B2%A8%EC%84%B1%EB%A1%9C" target="_blank" rel="noopener">카카오맵 열기 ↗</a></div>
     </div>
 
     <div class="stop" id="s-ninehill"><div class="t"><span class="time">14:30</span><span class="name">나인힐 베이커리 카페</span><span class="jp">언양 등억 · 동물 체험 <span class="pend">체험 여부 확인</span></span></div>
       <p>황리단길에서 40분. 신불산 자락이 정면으로 보이는 언덕 위 카페로, 마당에서 동물을 볼 수 있어 아이들이 오래 머뭅니다. 평일 10:00~20:00. 여기서 1시간 쉬고 출발하면 해 지기 전후로 집에 닿습니다.</p>
       <div class="drive">한다솥 → 나인힐 약 40분 (경부고속도로 언양 IC) · 나인힐 → 집 약 1시간</div>
       <div class="baby">한다솥에서 나오면 차에서 낮잠을 재우고, 깨면 여기서 동물을 보여 주세요. 물티슈와 여벌 옷을 가까이 두세요.</div>
-      <div class="acts"><button type="button" class="btn ghost" data-q="나인힐 베이커리 카페 울주" data-label="나인힐 베이커리 카페">지도에서 보기</button><a class="btn quiet" href="https://www.google.com/maps/search/?api=1&amp;query=%EB%82%98%EC%9D%B8%ED%9E%90%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%EC%B9%B4%ED%8E%98%20%EC%9A%B8%EC%A3%BC" target="_blank" rel="noopener">구글맵 열기 ↗</a></div>
+      <div class="acts"><button type="button" class="btn ghost" data-q="나인힐 베이커리 카페 울주" data-label="나인힐 베이커리 카페">지도에서 보기</button><a class="btn quiet" href="https://map.kakao.com/link/search/%EB%82%98%EC%9D%B8%ED%9E%90%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%EC%B9%B4%ED%8E%98%20%EC%9A%B8%EC%A3%BC" target="_blank" rel="noopener">카카오맵 열기 ↗</a></div>
     </div>
 
-    <div class="stop" id="s-home"><div class="t"><span class="time">15:30</span><span class="name">집으로</span><span class="jp">약 1시간 · 16:30 도착</span></div>
-      <p>처음 초안은 15시 귀가였는데 그러면 나인힐에 20분밖에 못 있습니다. 나인힐에서 1시간 쉬고 15:30에 출발하는 걸로 잡았습니다. 더 일찍 들어가고 싶으면 퇴실을 9:30으로 당기면 전체가 30분씩 앞당겨집니다.</p>
+    <div class="stop" id="s-home"><div class="t"><span class="time">15:30</span><span class="name">집으로</span><span class="jp">금정마을로 150 · 약 1시간 · 16:30 도착</span></div>
+      <p>처음 초안은 15시 귀가였는데 그러면 나인힐에 20분밖에 못 있습니다. 나인힐에서 1시간 쉬고 15:30에 출발하는 걸로 잡았습니다. 언양 IC에서 경부고속도로를 타면 동래까지 1시간 안쪽입니다. 더 일찍 들어가고 싶으면 퇴실을 9:30으로 당기면 전체가 30분씩 앞당겨집니다.</p>
+      <div class="acts"><a class="btn quiet" id="nav-back" href="https://map.kakao.com/link/search/%EB%B6%80%EC%82%B0%20%EB%8F%99%EB%9E%98%EA%B5%AC%20%EA%B8%88%EC%A0%95%EB%A7%88%EC%9D%84%EB%A1%9C%20150" target="_blank" rel="noopener">나인힐 → 집 길찾기 ↗</a></div>
     </div>
   </div>
 </section>
@@ -415,7 +424,7 @@ background:var(--card);font-size:13px;font-weight:700;color:var(--ink-soft);text
 
 <footer>
   초안입니다. 영업시간과 요금은 2026년 11월 검색 기준이라 출발 전에 네이버 지도에서 한 번 더 확인하세요.<br>
-  지도 핀 중 ‘대략 위치’ 표시가 있는 곳은 페이지가 열릴 때 주소로 자동 보정됩니다. 보정이 안 되면 구글맵 열기 버튼이 정확합니다.
+  지도는 카카오맵입니다. ‘대략 위치’ 표시가 있는 핀은 페이지가 열릴 때 주소·상호로 자동 보정됩니다. 보정이 안 되면 카카오맵 열기 버튼이 정확합니다.
 </footer>
 </div>
 
@@ -427,30 +436,34 @@ background:var(--card);font-size:13px;font-weight:700;color:var(--ink-soft);text
     buttons.forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.day===day?'true':'false'); });
   }
 
-  /* ---- 구글 지도 · 이야기 카드 · 스탬프 · 안내원 ----
-     places.json 에 좌표와 이야기가 들어 있다. 지도는 구글 Maps JavaScript API 로 그린다.
-     approx:true 인 핀은 address 로 브라우저 안에서 한 번 지오코딩해 자리를 바로잡고,
+  /* ---- 카카오맵 · 이야기 카드 · 스탬프 · 안내원 ----
+     places.json 에 좌표와 이야기가 들어 있다. 지도는 카카오맵 JavaScript SDK 로 그린다.
+     KAKAO_KEY 는 developers.kakao.com 의 'JavaScript 키'. 공개돼도 되는 키지만 등록한 도메인에서만 동작한다 (README).
+     approx:true 인 핀은 페이지가 열릴 때 주소(addressSearch) → 상호(keywordSearch) 순으로 자리를 바로잡고,
      결과는 이 폰의 localStorage 에 저장해 두 번째부터는 호출하지 않는다.
-     지도가 안 뜨면(키 제한·오프라인) 구글맵 열기 버튼 목록이 대신 나온다. */
-  var GKEY='AIzaSyCmcMxn5dB6vRAMkTjN1PeIEVBCwFu6JEA';
-  var DAYCOLOR={1:'#E8892B',2:'#2F6F8F'};
-  var GM={map:null,places:[],markers:[],lines:[],day:'all',stamps:{},cur:-1,gi:0};
-  var LS={stamp:'gj-stamp',geo:'gj-geo',check:'gj-check',shop:'gj-shop'};
+     지도가 안 뜨면(도메인 미등록·카카오맵 미활성·오프라인) 카카오맵 열기 버튼 목록이 대신 나온다. */
+  var KAKAO_KEY='a7ad72b0a0bfb78b04ee3b766b947176';
+  var DAYCOLOR={1:'#E8892B',2:'#2F6F8F',home:'#1F2A33'};
+  var GM={map:null,places:[],markers:[],lines:[],day:'all',stamps:{},cur:-1,gi:0,home:null,stay:null};
+  var LS={stamp:'gj-stamp',geo:'gj-geo2',check:'gj-check',shop:'gj-shop'};
 
   try{ GM.stamps=JSON.parse(localStorage.getItem(LS.stamp)||'{}'); }catch(e){ GM.stamps={}; }
   function saveStamps(){ try{ localStorage.setItem(LS.stamp,JSON.stringify(GM.stamps)); }catch(e){} }
 
-  function pinIcon(p,on){
-    var c=DAYCOLOR[(p.days&&p.days[0])||1]||'#64748b';
+  function pinColor(p){ return p.role==='home'?DAYCOLOR.home:(DAYCOLOR[(p.days&&p.days[0])||1]||'#64748b'); }
+  function pinImage(p,on){
+    var c=pinColor(p);
     var svg='<svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" viewBox="0 0 30 40">'
       +'<path d="M15 39C15 39 28 24.5 28 14.5A13 13 0 1 0 2 14.5C2 24.5 15 39 15 39Z" fill="'+c+'" stroke="#fff" stroke-width="2.4"/>'
       +'<circle cx="15" cy="14.5" r="5.4" fill="#fff"/>'
       +(on?'<circle cx="15" cy="14.5" r="3" fill="'+c+'"/>':'')+'</svg>';
-    return {url:'data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(svg),
-            scaledSize:new google.maps.Size(30,40), anchor:new google.maps.Point(15,39)};
+    return new kakao.maps.MarkerImage('data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(svg),
+      new kakao.maps.Size(30,40), {offset:new kakao.maps.Point(15,39)});
   }
-
+  function ll(p){ return new kakao.maps.LatLng(p.lat,p.lng); }
   function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function kakaoSearch(q){ return 'https://map.kakao.com/link/search/'+encodeURIComponent(q); }
+  function kakaoTo(p){ return 'https://map.kakao.com/link/to/'+encodeURIComponent(p.name)+','+p.lat+','+p.lng; }
 
   function showCard(i){
     GM.cur=i;
@@ -463,10 +476,11 @@ background:var(--card);font-size:13px;font-weight:700;color:var(--ink-soft);text
       +(p.memo?'<p class="gc-approx">'+esc(p.memo)+'</p>':'')
       +(p.story?'<p class="gc-story">'+esc(p.story)+'</p>':'')
       +(p.baby?'<div class="gc-baby">👶 '+esc(p.baby)+'</div>':'')
-      +(p.approx?'<p class="gc-approx">※ 핀은 대략 위치입니다. 정확한 자리는 구글맵에서 확인하세요.</p>':'')
+      +(p.approx?'<p class="gc-approx">※ 핀은 대략 위치입니다. 정확한 자리는 카카오맵에서 확인하세요.</p>':'')
       +'<div class="gc-act">'
-      +'<a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.query||p.name)+'" target="_blank" rel="noopener">구글맵에서 열기 ↗</a>'
-      +'<button type="button" id="gc-stamp" class="'+(done?'on':'')+'">'+(done?'✓ 다녀왔어요':'스탬프 찍기')+'</button>'
+      +'<a href="'+kakaoSearch(p.query||p.name)+'" target="_blank" rel="noopener">카카오맵에서 열기 ↗</a>'
+      +(p.approx||p.role==='home'?'':'<a href="'+kakaoTo(p)+'" target="_blank" rel="noopener">길찾기 ↗</a>')
+      +(p.role==='home'?'':'<button type="button" id="gc-stamp" class="'+(done?'on':'')+'">'+(done?'✓ 다녀왔어요':'스탬프 찍기')+'</button>')
       +'</div>';
     var b=document.getElementById('gc-stamp');
     if(b) b.onclick=function(){
@@ -475,64 +489,73 @@ background:var(--card);font-size:13px;font-weight:700;color:var(--ink-soft);text
     };
     box.hidden=false;
     var m=GM.markers[i];
-    if(m&&GM.map){ GM.map.panTo(m.getPosition()); if(GM.map.getZoom()<12) GM.map.setZoom(13); }
+    if(m&&GM.map){ GM.map.panTo(m.getPosition()); if(GM.map.getLevel()>8) GM.map.setLevel(7); }
   }
 
   function refreshPins(){
     GM.markers.forEach(function(m,i){
       var p=GM.places[i];
       var vis=(GM.day==='all')||(p.days&&p.days.indexOf(Number(GM.day))>=0);
-      m.setVisible(vis);
-      m.setIcon(pinIcon(p,!!GM.stamps[p.name]));
+      m.setMap(vis?GM.map:null);
+      m.setImage(pinImage(p,!!GM.stamps[p.name]));
     });
-    GM.lines.forEach(function(l){ l.setVisible(GM.day==='all'||String(l.day)===String(GM.day)); });
+    GM.lines.forEach(function(l){ l.setMap((GM.day==='all'||String(l.day)===String(GM.day))?GM.map:null); });
   }
 
-  /* 동선 — 일차별로 핀을 일정 순서대로 잇는다. places.json 순서가 곧 방문 순서다. */
+  /* 동선 — 집(home)에서 나가 숙소(stay)에서 자고, 숙소에서 나와 집으로 돌아온다.
+     사이 장소들은 places.json 순서대로 잇는다. 역할은 좌표가 아니라 role 로 구분한다. */
   function drawRoutes(){
-    /* 펜션(1·2일차 모두 포함)은 2일차 출발점이다. 좌표가 아니라 객체로 구분한다 */
-    var pen=null;
-    GM.places.forEach(function(p){ if(!pen&&p.days&&p.days.indexOf(1)>=0&&p.days.indexOf(2)>=0) pen=p; });
     [1,2].forEach(function(d){
-      var stops=GM.places.filter(function(p){ return p!==pen&&p.days&&p.days.indexOf(d)>=0; });
-      if(pen){ if(d===1) stops.push(pen); else stops.unshift(pen); }
-      var pts=stops.map(function(p){ return {lat:p.lat,lng:p.lng}; });
-      if(pts.length<2) return;
-      var line=new google.maps.Polyline({path:pts,map:GM.map,strokeOpacity:0,
-        icons:[{icon:{path:'M 0,-1 0,1',strokeOpacity:.9,strokeColor:DAYCOLOR[d],scale:3},offset:'0',repeat:'14px'}]});
+      var stops=GM.places.filter(function(p){ return !p.role&&p.days&&p.days.indexOf(d)>=0; });
+      if(d===1){ if(GM.home) stops.unshift(GM.home); if(GM.stay) stops.push(GM.stay); }
+      else     { if(GM.stay) stops.unshift(GM.stay); if(GM.home) stops.push(GM.home); }
+      if(stops.length<2) return;
+      var line=new kakao.maps.Polyline({path:stops.map(ll),map:GM.map,strokeWeight:3,
+        strokeColor:DAYCOLOR[d],strokeOpacity:.9,strokeStyle:'shortdash'});
       line.day=d; GM.lines.push(line);
     });
   }
 
-  /* 대략 위치 핀을 주소로 바로잡는다. 브라우저 안에서 돌아가므로 키의 referer 제한에 걸리지 않는다. */
+  /* 대략 위치 핀을 바로잡는다. 주소가 있으면 주소로, 없거나 실패하면 상호 검색으로.
+     카카오 SDK 의 services 라이브러리가 브라우저 안에서 돌아가므로 서버가 필요 없다. */
   function fixCoords(list,done){
     var cache={}; try{ cache=JSON.parse(localStorage.getItem(LS.geo)||'{}'); }catch(e){}
     var finished=false;
-    function finish(){ if(finished) return; finished=true; done(); }   /* done 은 딱 한 번만 */
+    function finish(){ if(finished) return; finished=true; done(); }
+    var svc=kakao.maps.services;
     var todo=[];
     list.forEach(function(p){
-      if(!p.approx||!p.address) return;
-      var c=cache[p.address];
+      if(!p.approx) return;
+      var key=p.address||p.query, c=cache[key];
       if(c){ p.lat=c.lat; p.lng=c.lng; p.approx=false; return; }
       todo.push(p);
     });
-    if(!todo.length||!google.maps.Geocoder) return finish();
+    if(!todo.length||!svc) return finish();
     var pending=todo.length;   /* 요청을 보내기 전에 개수를 먼저 센다. 응답이 즉시 와도 안전하다 */
-    todo.forEach(function(p){
-      new google.maps.Geocoder().geocode({address:p.address,region:'KR'},function(rs,st){
-        if(st==='OK'&&rs&&rs[0]&&/ROOFTOP|RANGE_INTERPOLATED|GEOMETRIC_CENTER/.test(rs[0].geometry.location_type)){
-          var l=rs[0].geometry.location;
-          p.lat=l.lat(); p.lng=l.lng(); p.approx=false;
-          cache[p.address]={lat:p.lat,lng:p.lng};
-          try{ localStorage.setItem(LS.geo,JSON.stringify(cache)); }catch(e){}
-        }
+    var geocoder=new svc.Geocoder(), places=new svc.Places();
+    function accept(p,y,x){
+      p.lat=Number(y); p.lng=Number(x); p.approx=false;
+      cache[p.address||p.query]={lat:p.lat,lng:p.lng};
+      try{ localStorage.setItem(LS.geo,JSON.stringify(cache)); }catch(e){}
+    }
+    function byKeyword(p){
+      places.keywordSearch(p.query||p.name,function(data,st){
+        if(st===svc.Status.OK&&data&&data[0]) accept(p,data[0].y,data[0].x);
         if(--pending===0) finish();
+      });
+    }
+    todo.forEach(function(p){
+      if(!p.address) return byKeyword(p);
+      geocoder.addressSearch(p.address,function(rs,st){
+        if(st===svc.Status.OK&&rs&&rs[0]){ accept(p,rs[0].y,rs[0].x); if(--pending===0) finish(); }
+        else byKeyword(p);
       });
     });
   }
 
   /* 안내원 대본 — [일차, 시각, 말, 핀 이름] */
   var GUIDE=[
+   [1,'12:30 출발','동래에서 경부고속도로. 경주까지 1시간 반, 가는 길이 낮잠 시간입니다.','집'],
    [1,'14:00 집결','포워드 카페에서 동행과 만납니다. 통일전 바로 옆이니 내비는 통일전으로.','카페 포워드'],
    [1,'15:00 통일전','은행잎은 거의 졌을 때입니다. 사진 한 장 찍고 바로 출발해도 됩니다.','통일전'],
    [1,'15:40 장보기','통일로를 타고 동쪽으로 넘어가면 펜션 직전에 하나로마트. 장보기 목록을 여세요.','불국사농협 하나로마트'],
@@ -542,7 +565,7 @@ background:var(--card);font-size:13px;font-weight:700;color:var(--ink-soft);text
    [2,'11:40 정원','천년숲정원. 황리단길 가는 길목입니다. 외나무다리는 안고 건너세요.','경북천년숲정원'],
    [2,'12:40 점심','한다솥 솥밥. 주차는 대릉원 쪽에 대고 5분 걸어가는 게 빠릅니다.','한다솥'],
    [2,'14:30 언양','나인힐. 오는 40분 동안 차에서 낮잠, 도착하면 동물 구경.','나인힐 베이커리 카페'],
-   [2,'15:30 귀가','여기서 집까지 1시간. 16시 반이면 들어갑니다.','나인힐 베이커리 카페']
+   [2,'15:30 귀가','언양 IC에서 경부고속도로. 16시 반이면 집입니다.','집']
   ];
   function guideShow(i){
     var g=GUIDE[i]; if(!g) return;
@@ -559,43 +582,52 @@ background:var(--card);font-size:13px;font-weight:700;color:var(--ink-soft);text
 
   function placeMarkers(){
     GM.places.forEach(function(p,i){
-      var m=new google.maps.Marker({position:{lat:p.lat,lng:p.lng},map:GM.map,
-        title:p.name, icon:pinIcon(p,!!GM.stamps[p.name])});
-      m.addListener('click',function(){ showCard(i); });
+      var m=new kakao.maps.Marker({position:ll(p),map:GM.map,title:p.name,image:pinImage(p,!!GM.stamps[p.name])});
+      kakao.maps.event.addListener(m,'click',function(){ showCard(i); });
       GM.markers.push(m);
     });
     drawRoutes();
     refreshPins();
-    var bounds=new google.maps.LatLngBounds();
-    GM.places.forEach(function(p){ bounds.extend({lat:p.lat,lng:p.lng}); });
-    GM.map.fitBounds(bounds,40);
+    var bounds=new kakao.maps.LatLngBounds();
+    GM.places.forEach(function(p){ bounds.extend(ll(p)); });
+    GM.map.setBounds(bounds,30);
+    /* 집 ↔ 첫·마지막 장소 길찾기 링크에 좌표를 채운다 (보정된 좌표라야 의미가 있다) */
+    var first=GM.places.filter(function(p){ return !p.role&&p.days.indexOf(1)>=0; })[0];
+    var last=GM.places.filter(function(p){ return !p.role&&p.days.indexOf(2)>=0; }).slice(-1)[0];
+    function fromTo(a,b){ return 'https://map.kakao.com/link/from/'+encodeURIComponent(a.name)+','+a.lat+','+a.lng+'/to/'+encodeURIComponent(b.name)+','+b.lat+','+b.lng; }
+    var go=document.getElementById('nav-go'), back=document.getElementById('nav-back');
+    if(GM.home&&first&&!GM.home.approx&&!first.approx&&go) go.href=fromTo(GM.home,first);
+    if(GM.home&&last&&!GM.home.approx&&!last.approx&&back) back.href=fromTo(last,GM.home);
   }
 
-  function mapFailed(){
+  var mapDone=false;
+  function mapFailed(why){
+    if(mapDone) return; mapDone=true;
     var f=document.getElementById('gfail'); if(f) f.hidden=false;
+    var w=document.getElementById('gfail-why'); if(w&&why) w.textContent=why;
     var m=document.getElementById('gmap'); if(m) m.style.display='none';
     var gv=document.getElementById('guide'); if(gv) gv.hidden=true;
     var ul=document.getElementById('gfail-list');
     if(ul&&!ul.children.length){
       var list=GM.places.length?GM.places:FALLBACK;
       ul.innerHTML=list.map(function(p){
-        return '<li><a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.query||p.name)+'" target="_blank" rel="noopener">'+esc(p.name)+' ↗</a></li>';
+        return '<li><a href="'+kakaoSearch(p.query||p.name)+'" target="_blank" rel="noopener">'+esc(p.name)+' ↗</a></li>';
       }).join('');
     }
   }
   /* places.json 조차 못 읽을 때를 위한 최소 목록 (이름과 검색어만) */
-  var FALLBACK=[{name:'카페 포워드',query:'경주 카페 포워드'},{name:'통일전',query:'경주 통일전'},
+  var FALLBACK=[{name:'집',query:'부산 동래구 금정마을로 150'},{name:'카페 포워드',query:'경주 카페 포워드'},{name:'통일전',query:'경주 통일전'},
     {name:'불국사농협 하나로마트',query:'불국사농협 하나로마트'},{name:'코코망고 키즈풀빌라',query:'경주 코코망고키즈풀빌라'},
     {name:'불국사',query:'경주 불국사'},{name:'경북천년숲정원',query:'경북천년숲정원'},
     {name:'한다솥',query:'경주 한다솥 첨성로'},{name:'나인힐 베이커리 카페',query:'나인힐 베이커리 카페 울주'}];
 
-  window.initGmap=function(){
+  function initKakao(){
     fetch('./places.json',{cache:'no-store'}).then(function(r){ return r.json(); }).then(function(list){
       GM.places=list.filter(function(p){ return p.lat&&p.lng; });
-      GM.map=new google.maps.Map(document.getElementById('gmap'),{
-        center:{lat:35.72,lng:129.22}, zoom:10, mapTypeControl:false, streetViewControl:false,
-        fullscreenControl:true, gestureHandling:'greedy'
-      });
+      GM.places.forEach(function(p){ if(p.role==='home') GM.home=p; if(p.role==='stay') GM.stay=p; });
+      GM.map=new kakao.maps.Map(document.getElementById('gmap'),{center:new kakao.maps.LatLng(35.55,129.2),level:11});
+      GM.map.addControl(new kakao.maps.ZoomControl(),kakao.maps.ControlPosition.RIGHT);
+      mapDone=true;
       fixCoords(GM.places,function(){
         placeMarkers();
         var gv=document.getElementById('guide');
@@ -606,15 +638,19 @@ background:var(--card);font-size:13px;font-weight:700;color:var(--ink-soft);text
           guideShow(0);
         }
       });
-    }).catch(mapFailed);
-  };
-  window.gm_authFailure=mapFailed;
+    }).catch(function(){ mapFailed('장소 목록(places.json)을 읽지 못했습니다.'); });
+  }
   (function(){
     var s=document.createElement('script');
-    s.src='https://maps.googleapis.com/maps/api/js?key='+GKEY+'&callback=initGmap&language=ko&region=KR&loading=async';
+    s.src='https://dapi.kakao.com/v2/maps/sdk.js?appkey='+KAKAO_KEY+'&libraries=services&autoload=false';
     s.async=true;
-    s.onerror=mapFailed;
+    s.onload=function(){
+      if(!window.kakao||!kakao.maps) return mapFailed('카카오맵 SDK 가 열리지 않았습니다. 카카오 개발자 콘솔에서 사이트 도메인 등록과 카카오맵 활성화를 확인하세요.');
+      kakao.maps.load(initKakao);
+    };
+    s.onerror=function(){ mapFailed('카카오맵 SDK 를 내려받지 못했습니다. 도메인 등록·카카오맵 활성화 또는 인터넷 연결을 확인하세요.'); };
     document.head.appendChild(s);
+    setTimeout(function(){ if(!mapDone) mapFailed('지도 응답이 없습니다.'); },10000);
   })();
 
   /* 일차 버튼 → 지도 */
@@ -626,7 +662,7 @@ background:var(--card);font-size:13px;font-weight:700;color:var(--ink-soft);text
   var gname=document.getElementById('g-name'), gopen=document.getElementById('g-open');
   function showMap(q,label){
     if(gname){ gname.textContent=label||q; }
-    if(gopen) gopen.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
+    if(gopen) gopen.href=kakaoSearch(q);
     var box=document.getElementById('gbox');
     if(box) box.scrollIntoView({block:'center'});
     if(!GM.map||!GM.places.length) return;
@@ -634,7 +670,7 @@ background:var(--card);font-size:13px;font-weight:700;color:var(--ink-soft);text
     GM.places.forEach(function(p,i){ if(hit<0&&(p.query===q||p.name===label)) hit=i; });
     if(hit<0) return;
     GM.day='all'; pressDay('all'); refreshPins();
-    showCard(hit); GM.map.setZoom(15);
+    showCard(hit); GM.map.setLevel(4);
   }
   document.querySelectorAll('button[data-q]').forEach(function(b){
     b.addEventListener('click',function(){ showMap(b.dataset.q,b.dataset.label); });
