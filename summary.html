@@ -10,7 +10,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:#f1efe9;color:var(--ink);font-family:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;font-size:14px;line-height:1.4}
 .page{background:var(--paper);width:210mm;max-width:100%;min-height:297mm;margin:16px auto;padding:10mm 11mm 9mm;box-shadow:0 2px 12px rgba(0,0,0,.08);display:flex;flex-direction:column}
-h1{font-size:18px;margin-bottom:1px}
+h1{font-size:18px;margin-bottom:8px}
 .sub{color:var(--soft);font-size:12px;margin-bottom:7px}
 .sub b{color:var(--ink)}
 /* ── 위 절반: 표 ── */
@@ -87,7 +87,8 @@ tr.past td a.nav{opacity:.45}
   .map{min-height:0}
 }
 @media (max-width:640px){
-  .page{padding:14px 10px;min-height:0;display:block}
+  html,body{background:#fff}
+  .page{padding:8px 10px 14px;margin:0;min-height:0;display:block;box-shadow:none}
   .days .hint{display:none}
   .map{min-height:0;height:62vh}
   /* 표 → 촘촘한 시간 목록. 폰 한 화면에 아홉 줄이 다 들어와야 한다.
@@ -128,7 +129,6 @@ tr.past td a.nav{opacity:.45}
 <body>
 <div class="page">
   <h1>하온하린윤하네 가족여행 — 경주 1박2일</h1>
-  <p class="sub"><b>11/12(목) ~ 11/13(금)</b> · 출발·도착 부산 동래구 금정마을로 150 · 숙소 코코망고 키즈풀빌라 · 동행은 포워드 카페에서 합류</p>
 
   <table>
     <thead><tr><th>일시</th><th>일정</th><th>소요시간</th><th>비고</th></tr></thead>
