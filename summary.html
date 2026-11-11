@@ -75,6 +75,30 @@ tr.past td a.nav{opacity:.45}
 .legend a{color:var(--ink);text-decoration:none}
 .num{cursor:pointer}
 .foot{color:var(--soft);font-size:11px;margin-top:4px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+/* ── 다음 장: 준비물 ── */
+.page2{min-height:0;margin-top:14px;padding-top:9mm;padding-bottom:9mm}
+.packhead{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:8px}
+.pack h2{font-size:17px}
+.packhead button{font:inherit;font-size:11.5px;color:var(--soft);background:transparent;border:1px solid #ccc;border-radius:6px;padding:3px 9px;cursor:pointer}
+.packgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 16px}
+.pg h3{font-size:12.5px;color:var(--soft);font-weight:700;margin-bottom:3px;padding-bottom:3px;border-bottom:1px solid var(--line)}
+.pg ul{list-style:none}
+.pg li{display:flex;align-items:flex-start;gap:7px;padding:3px 0;font-size:13px;line-height:1.35;border-bottom:1px dashed #e4e1da}
+.pg li:last-child{border-bottom:none}
+.pg input{margin-top:3px;width:16px;height:16px;flex:0 0 auto;accent-color:var(--d1)}
+.pg input:checked+label{color:#9aa1a8;text-decoration:line-through}
+.pg label{cursor:pointer}
+@media print{
+  .page2{page-break-before:always;break-before:page;margin:0;padding:0;box-shadow:none}
+  .packhead button{display:none}
+  .pg input{accent-color:#000}
+}
+@media (max-width:640px){
+  .page2{padding:12px 10px 20px;margin-top:0;border-top:8px solid #f1efe9}
+  .packgrid{grid-template-columns:1fr 1fr;gap:8px 12px}
+  .pg li{font-size:13px;padding:4px 0}
+}
+
 @media print{
   @page{size:A4;margin:9mm}
   td.what a.nav{display:none}
@@ -213,6 +237,62 @@ tr.past td a.nav{opacity:.45}
   </div>
 </div>
 
+<div class="page page2">
+<!-- ── 다음 장: 준비물 ── 사용자가 보낸 목록 그대로. 체크 표시는 이 폰에만 남는다 -->
+<section class="pack" id="pack">
+  <div class="packhead"><h2>윤하네 준비물</h2><button type="button" id="pack-reset">체크 지우기</button></div>
+  <div class="packgrid">
+    <div class="pg"><h3>윤하 옷·용품</h3><ul>
+      <li><input type="checkbox" id="pk1"><label for="pk1">윤하 수건 2</label></li>
+      <li><input type="checkbox" id="pk2"><label for="pk2">손수건 2</label></li>
+      <li><input type="checkbox" id="pk3"><label for="pk3">물티슈</label></li>
+      <li><input type="checkbox" id="pk4"><label for="pk4">내복 1</label></li>
+      <li><input type="checkbox" id="pk5"><label for="pk5">외출복 1</label></li>
+      <li><input type="checkbox" id="pk6"><label for="pk6">여벌옷 1</label></li>
+      <li><input type="checkbox" id="pk7"><label for="pk7">패딩</label></li>
+      <li><input type="checkbox" id="pk8"><label for="pk8">토끼 2</label></li>
+      <li><input type="checkbox" id="pk9"><label for="pk9">수면조끼</label></li>
+      <li><input type="checkbox" id="pk10"><label for="pk10">홈캠</label></li>
+    </ul></div>
+    <div class="pg"><h3>윤하 먹거리·기저귀·세면</h3><ul>
+      <li><input type="checkbox" id="pk11"><label for="pk11">턱받이</label></li>
+      <li><input type="checkbox" id="pk12"><label for="pk12">텀블러</label></li>
+      <li><input type="checkbox" id="pk13"><label for="pk13">숟가락</label></li>
+      <li><input type="checkbox" id="pk14"><label for="pk14">맘마밀 4</label></li>
+      <li><input type="checkbox" id="pk15"><label for="pk15">떡뻥</label></li>
+      <li><input type="checkbox" id="pk16"><label for="pk16">우유 6개</label></li>
+      <li><input type="checkbox" id="pk17"><label for="pk17">기저귀</label></li>
+      <li><input type="checkbox" id="pk18"><label for="pk18">밤기저귀</label></li>
+      <li><input type="checkbox" id="pk19"><label for="pk19">칫솔</label></li>
+      <li><input type="checkbox" id="pk20"><label for="pk20">치약</label></li>
+    </ul></div>
+    <div class="pg"><h3>물놀이·외출</h3><ul>
+      <li><input type="checkbox" id="pk21"><label for="pk21">아기 수영복</label></li>
+      <li><input type="checkbox" id="pk22"><label for="pk22">윤하 신발</label></li>
+      <li><input type="checkbox" id="pk23"><label for="pk23">기저귀 매트</label></li>
+      <li><input type="checkbox" id="pk24"><label for="pk24">양말 2개</label></li>
+    </ul></div>
+    <div class="pg"><h3>엄마 아빠</h3><ul>
+      <li><input type="checkbox" id="pk25"><label for="pk25">엄마아빠 잠옷 1</label></li>
+      <li><input type="checkbox" id="pk26"><label for="pk26">추리닝 1</label></li>
+      <li><input type="checkbox" id="pk27"><label for="pk27">아빠 수영복</label></li>
+      <li><input type="checkbox" id="pk28"><label for="pk28">아빠 속옷 3</label></li>
+      <li><input type="checkbox" id="pk29"><label for="pk29">엄마 속옷 1</label></li>
+    </ul></div>
+    <div class="pg"><h3>세면·화장품</h3><ul>
+      <li><input type="checkbox" id="pk30"><label for="pk30">로션</label></li>
+      <li><input type="checkbox" id="pk31"><label for="pk31">에센스</label></li>
+      <li><input type="checkbox" id="pk32"><label for="pk32">윤하 바디워시</label></li>
+    </ul></div>
+    <div class="pg"><h3>봉투·기타</h3><ul>
+      <li><input type="checkbox" id="pk33"><label for="pk33">비닐봉지 10장</label></li>
+      <li><input type="checkbox" id="pk34"><label for="pk34">큰봉투 2장</label></li>
+      <li><input type="checkbox" id="pk35"><label for="pk35">일회용 수세미 (아기 텀블러용)</label></li>
+    </ul></div>
+  </div>
+</section>
+</div>
+
 <script>
 (function(){
   /* 아래 절반 지도 — index.html 과 같은 places.json 을 읽는다.
@@ -240,6 +320,17 @@ tr.past td a.nav{opacity:.45}
       if(!anyNow&&nextRow) nextRow.classList.add('next');
     }
     tick(); setInterval(tick,30000);
+  })();
+
+  /* ── 준비물 체크 기억 (이 폰에만) ── */
+  (function(){
+    var KEY='gj-pack', boxes=[].slice.call(document.querySelectorAll('#pack input[type=checkbox]'));
+    if(!boxes.length) return;
+    try{ var saved=JSON.parse(localStorage.getItem(KEY)||'{}'); boxes.forEach(function(b){ if(saved[b.id]) b.checked=true; }); }catch(e){}
+    function save(){ try{ var o={}; boxes.forEach(function(b){ if(b.checked) o[b.id]=1; }); localStorage.setItem(KEY,JSON.stringify(o)); }catch(e){} }
+    boxes.forEach(function(b){ b.addEventListener('change',save); });
+    var r=document.getElementById('pack-reset');
+    if(r) r.addEventListener('click',function(){ boxes.forEach(function(b){ b.checked=false; }); save(); });
   })();
 
   var KAKAO_KEY='a7ad72b0a0bfb78b04ee3b766b947176';
