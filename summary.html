@@ -71,11 +71,8 @@ tr.past td a.nav{opacity:.45}
 .legend b{display:inline-flex;width:16px;height:16px;border-radius:50%;color:#fff;font-size:10px;align-items:center;justify-content:center;margin:0 3px 0 8px;vertical-align:1px}
 .legend span:first-child b{margin-left:0}
 .legend span.dim{opacity:.35}
-.navrow{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
-.navrow[hidden]{display:none}
-.daynav{font-size:12px;font-weight:700;color:#fff;border-radius:6px;padding:4px 10px;text-decoration:none}
-.daynav.d1{background:var(--d1)}
-.daynav.d2{background:var(--d2)}
+.legend a{color:var(--ink);text-decoration:none}
+.num{cursor:pointer}
 .foot{color:var(--soft);font-size:11px;margin-top:4px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
 @media print{
   @page{size:A4;margin:9mm}
@@ -83,7 +80,7 @@ tr.past td a.nav{opacity:.45}
   td.what a.pl{text-decoration:none}
   html,body{background:#fff}
   .page{width:auto;min-height:0;height:279mm;margin:0;padding:0;box-shadow:none}
-  .days,.navrow{display:none}
+  .days{display:none}
   table{page-break-inside:avoid}
   .map{min-height:0}
 }
@@ -140,19 +137,19 @@ tr.past td a.nav{opacity:.45}
     <tbody>
       <tr data-at="2026-11-12T12:30">
         <td class="when"><span class="d">11/12(목)</span><span class="t">12:30</span></td>
-        <td class="what"><span><a class="pl" data-place="집" href="#">집 출발</a> → 포워드 카페 모임<a class="nav" data-nav="집" href="#" target="_blank" rel="noopener">길찾기</a></span><small data-addr="집"></small></td>
+        <td class="what"><span><a class="pl" data-place="집" href="#">집 출발</a> → 포워드 카페 모임<a class="nav" data-nav="카페 포워드" href="#" target="_blank" rel="noopener">길안내</a></span><small data-addr="집"></small></td>
         <td class="how">집→포워드 <span data-leg="1-0">약&nbsp;1시간&nbsp;30분</span></td>
         <td class="note"><span class="red">네비검색<span class="sep"><br></span>경주&nbsp;통일전</span></td>
       </tr>
       <tr data-at="2026-11-12T14:00">
         <td class="when"><span class="t">14:00<i>~15:00</i></span></td>
-        <td class="what"><span><a class="pl" data-place="카페 포워드" href="#">카페 포워드</a> (동행 집결)<a class="nav" data-nav="카페 포워드" href="#" target="_blank" rel="noopener">길찾기</a></span><small data-addr="카페 포워드"></small><span><a class="pl" data-place="통일전" href="#">통일전 은행나무길</a> 잠깐 (선택)<a class="nav" data-nav="통일전" href="#" target="_blank" rel="noopener">길찾기</a></span><small data-addr="통일전"></small></td>
+        <td class="what"><span><a class="pl" data-place="카페 포워드" href="#">카페 포워드</a> (동행 집결)<a class="nav" data-nav="카페 포워드" href="#" target="_blank" rel="noopener">길안내</a></span><small data-addr="카페 포워드"></small><span><a class="pl" data-place="통일전" href="#">통일전 은행나무길</a> 잠깐 (선택)<a class="nav" data-nav="통일전" href="#" target="_blank" rel="noopener">길안내</a></span><small data-addr="통일전"></small></td>
         <td class="how">카페 1시간<span class="sep"><br></span>통일전 15분</td>
         <td class="note">카페 11시 오픈</td>
       </tr>
       <tr data-at="2026-11-12T15:40">
         <td class="when"><span class="t">15:40<i>~16:10</i></span></td>
-        <td class="what"><span><a class="pl" data-place="불국사농협 하나로마트" href="#">마트 장보기</a> (불국사농협 하나로마트)<a class="nav" data-nav="불국사농협 하나로마트" href="#" target="_blank" rel="noopener">길찾기</a></span><small data-addr="불국사농협 하나로마트"></small><span><a class="pl" data-place="코코망고 키즈풀빌라" href="#">숙소 체크인</a> (코코망고 키즈풀빌라)<a class="nav" data-nav="코코망고 키즈풀빌라" href="#" target="_blank" rel="noopener">길찾기</a></span><small data-addr="코코망고 키즈풀빌라"></small></td>
+        <td class="what"><span><a class="pl" data-place="불국사농협 하나로마트" href="#">마트 장보기</a> (불국사농협 하나로마트)<a class="nav" data-nav="불국사농협 하나로마트" href="#" target="_blank" rel="noopener">길안내</a></span><small data-addr="불국사농협 하나로마트"></small><span><a class="pl" data-place="코코망고 키즈풀빌라" href="#">숙소 체크인</a> (코코망고 키즈풀빌라)<a class="nav" data-nav="코코망고 키즈풀빌라" href="#" target="_blank" rel="noopener">길안내</a></span><small data-addr="코코망고 키즈풀빌라"></small></td>
         <td class="how">통일전→마트 <span data-leg="1-2">약 20분</span><span class="sep"><br></span>마트→숙소 <span data-leg="1-3">약 10분</span></td>
         <td class="note">마트 08:30~22:00<span class="sep"><br></span>입실 15:00</td>
       </tr>
@@ -165,31 +162,31 @@ tr.past td a.nav{opacity:.45}
       <tr class="gap"><td colspan="4"></td></tr>
       <tr data-at="2026-11-13T10:00">
         <td class="when"><span class="d">11/13(금)</span><span class="t">10:00</span></td>
-        <td class="what"><span>체크아웃</span><span><a class="pl" data-place="불국사" href="#">불국사 구경</a><a class="nav" data-nav="불국사" href="#" target="_blank" rel="noopener">길찾기</a></span><small data-addr="불국사"></small></td>
+        <td class="what"><span>체크아웃</span><span><a class="pl" data-place="불국사" href="#">불국사 구경</a><a class="nav" data-nav="불국사" href="#" target="_blank" rel="noopener">길안내</a></span><small data-addr="불국사"></small></td>
         <td class="how">숙소→불국사 <span data-leg="2-0">약 10분</span><span class="sep"><br></span>구경 1시간</td>
         <td class="note"><span class="red">입장 무료</span><span class="sep"><br></span>주차 소형 1,000원</td>
       </tr>
       <tr data-at="2026-11-13T11:40">
         <td class="when"><span class="t">11:40</span></td>
-        <td class="what"><span><a class="pl" data-place="경북천년숲정원" href="#">경북천년숲정원</a> 이동 산책<a class="nav" data-nav="경북천년숲정원" href="#" target="_blank" rel="noopener">길찾기</a></span><small data-addr="경북천년숲정원"></small></td>
+        <td class="what"><span><a class="pl" data-place="경북천년숲정원" href="#">경북천년숲정원</a> 이동 산책<a class="nav" data-nav="경북천년숲정원" href="#" target="_blank" rel="noopener">길안내</a></span><small data-addr="경북천년숲정원"></small></td>
         <td class="how">불국사→정원 <span data-leg="2-1">약 25분</span><span class="sep"><br></span>산책 45분</td>
         <td class="note">10~16시 · 무료<span class="sep"><br></span>주차 빡셈</td>
       </tr>
       <tr data-at="2026-11-13T12:40">
         <td class="when"><span class="t">12:40<i>~13:40</i></span></td>
-        <td class="what"><span><a class="pl" data-place="한다솥" href="#">점심식사</a> (한다솥)<a class="nav" data-nav="한다솥" href="#" target="_blank" rel="noopener">길찾기</a></span><small data-addr="한다솥"></small></td>
+        <td class="what"><span><a class="pl" data-place="한다솥" href="#">점심식사</a> (한다솥)<a class="nav" data-nav="한다솥" href="#" target="_blank" rel="noopener">길안내</a></span><small data-addr="한다솥"></small></td>
         <td class="how">정원→한다솥 <span data-leg="2-2">약 15분</span></td>
         <td class="note">생선구이, 솥밥 등</td>
       </tr>
       <tr data-at="2026-11-13T14:30">
         <td class="when"><span class="t">14:30</span></td>
-        <td class="what"><span><a class="pl" data-place="나인힐 베이커리 카페" href="#">울산 언양 카페이동</a> (나인힐 베이커리 카페)<a class="nav" data-nav="나인힐 베이커리 카페" href="#" target="_blank" rel="noopener">길찾기</a></span><small data-addr="나인힐 베이커리 카페"></small></td>
+        <td class="what"><span><a class="pl" data-place="나인힐 베이커리 카페" href="#">울산 언양 카페이동</a> (나인힐 베이커리 카페)<a class="nav" data-nav="나인힐 베이커리 카페" href="#" target="_blank" rel="noopener">길안내</a></span><small data-addr="나인힐 베이커리 카페"></small></td>
         <td class="how">한다솥→나인힐 <span data-leg="2-3">약 40분</span></td>
         <td class="note">동물 체험<span class="sep"><br></span>풍경 좋음</td>
       </tr>
       <tr data-at="2026-11-13T15:30" data-until="2026-11-13T16:30">
         <td class="when"><span class="t">15:30</span></td>
-        <td class="what"><span><a class="pl" data-place="집" href="#">집 복귀</a><a class="nav" data-nav="집" href="#" target="_blank" rel="noopener">길찾기</a></span><small data-addr="집"></small></td>
+        <td class="what"><span><a class="pl" data-place="집" href="#">집 복귀</a><a class="nav" data-nav="집" href="#" target="_blank" rel="noopener">길안내</a></span><small data-addr="집"></small></td>
         <td class="how">나인힐→집 <span data-leg="2-4">약 1시간</span></td>
         <td class="note">16:30 도착</td>
       </tr>
@@ -208,10 +205,6 @@ tr.past td a.nav{opacity:.45}
       <div class="alt" id="kalt" hidden>지도는 인터넷이 연결된 사이트(kimddubuck.github.io)에서만 그려집니다.</div>
     </div>
     <p class="legend" id="klegend" hidden></p>
-    <p class="navrow" id="navrow" hidden>
-      <a class="daynav d1" id="kakao-d1" href="#" target="_blank" rel="noopener">1일차 전체 경로 카카오맵 길찾기 ↗</a>
-      <a class="daynav d2" id="kakao-d2" href="#" target="_blank" rel="noopener">2일차 전체 경로 카카오맵 길찾기 ↗</a>
-    </p>
     <p class="foot">
       <span id="roadnote">귤색 1일차 · 파란색 2일차 · 검은 핀 집(부산 동래구 금정마을로 150)</span>
       <span>초안 · 영업시간은 출발 전 네이버 지도에서 재확인</span>
@@ -260,7 +253,7 @@ tr.past td a.nav{opacity:.45}
   }
   function dist(a,b){ var k=Math.cos((a.lat+b.lat)/2*Math.PI/180); var dx=(b.lng-a.lng)*k, dy=b.lat-a.lat; return Math.sqrt(dx*dx+dy*dy); }
   function overlay(p,html,z){ return new kakao.maps.CustomOverlay({position:LL(p),map:S.map,content:html,zIndex:z||1}); }
-  function numHtml(n,c,dim){ return '<div class="num'+(dim?' dim':'')+'" style="background:'+c+'">'+n+'</div>'; }
+  function numHtml(n,c,dim,name){ return '<div class="num'+(dim?' dim':'')+'" style="background:'+c+'" onclick="gjNav(this.getAttribute(\'data-n\'))" data-n="'+(name||'').replace(/"/g,'&quot;')+'" title="카카오맵 길안내">'+n+'</div>'; }
 
   function build(list){
     var pts=list.filter(function(p){ return p.lat&&p.lng; });
@@ -282,8 +275,9 @@ tr.past td a.nav{opacity:.45}
       var n=i+1, c=p.role==='home'?COLOR.home:COLOR[p.days[0]];
       var days=p.role?[1,2]:p.days;
       var lbl=new kakao.maps.CustomOverlay({position:LL(p),map:S.map,xAnchor:0,yAnchor:0,zIndex:50+n,content:'<div class="lbl">'+p.name.replace(/</g,'&lt;')+'</div>'});
-      S.pins.push({n:n,c:c,name:p.name,ov:overlay(p,numHtml(n,c,false),10+n),lbl:lbl,days:days,on:true});
-      legend.push('<span data-days="'+days.join(' ')+'"><b style="background:'+c+'">'+n+'</b>'+p.name.replace(/</g,'&lt;')+(p.role==='home'?' (출발·도착)':'')+'</span>');
+      var pin=new kakao.maps.CustomOverlay({position:LL(p),map:S.map,content:numHtml(n,c,false,p.name),zIndex:10+n,clickable:true});
+      S.pins.push({n:n,c:c,name:p.name,ov:pin,lbl:lbl,days:days,on:true});
+      legend.push('<span data-days="'+days.join(' ')+'"><a href="#" onclick="gjNav(this.getAttribute(\'data-n\'));return false" data-n="'+p.name.replace(/"/g,'&quot;')+'" title="카카오맵 길안내"><b style="background:'+c+'">'+n+'</b>'+p.name.replace(/</g,'&lt;')+(p.role==='home'?' (출발·도착)':'')+'</a></span>');
     });
     var lg=document.getElementById('klegend'); if(lg){ lg.innerHTML=legend.join(''); lg.hidden=false; }
 
@@ -293,10 +287,7 @@ tr.past td a.nav{opacity:.45}
       S.paths[d]=r.slice();
       S.lines[d]=new kakao.maps.Polyline({map:S.map,path:r.map(LL),strokeWeight:4,strokeColor:COLOR[d],strokeOpacity:.9,strokeStyle:'shortdash'});
       makeArrows(d);
-      var a=document.getElementById('kakao-d'+d);
-      if(a) a.href='https://map.kakao.com/link/by/car/'+r.map(function(p){ return encodeURIComponent(p.name)+','+p.lat+','+p.lng; }).join('/');
     });
-    var nr=document.getElementById('navrow'); if(nr) nr.hidden=false;
     loadRoads();
 
     var all=new kakao.maps.LatLngBounds(); pts.forEach(function(p){ all.extend(LL(p)); });
@@ -412,7 +403,7 @@ tr.past td a.nav{opacity:.45}
     [].slice.call(document.querySelectorAll('.days button')).forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.day===day?'true':'false'); });
     S.pins.forEach(function(x){
       x.on=day==='all'||x.days.indexOf(Number(day))>=0;
-      x.ov.setContent(numHtml(x.n,x.c,!x.on));
+      x.ov.setContent(numHtml(x.n,x.c,!x.on,x.name));
     });
     [].slice.call(document.querySelectorAll('#klegend span')).forEach(function(sp){
       sp.classList.toggle('dim', day!=='all' && sp.dataset.days.split(' ').indexOf(day)<0);
@@ -459,20 +450,40 @@ tr.past td a.nav{opacity:.45}
   window.addEventListener('beforeprint',function(){ if(S.map){ setDay('all'); stopAnim(); } });
   window.addEventListener('afterprint',function(){ if(S.map){ S.map.relayout(); setDay('all'); } });
 
-  /* ── 표의 장소 링크 ── 이름은 카카오맵 검색, '길찾기'는 좌표가 맞춰진 뒤 link/to 로. 주소는 places.json 에서 */
+  /* ── 카카오맵 길안내 ── 누르면 카카오맵 앱의 자동차 경로 화면을 바로 연다(kakaomap://route). 
+     앱이 없거나 PC면 1.2초 뒤 웹 길찾기(map.kakao.com/link/to)로 넘어간다. 좌표가 대략 위치면 검색으로 연다. */
+  var PLACES={};
+  function navUrls(p){
+    if(!p) return null;
+    if(p.approx) return {app:null, web:'https://map.kakao.com/link/search/'+encodeURIComponent(p.query||p.name)};
+    return {app:'kakaomap://route?ep='+p.lat+','+p.lng+'&by=CAR',
+            web:'https://map.kakao.com/link/to/'+encodeURIComponent(p.name)+','+p.lat+','+p.lng};
+  }
+  window.gjNav=function(name){
+    var u=navUrls(PLACES[name]); if(!u) return;
+    if(!u.app){ window.open(u.web,'_blank'); return; }
+    var t0=Date.now(), left=false;
+    function onHide(){ left=true; }
+    document.addEventListener('visibilitychange',onHide,{once:true});
+    window.location.href=u.app;
+    setTimeout(function(){
+      document.removeEventListener('visibilitychange',onHide);
+      if(!left&&!document.hidden&&Date.now()-t0<2500) window.open(u.web,'_blank');
+    },1200);
+  };
   function fillLinks(list){
-    var by={}; list.forEach(function(p){ by[p.name]=p; });
+    list.forEach(function(p){ PLACES[p.name]=p; });
     [].slice.call(document.querySelectorAll('a.pl[data-place]')).forEach(function(a){
-      var p=by[a.dataset.place]; if(!p) return;
+      var p=PLACES[a.dataset.place]; if(!p) return;
       a.href='https://map.kakao.com/link/search/'+encodeURIComponent(p.query||p.name); a.target='_blank'; a.rel='noopener';
     });
     [].slice.call(document.querySelectorAll('a.nav[data-nav]')).forEach(function(a){
-      var p=by[a.dataset.nav]; if(!p) return;
-      a.href=p.approx ? 'https://map.kakao.com/link/search/'+encodeURIComponent(p.query||p.name)
-                      : 'https://map.kakao.com/link/to/'+encodeURIComponent(p.name)+','+p.lat+','+p.lng;
+      var u=navUrls(PLACES[a.dataset.nav]); if(!u) return;
+      a.href=u.web; a.title='카카오맵 길안내';
+      if(!a.__bound){ a.__bound=true; a.addEventListener('click',function(e){ e.preventDefault(); gjNav(a.dataset.nav); }); }
     });
     [].slice.call(document.querySelectorAll('small[data-addr]')).forEach(function(el){
-      var p=by[el.dataset.addr]; el.textContent=(p&&p.address)?p.address:'';
+      var p=PLACES[el.dataset.addr]; el.textContent=(p&&p.address)?p.address:'';
     });
   }
 
