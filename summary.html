@@ -24,11 +24,14 @@ td.what span{display:block}
 td.what span::before{content:"- "}
 .red{color:var(--red);font-weight:700}
 .gap{height:10px;border:none!important;background:transparent}
-.map{border:1px solid var(--line);height:88mm;position:relative;background:#e8eef2}
+.map{border:1px solid var(--line);height:100mm;position:relative;background:#e8eef2}
 #kmap{width:100%;height:100%}
 .map .alt[hidden]{display:none}
 .map .alt{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--soft);font-size:13px;text-align:center;padding:12px}
-.lbl{background:rgba(255,255,255,.92);border:1px solid #888;border-radius:3px;padding:1px 5px;font-size:11.5px;font-weight:700;white-space:nowrap;transform:translate(10px,-50%)}
+.num{width:22px;height:22px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;transform:translate(-50%,-50%)}
+.legend{font-size:12px;line-height:1.7;margin-top:6px}
+.legend b{display:inline-flex;width:17px;height:17px;border-radius:50%;color:#fff;font-size:10.5px;align-items:center;justify-content:center;margin:0 3px 0 8px;vertical-align:1px}
+.legend b:first-child{margin-left:0}
 .foot{color:var(--soft);font-size:11.5px;margin-top:8px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
 .foot a{color:var(--soft)}
 .tools{width:210mm;max-width:100%;margin:0 auto;display:flex;gap:8px;justify-content:flex-end}
@@ -39,14 +42,14 @@ td.what span::before{content:"- "}
   .page{width:auto;min-height:0;margin:0;padding:0;box-shadow:none}
   .tools{display:none}
   table{page-break-inside:avoid}
-  .map{height:84mm}
+  .map{height:96mm}
 }
 @media (max-width:640px){
   .page{padding:16px 12px;min-height:0}
   td.how,td.when{white-space:normal}
   table{font-size:12.5px}
   th,td{padding:5px 5px}
-  .map{height:280px}
+  .map{height:300px}
 }
 </style>
 </head>
@@ -121,8 +124,9 @@ td.what span::before{content:"- "}
     <div id="kmap"></div>
     <div class="alt" id="kalt" hidden>지도는 인터넷이 연결된 사이트(kimddubuck.github.io)에서만 그려집니다.</div>
   </div>
+  <p class="legend" id="klegend" hidden></p>
   <p class="foot">
-    <span>귤색 점선 1일차 · 파란 점선 2일차 · 검은 핀 집</span>
+    <span>귤색 점선 1일차 · 파란 점선 2일차 · 검은 핀 집(부산 동래구 금정마을로 150)</span>
     <span>초안 · 영업시간은 출발 전 네이버 지도에서 재확인</span>
   </p>
 </div>
@@ -135,25 +139,35 @@ td.what span::before{content:"- "}
   var COLOR={1:'#E8892B',2:'#2F6F8F'};
   function fail(){ var a=document.getElementById('kalt'); if(a) a.hidden=false; }
   function draw(list){
-    var pts=list.filter(function(p){ return p.lat&&p.lng&&p.role!=='home'; });
-    var map=new kakao.maps.Map(document.getElementById('kmap'),{center:new kakao.maps.LatLng(35.75,129.2),level:10,draggable:true});
+    /* 집까지 넣으면 부산~경주가 한 화면이라 경주 핀이 몰린다. 이름표 대신 번호 핀을 찍고 아래에 번호 목록을 단다. */
+    var pts=list.filter(function(p){ return p.lat&&p.lng; });
+    var home=null, stay=null;
+    pts.forEach(function(p){ if(p.role==='home') home=p; if(p.role==='stay') stay=p; });
+    var order=[];                                   /* 방문 순서: 집 → 1일차 → 숙소 → 2일차 → 집 */
+    if(home) order.push(home);
+    pts.forEach(function(p){ if(!p.role&&p.days.indexOf(1)>=0) order.push(p); });
+    if(stay) order.push(stay);
+    pts.forEach(function(p){ if(!p.role&&p.days.indexOf(2)>=0) order.push(p); });
+    var map=new kakao.maps.Map(document.getElementById('kmap'),{center:new kakao.maps.LatLng(35.55,129.2),level:10,draggable:true});
     var b=new kakao.maps.LatLngBounds();
-    var stay=null;
-    pts.forEach(function(p){
-      if(p.role==='stay') stay=p;
+    var legend=[];
+    order.forEach(function(p,i){
+      var n=i+1, c=p.role==='home'?'#1F2A33':COLOR[p.days[0]];
       var pos=new kakao.maps.LatLng(p.lat,p.lng); b.extend(pos);
-      new kakao.maps.Marker({position:pos,map:map,title:p.name});
-      new kakao.maps.CustomOverlay({position:pos,map:map,yAnchor:1.6,xAnchor:0,
-        content:'<div class="lbl">'+p.name.replace(/</g,'&lt;')+'</div>'});
+      new kakao.maps.CustomOverlay({position:pos,map:map,zIndex:n,
+        content:'<div class="num" style="background:'+c+'">'+n+'</div>'});
+      legend.push('<b style="background:'+c+'">'+n+'</b>'+p.name.replace(/</g,'&lt;')+(p.role==='home'?' (출발·도착)':''));
     });
+    var lg=document.getElementById('klegend'); if(lg){ lg.innerHTML=legend.join(''); lg.hidden=false; }
     [1,2].forEach(function(d){
       var s=pts.filter(function(p){ return !p.role&&p.days.indexOf(d)>=0; });
-      if(stay){ d===1?s.push(stay):s.unshift(stay); }
+      if(d===1){ if(home) s.unshift(home); if(stay) s.push(stay); }
+      else     { if(stay) s.unshift(stay); if(home) s.push(home); }
       if(s.length<2) return;
       new kakao.maps.Polyline({map:map,path:s.map(function(p){ return new kakao.maps.LatLng(p.lat,p.lng); }),
         strokeWeight:3,strokeColor:COLOR[d],strokeOpacity:.9,strokeStyle:'shortdash'});
     });
-    map.setBounds(b,20);
+    map.setBounds(b,16);
   }
   function init(){
     fetch('./places.json',{cache:'no-store'}).then(function(r){ return r.json(); }).then(function(list){
